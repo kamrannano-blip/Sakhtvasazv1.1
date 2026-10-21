@@ -53,7 +53,7 @@ body{font-family:'Vazirmatn',sans-serif;background:#0a0e1a;color:#e8ecf5;font-si
 .btn:active{transform:scale(.96)}
 .btn-primary{background:linear-gradient(135deg,var(--primary),var(--primary2));color:#0a0e1a;box-shadow:0 4px 16px rgba(245,158,11,.3)}
 .btn-secondary{background:var(--card2);color:var(--text);border:1px solid var(--border)}
-.btn-success{background:linear-gradient(135deg,#10b981,#34d399);color:#0a0e1a;box-shadow:0 4px 16px rgba(16,185,129,.3)}
+.btn-success{background:linear-gradient(135deg,#10b981,#34d399);color:#0a0e1a}
 .btn-danger{background:rgba(239,68,68,.15);color:#f87171;border:1px solid rgba(239,68,68,.3)}
 .btn-block{width:100%}
 .btn-sm{padding:8px 12px;font-size:11px;border-radius:10px}
@@ -82,7 +82,6 @@ body{font-family:'Vazirmatn',sans-serif;background:#0a0e1a;color:#e8ecf5;font-si
 .list-icon.blue{background:rgba(59,130,246,.15)}
 .list-icon.purple{background:rgba(139,92,246,.15)}
 .list-icon.red{background:rgba(239,68,68,.15)}
-.list-icon.yellow{background:rgba(234,179,8,.15)}
 .list-body{flex:1;min-width:0}
 .list-title{font-size:13px;font-weight:700;margin-bottom:2px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .list-sub{font-size:11px;color:var(--text2);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
@@ -92,31 +91,25 @@ body{font-family:'Vazirmatn',sans-serif;background:#0a0e1a;color:#e8ecf5;font-si
 .empty-icon{font-size:56px;margin-bottom:12px;opacity:.4}
 .empty-text{font-size:13px;font-weight:600}
 .empty-sub{font-size:11px;color:var(--text3);margin-top:4px}
-
-/* ===== FILTERS ===== */
 .chips{display:flex;gap:8px;overflow-x:auto;padding:4px 16px 12px;margin:0 -16px;position:relative}
 .chips::-webkit-scrollbar{display:none}
 .chip{padding:7px 14px;background:var(--card);border:1px solid var(--border);border-radius:20px;font-size:11px;font-weight:600;color:var(--text2);white-space:nowrap;cursor:pointer;transition:.2s;flex-shrink:0;position:relative}
 .chip.active{background:linear-gradient(135deg,var(--primary),var(--primary2));color:#0a0e1a;border-color:transparent}
 .chip.active.green{background:linear-gradient(135deg,#10b981,#34d399);color:#fff}
-.chip.active.red{background:linear-gradient(135deg,#ef4444,#f87171);color:#fff}
 .chip.active.yellow{background:linear-gradient(135deg,#eab308,#facc15);color:#0a0e1a}
-.chip.active.purple{background:linear-gradient(135deg,#8b5cf6,#a78bfa)}
-.chip-dropdown{position:relative}
-.chip-menu{position:absolute;top:calc(100% + 6px);left:0;background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:6px;min-width:160px;box-shadow:0 8px 32px rgba(0,0,0,.6);z-index:50;display:none;animation:fadeIn .15s}
+.chip.active.purple{background:linear-gradient(135deg,#8b5cf6,#a78bfa);color:#fff}
+.chip-dropdown{position:relative;flex-shrink:0}
+.chip-menu{position:fixed;background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:6px;min-width:180px;box-shadow:0 12px 48px rgba(0,0,0,.85);z-index:9999;display:none}
 .chip-menu.show{display:block}
-.chip-menu-item{padding:10px 12px;border-radius:8px;font-size:12px;font-weight:600;color:var(--text2);cursor:pointer;transition:.15s;white-space:nowrap}
+.chip-menu-item{padding:10px 14px;border-radius:8px;font-size:12px;font-weight:600;color:var(--text2);cursor:pointer;transition:.15s;white-space:nowrap}
 .chip-menu-item:active{background:var(--card)}
 .chip-menu-item.active{background:rgba(245,158,11,.15);color:var(--primary)}
-
 .toast{position:fixed;top:20px;left:50%;transform:translateX(-50%) translateY(-150px);background:var(--card2);color:var(--text);padding:12px 20px;border-radius:12px;border:1px solid var(--border);font-size:13px;font-weight:600;z-index:999;box-shadow:0 8px 32px rgba(0,0,0,.5);transition:.35s;display:flex;align-items:center;gap:8px;max-width:calc(100% - 40px)}
 .toast.show{transform:translateX(-50%) translateY(0)}
 .toast.success{border-color:rgba(16,185,129,.4);background:rgba(16,185,129,.15)}
 .toast.error{border-color:rgba(239,68,68,.4);background:rgba(239,68,68,.15)}
 .section-title{font-size:14px;font-weight:700;margin:18px 0 10px;display:flex;justify-content:space-between;align-items:center}
 .section-title a{font-size:11px;color:var(--primary);font-weight:600;cursor:pointer}
-
-/* ===== PROJECTS ===== */
 .project-card{background:var(--card);border:1px solid var(--border);border-radius:16px;overflow:hidden;margin-bottom:12px;cursor:pointer}
 .project-card:active{transform:scale(.98)}
 .project-header{padding:14px 14px 10px;position:relative}
@@ -137,8 +130,6 @@ body{font-family:'Vazirmatn',sans-serif;background:#0a0e1a;color:#e8ecf5;font-si
 .btn-end-project{background:rgba(16,185,129,.12);color:#34d399;border:1px solid rgba(16,185,129,.3);border-radius:10px;padding:8px 12px;font-size:11px;font-weight:700;cursor:pointer;font-family:inherit;width:100%;margin-top:10px;transition:.2s}
 .btn-end-project:active{background:rgba(16,185,129,.2)}
 .btn-reopen{background:rgba(139,92,246,.12);color:#a78bfa;border:1px solid rgba(139,92,246,.3);border-radius:10px;padding:6px 12px;font-size:10px;font-weight:700;cursor:pointer;font-family:inherit;transition:.2s}
-
-/* ===== HERO ===== */
 .hero-card{background:linear-gradient(135deg,#1e2a4a 0%,#2a1a0f 100%);border:1px solid var(--border);border-radius:20px;padding:20px;margin-bottom:14px;position:relative;overflow:hidden}
 .hero-card::after{content:'🏗️';position:absolute;left:-20px;bottom:-20px;font-size:120px;opacity:.06;transform:rotate(-15deg)}
 .hero-title{font-size:12px;color:var(--text2);margin-bottom:6px}
@@ -147,11 +138,8 @@ body{font-family:'Vazirmatn',sans-serif;background:#0a0e1a;color:#e8ecf5;font-si
 .hero-divider{height:1px;background:linear-gradient(90deg,transparent,var(--border),transparent);margin:12px 0}
 .hero-line{display:flex;justify-content:space-between;font-size:12px;color:var(--text2);margin:6px 0;gap:8px}
 .hero-line b{font-weight:800;font-size:12px;word-break:break-all;text-align:left}
-
 .actions{display:flex;gap:6px;margin-top:10px}
 .actions .btn{flex:1}
-
-/* ===== PAYMENTS ===== */
 .payment-block{background:var(--card2);border:1px solid var(--border);border-radius:14px;padding:12px;margin-bottom:10px}
 .payment-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
 .payment-title{font-size:12px;font-weight:700;color:var(--text)}
@@ -165,8 +153,6 @@ body{font-family:'Vazirmatn',sans-serif;background:#0a0e1a;color:#e8ecf5;font-si
 .summary-line b{color:var(--text);word-break:break-all;text-align:left}
 .summary-line .warn{color:#f59e0b}
 .summary-line .bad{color:#f87171}
-
-/* ===== BRAND ===== */
 .brand-footer{text-align:center;padding:24px 20px 16px;margin-top:20px;opacity:.7}
 .brand-line{height:1px;background:linear-gradient(90deg,transparent,var(--border),transparent);margin:0 auto 14px;max-width:200px}
 .brand-name{font-size:13px;font-weight:800;letter-spacing:2px;background:linear-gradient(135deg,var(--primary),var(--primary2),var(--purple));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:3px}
@@ -176,8 +162,6 @@ body{font-family:'Vazirmatn',sans-serif;background:#0a0e1a;color:#e8ecf5;font-si
 .brand-modal .brand-name{font-size:12px}
 .brand-modal .brand-sub{font-size:8px}
 .brand-modal .brand-phone{font-size:9px}
-
-/* ===== CONTRACTOR ===== */
 .contractor-card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:14px;margin-bottom:10px}
 .contractor-head{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:8px}
 .contractor-name{font-size:14px;font-weight:700}
@@ -194,8 +178,6 @@ body{font-family:'Vazirmatn',sans-serif;background:#0a0e1a;color:#e8ecf5;font-si
 .payment-history-item .ph-amount{font-weight:800;color:var(--text);word-break:break-all;font-size:11px}
 .payment-history-item .ph-date{color:var(--text2);font-size:10px;margin-top:2px}
 .payment-history-item .ph-del{background:rgba(239,68,68,.15);color:#f87171;border:none;width:20px;height:20px;border-radius:5px;font-size:10px;cursor:pointer;font-family:inherit;flex-shrink:0}
-
-/* ===== DEBT ===== */
 .debt-item{background:rgba(239,68,68,.08);border:1px solid rgba(239,68,68,.2);border-radius:10px;padding:10px 12px;margin-bottom:8px;font-size:12px}
 .debt-item.unsettled{background:rgba(234,179,8,.08);border-color:rgba(234,179,8,.2)}
 .debt-item.unsettled .debt-title{color:#eab308}
@@ -203,8 +185,6 @@ body{font-family:'Vazirmatn',sans-serif;background:#0a0e1a;color:#e8ecf5;font-si
 .debt-item .debt-title{font-weight:700;color:#f87171;margin-bottom:3px}
 .debt-item .debt-info{color:var(--text2);font-size:11px;margin:2px 0}
 .debt-item .debt-amount{font-weight:800;color:#f87171;margin-top:4px}
-
-/* ===== WAREHOUSE ITEMS ===== */
 .mat-from-expense{background:linear-gradient(135deg,rgba(59,130,246,.08),rgba(139,92,246,.08));border-color:rgba(59,130,246,.2)}
 .mat-badge{display:inline-block;padding:1px 6px;border-radius:8px;font-size:9px;font-weight:700;background:rgba(59,130,246,.15);color:#60a5fa;margin-right:4px}
 </style>
@@ -271,16 +251,11 @@ body{font-family:'Vazirmatn',sans-serif;background:#0a0e1a;color:#e8ecf5;font-si
 
     <div class="page" id="page-finance">
       <div class="chips" id="expenseFilters">
-        <div class="chip" data-filter="settled">✅ تسویه شده</div>
-        <div class="chip" data-filter="unsettled">⚠️ بلاتکلیف</div>
         <div class="chip-dropdown" id="chequeDropdown">
           <div class="chip" id="chequeChip" onclick="toggleChequeMenu(event)">🔽 چک‌ها</div>
-          <div class="chip-menu" id="chequeMenu">
-            <div class="chip-menu-item" data-cfilter="hascheque">🧾 دارای چک</div>
-            <div class="chip-menu-item" data-cfilter="overdue">⏰ چک سررسید</div>
-            <div class="chip-menu-item" data-cfilter="bounced">↩️ چک برگشتی</div>
-          </div>
         </div>
+        <div class="chip" data-filter="settled">✅ تسویه شده</div>
+        <div class="chip" data-filter="unsettled">⚠️ بلاتکلیف</div>
         <div class="chip active" data-filter="all">همه</div>
         <div class="chip" data-filter="مصالح">مصالح</div>
         <div class="chip" data-filter="دستمزد">دستمزد</div>
@@ -325,6 +300,13 @@ body{font-family:'Vazirmatn',sans-serif;background:#0a0e1a;color:#e8ecf5;font-si
     <div class="nav-item" data-page="materials" onclick="switchPage('materials')"><div class="nav-icon">📦</div><div class="nav-label">انبار</div></div>
     <div class="nav-item" data-page="more" onclick="switchPage('more')"><div class="nav-icon">⚙️</div><div class="nav-label">بیشتر</div></div>
   </div>
+</div>
+
+<!-- Dropdown Menu OUTSIDE .chips to avoid overflow clipping -->
+<div class="chip-menu" id="chequeMenu">
+  <div class="chip-menu-item" data-cfilter="hascheque">🧾 دارای چک</div>
+  <div class="chip-menu-item" data-cfilter="overdue">⏰ چک سررسید</div>
+  <div class="chip-menu-item" data-cfilter="bounced">↩️ چک برگشتی</div>
 </div>
 
 <div class="modal-overlay" id="modal" onclick="if(event.target===this)closeModal()">
@@ -381,9 +363,10 @@ var jalaali = (function() {
   return { toJalaali, toGregorian, isLeapJalaaliYear, jalaaliMonthLength };
 })();
 
-/* ===== STATE & DB ===== */
+/* ===== STATE ===== */
 const DB_KEY='sakhtyar_v7';
 let state={page:'dashboard',projectFilter:'all',expenseFilter:'all'};
+var currentChequeFilter=null;
 
 function loadDB(){
   let d=localStorage.getItem(DB_KEY);
@@ -393,7 +376,6 @@ function loadDB(){
 function saveDB(d){localStorage.setItem(DB_KEY,JSON.stringify(d))}
 function uid(){return Date.now().toString(36)+Math.random().toString(36).slice(2,7)}
 
-/* ===== NUMBER FORMAT ===== */
 const FA_DIGITS=['۰','۱','۲','۳','۴','۵','۶','۷','۸','۹'];
 function toFaDigits(s){return String(s).replace(/\d/g,d=>FA_DIGITS[d])}
 function toEnDigits(s){return String(s).replace(/[۰-۹]/g,d=>'۰۱۲۳۴۵۶۷۸۹'.indexOf(d))}
@@ -401,12 +383,8 @@ function num(n){if(!n&&n!==0)return '۰';return Number(n).toLocaleString('fa-IR'
 function money(n){return num(n)+' تومان'}
 function yearFa(y){return toFaDigits(y)}
 
-function todayISO(){
-  var d=new Date();
-  return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');
-}
+function todayISO(){var d=new Date();return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0')}
 
-/* ===== MONEY INPUT ===== */
 function moneyInputHTML(id,value,placeholder){
   var raw=value?String(Math.round(Number(value))):'';
   var display=raw?toFaDigits(Number(raw).toLocaleString('en-US').replace(/,/g,'٬')):'';
@@ -418,12 +396,8 @@ function formatMoneyInput(el){
   el.dataset.raw=v;
   el.value=v?toFaDigits(Number(v).toLocaleString('en-US').replace(/,/g,'٬')):'';
 }
-function getMoney(id){
-  var el=document.getElementById(id);
-  return el?Number(el.dataset.raw||0)||0:0;
-}
+function getMoney(id){var el=document.getElementById(id);return el?Number(el.dataset.raw||0)||0:0}
 
-/* ===== JALALI HELPERS ===== */
 const WEEK_DAYS=['یکشنبه','دوشنبه','سه‌شنبه','چهارشنبه','پنجشنبه','جمعه','شنبه'];
 const MONTHS=['فروردین','اردیبهشت','خرداد','تیر','مرداد','شهریور','مهر','آبان','آذر','دی','بهمن','اسفند'];
 function isoToJalali(iso){
@@ -438,8 +412,7 @@ function faDate(iso){
   return yearFa(j.jy)+'/'+toFaDigits(String(j.jm).padStart(2,'0'))+'/'+toFaDigits(String(j.jd).padStart(2,'0'));
 }
 function faDateFull(){
-  var d=new Date();
-  var j=jalaali.toJalaali(d.getFullYear(),d.getMonth()+1,d.getDate());
+  var d=new Date();var j=jalaali.toJalaali(d.getFullYear(),d.getMonth()+1,d.getDate());
   return WEEK_DAYS[d.getDay()]+' '+toFaDigits(j.jd)+' '+MONTHS[j.jm-1]+' '+yearFa(j.jy);
 }
 function daysUntil(iso){if(!iso)return 999;var d=new Date(iso),n=new Date();return Math.ceil((d-n)/86400000)}
@@ -472,7 +445,6 @@ function getJDate(id){
   return jalaliToISO(y,m,d);
 }
 
-/* ===== PAGES ===== */
 const PAGES={
   dashboard:{title:'ساخت‌یار',sub:'مدیریت حرفه‌ای پروژه‌های ساختمانی',fab:false},
   projects:{title:'پروژه‌ها',sub:'مدیریت پروژه‌های ساختمانی',fab:true,fabAction:'addProject'},
@@ -508,7 +480,6 @@ function renderPage(p){
   if(p==='more')renderContractors();
 }
 
-/* ===== CALCULATIONS ===== */
 function expenseCashSum(e){return (e.cash||[]).reduce((s,c)=>s+(Number(c.amount)||0),0)}
 function expenseChequePending(e){return (e.cheques||[]).filter(c=>c.status==='pending').reduce((s,c)=>s+(Number(c.amount)||0),0)}
 function expenseChequeCashed(e){return (e.cheques||[]).filter(c=>c.status==='cashed').reduce((s,c)=>s+(Number(c.amount)||0),0)}
@@ -533,7 +504,6 @@ function allTotals(db){
   return{total,cash,chqPending,unsettled,net:cash,conWage};
 }
 
-/* ===== FILTERS ===== */
 function isSettled(e){
   var paid = expenseCashSum(e) + expenseChequeCashed(e);
   var total = Number(e.totalAmount)||0;
@@ -548,15 +518,47 @@ function hasOverdueCheque(e){
 function hasBouncedCheque(e){ return (e.cheques||[]).some(c => c.status === 'bounced'); }
 function hasAnyCheque(e){ return (e.cheques||[]).length > 0; }
 
-/* ===== CHEQUE DROPDOWN ===== */
+/* ===== CHEQUE DROPDOWN (FIXED) ===== */
 function toggleChequeMenu(ev){
   ev.stopPropagation();
+  ev.preventDefault();
   var menu = document.getElementById('chequeMenu');
-  menu.classList.toggle('show');
+  var chip = document.getElementById('chequeChip');
+  
+  if(menu.classList.contains('show')){
+    menu.classList.remove('show');
+    return;
+  }
+  
+  // موقعیت‌یابی دقیق زیر چیپ
+  var rect = chip.getBoundingClientRect();
+  menu.style.top = (rect.bottom + 8) + 'px';
+  menu.style.left = 'auto';
+  menu.style.right = 'auto';
+  
+  // چون RTL هست، از سمت راست محاسبه می‌کنیم
+  var menuWidth = 200;
+  var rightPos = window.innerWidth - rect.right;
+  
+  // اگه از سمت راست بیرون زد، چپ‌چین کن
+  if(rightPos + menuWidth > window.innerWidth){
+    menu.style.left = '16px';
+    menu.style.right = 'auto';
+  } else {
+    menu.style.right = rightPos + 'px';
+    menu.style.left = 'auto';
+  }
+  
+  menu.classList.add('show');
 }
-document.addEventListener('click', function(){
+
+// بستن منو با کلیک بیرون
+document.addEventListener('click', function(e){
   var menu = document.getElementById('chequeMenu');
-  if(menu) menu.classList.remove('show');
+  var chip = document.getElementById('chequeChip');
+  if(menu && menu.classList.contains('show') && !chip.contains(e.target) && !menu.contains(e.target)){
+    menu.classList.remove('show');
+  }
 });
 
 /* ===== RENDER: DASHBOARD ===== */
@@ -579,9 +581,7 @@ function renderDashboard(){
   else cEl.innerHTML=db.contractors.slice(0,3).map(c=>{
     var proj=db.projects.find(p=>p.id===c.projectId);
     var wage=contractorWage(c,db);var paid=contractorPaidTotal(c);var rem=Math.max(0,wage-paid);
-    return `<div class="list-item"><div class="list-icon purple">👷</div>
-      <div class="list-body"><div class="list-title">${esc(c.name)}</div><div class="list-sub">${num(c.share)}٪ · ${proj?esc(proj.name):'—'}</div></div>
-      <div class="list-value" style="color:${rem>0?'#f59e0b':'#34d399'}">${money(wage)}</div></div>`;
+    return `<div class="list-item"><div class="list-icon purple">👷</div><div class="list-body"><div class="list-title">${esc(c.name)}</div><div class="list-sub">${num(c.share)}٪ · ${proj?esc(proj.name):'—'}</div></div><div class="list-value" style="color:${rem>0?'#f59e0b':'#34d399'}">${money(wage)}</div></div>`;
   }).join('');
 
   var cheques=[];
@@ -591,10 +591,7 @@ function renderDashboard(){
   if(!cheques.length)chEl.innerHTML='<div class="empty" style="padding:20px"><div class="empty-text">چک در انتظاری نیست</div></div>';
   else chEl.innerHTML=cheques.map(c=>{
     var days=daysUntil(c.dueDate);var color=days<=7?'#f87171':days<=30?'#f59e0b':'#34d399';
-    return `<div class="list-item"><div class="list-icon orange">🧾</div>
-      <div class="list-body"><div class="list-title">${esc(c.bank)} · ${esc(c.number||'—')}</div>
-      <div class="list-sub">${esc(c.expenseTitle)} · ${faDate(c.dueDate)}</div></div>
-      <div class="list-value" style="color:${color}">${money(c.amount)}</div></div>`;
+    return `<div class="list-item"><div class="list-icon orange">🧾</div><div class="list-body"><div class="list-title">${esc(c.bank)} · ${esc(c.number||'—')}</div><div class="list-sub">${esc(c.expenseTitle)} · ${faDate(c.dueDate)}</div></div><div class="list-value" style="color:${color}">${money(c.amount)}</div></div>`;
   }).join('');
 
   var recent=db.expenses.slice().sort((a,b)=>new Date(b.date)-new Date(a.date)).slice(0,3);
@@ -602,14 +599,10 @@ function renderDashboard(){
   if(!recent.length)exEl.innerHTML='<div class="empty" style="padding:20px"><div class="empty-text">هزینه‌ای نیست</div></div>';
   else exEl.innerHTML=recent.map(e=>{
     var proj=db.projects.find(p=>p.id===e.projectId);
-    return `<div class="list-item"><div class="list-icon orange">💸</div>
-      <div class="list-body"><div class="list-title">${esc(e.title)}</div>
-      <div class="list-sub">${esc(e.category)} · ${proj?esc(proj.name):'—'} · ${faDate(e.date)}</div></div>
-      <div class="list-value expense">${money(e.totalAmount)}</div></div>`;
+    return `<div class="list-item"><div class="list-icon orange">💸</div><div class="list-body"><div class="list-title">${esc(e.title)}</div><div class="list-sub">${esc(e.category)} · ${proj?esc(proj.name):'—'} · ${faDate(e.date)}</div></div><div class="list-value expense">${money(e.totalAmount)}</div></div>`;
   }).join('');
 }
 
-/* ===== RENDER: PROJECTS ===== */
 function renderProjects(){
   var db=loadDB();
   var list=db.projects;
@@ -619,24 +612,13 @@ function renderProjects(){
   el.innerHTML=list.map(p=>renderProjectCard(p,db)).join('');
 }
 function renderProjectCard(p,db){
-  var total=projectTotalCost(p.id,db);
-  var cash=projectCashPaid(p.id,db);
-  var chqPending=projectChequePending(p.id,db);
+  var total=projectTotalCost(p.id,db);var cash=projectCashPaid(p.id,db);var chqPending=projectChequePending(p.id,db);
   var labels={active:'در حال اجرا',pending:'در انتظار',done:'تکمیل شده',paused:'متوقف'};
-  var isDone = p.status === 'done';
-  var datesBox = '';
+  var isDone=p.status==='done';var datesBox='';
   if(isDone && p.endDate){
-    datesBox = `<div class="dates-box completed">
-      <div class="dates-row"><span>📅 شروع:</span><b>${faDate(p.startDate)}</b></div>
-      <div class="dates-row"><span>📅 پایان:</span><b>${faDate(p.endDate)}</b></div>
-      <div class="dates-row" style="border-top:1px solid rgba(16,185,129,.2);padding-top:4px;margin-top:4px"><span>💰 هزینه کل:</span><b style="color:#34d399">${money(total)}</b></div>
-    </div>
-    <button class="btn-reopen" style="margin-top:8px;width:100%" onclick="event.stopPropagation();reopenProject('${p.id}')">↩️ بازگشت به حالت اجرا</button>`;
+    datesBox=`<div class="dates-box completed"><div class="dates-row"><span>📅 شروع:</span><b>${faDate(p.startDate)}</b></div><div class="dates-row"><span>📅 پایان:</span><b>${faDate(p.endDate)}</b></div><div class="dates-row" style="border-top:1px solid rgba(16,185,129,.2);padding-top:4px;margin-top:4px"><span>💰 هزینه کل:</span><b style="color:#34d399">${money(total)}</b></div></div><button class="btn-reopen" style="margin-top:8px;width:100%" onclick="event.stopPropagation();reopenProject('${p.id}')">↩️ بازگشت به حالت اجرا</button>`;
   } else {
-    datesBox = `<div class="dates-box">
-      <div class="dates-row"><span>📅 شروع:</span><b>${faDate(p.startDate)}</b></div>
-    </div>
-    <button class="btn-end-project" onclick="event.stopPropagation();tryEndProject('${p.id}')">✅ تأیید پایان پروژه</button>`;
+    datesBox=`<div class="dates-box"><div class="dates-row"><span>📅 شروع:</span><b>${faDate(p.startDate)}</b></div></div><button class="btn-end-project" onclick="event.stopPropagation();tryEndProject('${p.id}')">✅ تأیید پایان پروژه</button>`;
   }
   return `<div class="project-card" onclick="openProjectDetail('${p.id}')">
     <div class="project-header"><div class="project-name">${esc(p.name)}</div><div class="badge ${p.status||'pending'}">${labels[p.status]||'—'}</div></div>
@@ -650,62 +632,32 @@ function renderProjectCard(p,db){
   </div>`;
 }
 
-/* ===== END PROJECT ===== */
 function checkProjectDebts(pid,db){
-  var debts = [];
+  var debts=[];
   db.expenses.filter(e=>e.projectId===pid).forEach(e=>{
-    var total = Number(e.totalAmount)||0;
-    var pendingChq = (e.cheques||[]).filter(c=>c.status==='pending');
-    var bouncedChq = (e.cheques||[]).filter(c=>c.status==='bounced');
-    bouncedChq.forEach(c=>{
-      debts.push({
-        type:'bounced', title:'چک برگشتی - '+esc(e.title),
-        info:esc(c.bank)+' · شماره '+(c.number||'—')+' · سررسید '+faDate(c.dueDate),
-        amount:Number(c.amount)||0
-      });
-    });
-    pendingChq.forEach(c=>{
-      debts.push({
-        type:'pending', title:'چک در انتظار - '+esc(e.title),
-        info:esc(c.bank)+' · شماره '+(c.number||'—')+' · سررسید '+faDate(c.dueDate),
-        amount:Number(c.amount)||0
-      });
-    });
-    var unsettled = expenseUnsettledAmount(e);
-    if(unsettled > 1 && !pendingChq.length && !bouncedChq.length){
-      var paid = expenseCashSum(e) + expenseChequeCashed(e);
-      debts.push({
-        type:'unsettled', title:'⚠️ بلاتکلیف - '+esc(e.title),
-        info:'کل '+money(total)+' · پرداخت شده '+money(paid),
-        amount:unsettled
-      });
-    } else if(unsettled > 1){
-      var paid2 = expenseCashSum(e) + expenseChequeCased ? 0 : 0;
-      debts.push({
-        type:'unsettled', title:'⚠️ بلاتکلیف - '+esc(e.title),
-        info:'بخشی از هزینه بدون پرداخت',
-        amount:unsettled
-      });
+    var total=Number(e.totalAmount)||0;
+    var pendingChq=(e.cheques||[]).filter(c=>c.status==='pending');
+    var bouncedChq=(e.cheques||[]).filter(c=>c.status==='bounced');
+    bouncedChq.forEach(c=>debts.push({type:'bounced',title:'چک برگشتی - '+esc(e.title),info:esc(c.bank)+' · شماره '+(c.number||'—')+' · سررسید '+faDate(c.dueDate),amount:Number(c.amount)||0}));
+    pendingChq.forEach(c=>debts.push({type:'pending',title:'چک در انتظار - '+esc(e.title),info:esc(c.bank)+' · شماره '+(c.number||'—')+' · سررسید '+faDate(c.dueDate),amount:Number(c.amount)||0}));
+    var unsettled=expenseUnsettledAmount(e);
+    if(unsettled>1){
+      var paid=expenseCashSum(e)+expenseChequeCashed(e);
+      debts.push({type:'unsettled',title:'⚠️ بلاتکلیف - '+esc(e.title),info:'کل '+money(total)+' · پرداخت شده '+money(paid),amount:unsettled});
     }
   });
   db.contractors.filter(c=>c.projectId===pid).forEach(c=>{
-    var wage = contractorWage(c,db);
-    var paid = contractorPaidTotal(c);
-    var rem = wage - paid;
-    if(rem > 1){
-      debts.push({ type:'contractor', title:'طلب پیمانکار - '+esc(c.name), info:'دستمزد '+money(wage)+' · پرداخت شده '+money(paid), amount:rem });
-    }
+    var wage=contractorWage(c,db);var paid=contractorPaidTotal(c);var rem=wage-paid;
+    if(rem>1)debts.push({type:'contractor',title:'طلب پیمانکار - '+esc(c.name),info:'دستمزد '+money(wage)+' · پرداخت شده '+money(paid),amount:rem});
   });
   return debts;
 }
 
 function tryEndProject(pid){
-  var db = loadDB();
-  var p = db.projects.find(x=>x.id===pid);
-  if(!p) return;
-  var debts = checkProjectDebts(pid, db);
-  if(debts.length === 0){
-    document.getElementById('modalBody').innerHTML = `
+  var db=loadDB();var p=db.projects.find(x=>x.id===pid);if(!p)return;
+  var debts=checkProjectDebts(pid,db);
+  if(debts.length===0){
+    document.getElementById('modalBody').innerHTML=`
       <div class="modal-title">✅ تأیید پایان پروژه</div>
       <div class="card" style="border-color:rgba(16,185,129,.3);background:rgba(16,185,129,.05)">
         <div style="text-align:center;padding:10px 0">
@@ -714,28 +666,16 @@ function tryEndProject(pid){
           <div style="font-size:12px;color:var(--text2)">پروژه «${esc(p.name)}» بدون بدهی آماده بسته شدن است.</div>
         </div>
       </div>
-      <div class="form-group"><label class="form-label">تاریخ پایان پروژه</label>${dateInputHTML('endDatePick', todayISO())}</div>
-      <div class="summary-box">
-        <div class="summary-line"><span>📅 شروع:</span><b>${faDate(p.startDate)}</b></div>
-        <div class="summary-line"><span>💰 هزینه کل:</span><b style="color:#f59e0b">${money(projectTotalCost(pid,db))}</b></div>
-      </div>
-      <div class="actions" style="margin-top:14px">
-        <button class="btn btn-success" onclick="confirmEndProject('${pid}')">✅ تأیید پایان</button>
-        <button class="btn btn-secondary" onclick="closeModal()">انصراف</button>
-      </div>
+      <div class="form-group"><label class="form-label">تاریخ پایان پروژه</label>${dateInputHTML('endDatePick',todayISO())}</div>
+      <div class="summary-box"><div class="summary-line"><span>📅 شروع:</span><b>${faDate(p.startDate)}</b></div><div class="summary-line"><span>💰 هزینه کل:</span><b style="color:#f59e0b">${money(projectTotalCost(pid,db))}</b></div></div>
+      <div class="actions" style="margin-top:14px"><button class="btn btn-success" onclick="confirmEndProject('${pid}')">✅ تأیید پایان</button><button class="btn btn-secondary" onclick="closeModal()">انصراف</button></div>
       <div class="brand-modal"><div class="brand-name">✦ DAVIN NOVA ✦</div><div class="brand-sub">DESIGNED & ENGINEERED BY DAVIN</div><div class="brand-phone">۰۹۱۲۱۷۵۹۹۴۲</div></div>
     `;
     showModal();
   } else {
-    var totalDebt = debts.reduce((s,d)=>s+d.amount,0);
-    var debtsHtml = debts.map(d=>`
-      <div class="debt-item ${d.type==='unsettled'?'unsettled':''}">
-        <div class="debt-title">${d.title}</div>
-        <div class="debt-info">${d.info}</div>
-        <div class="debt-amount">💰 ${money(d.amount)}</div>
-      </div>
-    `).join('');
-    document.getElementById('modalBody').innerHTML = `
+    var totalDebt=debts.reduce((s,d)=>s+d.amount,0);
+    var debtsHtml=debts.map(d=>`<div class="debt-item ${d.type==='unsettled'?'unsettled':''}"><div class="debt-title">${d.title}</div><div class="debt-info">${d.info}</div><div class="debt-amount">💰 ${money(d.amount)}</div></div>`).join('');
+    document.getElementById('modalBody').innerHTML=`
       <div class="modal-title">⚠️ بدهی‌های پروژه</div>
       <div class="card" style="border-color:rgba(239,68,68,.3);background:rgba(239,68,68,.05)">
         <div style="text-align:center;padding:10px 0">
@@ -754,29 +694,15 @@ function tryEndProject(pid){
   }
 }
 function confirmEndProject(pid){
-  var db = loadDB();
-  var p = db.projects.find(x=>x.id===pid);
-  if(!p) return;
-  p.endDate = getJDate('endDatePick');
-  p.status = 'done';
-  saveDB(db);
-  closeModal();
-  toast('✅ پروژه با موفقیت بسته شد','success');
-  renderPage(state.page);
+  var db=loadDB();var p=db.projects.find(x=>x.id===pid);if(!p)return;
+  p.endDate=getJDate('endDatePick');p.status='done';saveDB(db);closeModal();toast('✅ پروژه با موفقیت بسته شد','success');renderPage(state.page);
 }
 function reopenProject(pid){
   if(!confirm('پروژه به حالت اجرا برگردد؟'))return;
-  var db = loadDB();
-  var p = db.projects.find(x=>x.id===pid);
-  if(!p) return;
-  p.status = 'active';
-  p.endDate = '';
-  saveDB(db);
-  toast('پروژه بازگشایی شد','success');
-  renderPage(state.page);
+  var db=loadDB();var p=db.projects.find(x=>x.id===pid);if(!p)return;
+  p.status='active';p.endDate='';saveDB(db);toast('پروژه بازگشایی شد','success');renderPage(state.page);
 }
 
-/* ===== RENDER: EXPENSES ===== */
 function renderExpenses(){
   var db=loadDB();
   var list=db.expenses.slice().sort((a,b)=>new Date(b.date)-new Date(a.date));
@@ -805,28 +731,14 @@ function renderExpenses(){
     if((e.cash||[]).length)info.push(num((e.cash||[]).length)+' نقد');
     if((e.cheques||[]).length)info.push(num((e.cheques||[]).length)+' چک');
     var extra='';
-    if(filter==='overdue'){
-      var cnt=(e.cheques||[]).filter(c=>c.status==='pending' && c.dueDate < todayISO()).length;
-      extra=`<div style="margin-top:4px;font-size:10px;color:#f87171;font-weight:700">⏰ ${num(cnt)} چک سررسید</div>`;
-    } else if(filter==='bounced'){
-      var cnt2=(e.cheques||[]).filter(c=>c.status==='bounced').length;
-      extra=`<div style="margin-top:4px;font-size:10px;color:#f87171;font-weight:700">↩️ ${num(cnt2)} چک برگشتی</div>`;
-    } else if(filter==='settled'){
-      extra=`<div style="margin-top:4px;font-size:10px;color:#34d399;font-weight:700">✅ تسویه شده</div>`;
-    } else if(filter==='unsettled'){
-      extra=`<div style="margin-top:4px;font-size:10px;color:#eab308;font-weight:700">⚠️ بلاتکلیف: ${money(expenseUnsettledAmount(e))}</div>`;
-    }
-    return `<div class="list-item" onclick="openExpenseForm('${e.id}')">
-      <div class="list-icon orange">💸</div>
-      <div class="list-body"><div class="list-title">${esc(e.title)}</div>
-      <div class="list-sub">${esc(e.category)} · ${proj?esc(proj.name):'—'} · ${faDate(e.date)}${info.length?' · '+info.join(' + '):''}</div>
-      ${extra}</div>
-      <div class="list-value expense">${money(e.totalAmount)}</div>
-    </div>`;
+    if(filter==='overdue'){var cnt=(e.cheques||[]).filter(c=>c.status==='pending' && c.dueDate < todayISO()).length;extra=`<div style="margin-top:4px;font-size:10px;color:#f87171;font-weight:700">⏰ ${num(cnt)} چک سررسید</div>`;}
+    else if(filter==='bounced'){var cnt2=(e.cheques||[]).filter(c=>c.status==='bounced').length;extra=`<div style="margin-top:4px;font-size:10px;color:#f87171;font-weight:700">↩️ ${num(cnt2)} چک برگشتی</div>`;}
+    else if(filter==='settled'){extra=`<div style="margin-top:4px;font-size:10px;color:#34d399;font-weight:700">✅ تسویه شده</div>`;}
+    else if(filter==='unsettled'){extra=`<div style="margin-top:4px;font-size:10px;color:#eab308;font-weight:700">⚠️ بلاتکلیف: ${money(expenseUnsettledAmount(e))}</div>`;}
+    return `<div class="list-item" onclick="openExpenseForm('${e.id}')"><div class="list-icon orange">💸</div><div class="list-body"><div class="list-title">${esc(e.title)}</div><div class="list-sub">${esc(e.category)} · ${proj?esc(proj.name):'—'} · ${faDate(e.date)}${info.length?' · '+info.join(' + '):''}</div>${extra}</div><div class="list-value expense">${money(e.totalAmount)}</div></div>`;
   }).join('');
 }
 
-/* ===== RENDER: MATERIALS ===== */
 function renderMaterials(){
   var db=loadDB();
   document.getElementById('matCount').textContent=num(db.materials.length);
@@ -836,43 +748,21 @@ function renderMaterials(){
   if(!db.materials.length){el.innerHTML='<div class="empty"><div class="empty-icon">📦</div><div class="empty-text">انبار خالی</div></div>';return}
   el.innerHTML=db.materials.map(m=>{
     var proj=db.projects.find(p=>p.id===m.projectId);
-    var fromExp = m.expenseId ? true : false;
-    return `<div class="list-item ${fromExp?'mat-from-expense':''}" onclick="${fromExp?`openExpenseForm('${m.expenseId}')`:`openMaterialForm('${m.id}')`}">
-      <div class="list-icon ${fromExp?'blue':'green'}">${fromExp?'🔗':'📦'}</div>
-      <div class="list-body"><div class="list-title">${esc(m.name)} ${fromExp?'<span class="mat-badge">از هزینه</span>':''}</div>
-      <div class="list-sub">${num(m.quantity)} ${esc(m.unit||'')} · ${money(m.unitPrice)} · ${proj?esc(proj.name):'—'}</div></div>
-      <div class="list-value">${money((Number(m.quantity)||0)*(Number(m.unitPrice)||0))}</div>
-    </div>`;
+    var fromExp=m.expenseId?true:false;
+    return `<div class="list-item ${fromExp?'mat-from-expense':''}" onclick="${fromExp?`openExpenseForm('${m.expenseId}')`:`openMaterialForm('${m.id}')`}"><div class="list-icon ${fromExp?'blue':'green'}">${fromExp?'🔗':'📦'}</div><div class="list-body"><div class="list-title">${esc(m.name)} ${fromExp?'<span class="mat-badge">از هزینه</span>':''}</div><div class="list-sub">${num(m.quantity)} ${esc(m.unit||'')} · ${money(m.unitPrice)} · ${proj?esc(proj.name):'—'}</div></div><div class="list-value">${money((Number(m.quantity)||0)*(Number(m.unitPrice)||0))}</div></div>`;
   }).join('');
 }
 
-/* ===== RENDER: CONTRACTORS ===== */
 function renderContractors(){
-  var db=loadDB();
-  var el=document.getElementById('contractorsList');
+  var db=loadDB();var el=document.getElementById('contractorsList');
   if(!db.contractors.length){el.innerHTML='<div class="empty" style="padding:24px"><div class="empty-icon">👷</div><div class="empty-text">پیمانکاری نیست</div></div>';return}
   el.innerHTML=db.contractors.map(c=>{
     var proj=db.projects.find(p=>p.id===c.projectId);
     var wage=contractorWage(c,db);var paid=contractorPaidTotal(c);var rem=Math.max(0,wage-paid);
-    return `<div class="contractor-card">
-      <div class="contractor-head"><div class="contractor-name">${esc(c.name)}</div><div class="contractor-share">${num(c.share)}٪</div></div>
-      <div class="contractor-info">📞 ${esc(c.phone||'—')}</div>
-      <div class="contractor-info">🏗️ ${proj?esc(proj.name):'—'}</div>
-      <div class="contractor-pay">
-        <div class="contractor-pay-line"><span>دستمزد متعلقه:</span><b style="color:#f59e0b">${money(wage)}</b></div>
-        <div class="contractor-pay-line"><span>پرداخت شده:</span><b style="color:#34d399">${money(paid)}</b></div>
-        <div class="contractor-pay-line"><span>باقیمانده:</span><b style="color:#f87171">${money(rem)}</b></div>
-      </div>
-      <div class="actions">
-        <button class="btn btn-sm btn-primary" onclick="openContractorForm('${c.id}')">✏️</button>
-        <button class="btn btn-sm btn-secondary" onclick="openContractorPay('${c.id}')">💰 پرداخت</button>
-        <button class="btn btn-sm btn-danger" onclick="deleteContractor('${c.id}')">🗑️</button>
-      </div>
-    </div>`;
+    return `<div class="contractor-card"><div class="contractor-head"><div class="contractor-name">${esc(c.name)}</div><div class="contractor-share">${num(c.share)}٪</div></div><div class="contractor-info">📞 ${esc(c.phone||'—')}</div><div class="contractor-info">🏗️ ${proj?esc(proj.name):'—'}</div><div class="contractor-pay"><div class="contractor-pay-line"><span>دستمزد متعلقه:</span><b style="color:#f59e0b">${money(wage)}</b></div><div class="contractor-pay-line"><span>پرداخت شده:</span><b style="color:#34d399">${money(paid)}</b></div><div class="contractor-pay-line"><span>باقیمانده:</span><b style="color:#f87171">${money(rem)}</b></div></div><div class="actions"><button class="btn btn-sm btn-primary" onclick="openContractorForm('${c.id}')">✏️</button><button class="btn btn-sm btn-secondary" onclick="openContractorPay('${c.id}')">💰 پرداخت</button><button class="btn btn-sm btn-danger" onclick="deleteContractor('${c.id}')">🗑️</button></div></div>`;
   }).join('');
 }
 
-/* ===== PROJECT FORM ===== */
 function openProjectForm(id){
   var db=loadDB();
   var p=id?db.projects.find(x=>x.id===id):{name:'',address:'',startDate:todayISO(),status:'active',description:''};
@@ -881,17 +771,10 @@ function openProjectForm(id){
     <div class="modal-title">${id?'ویرایش پروژه':'پروژه جدید'}</div>
     <div class="form-group"><label class="form-label">نام پروژه *</label><input class="form-input" id="pName" value="${esc(p.name||'')}" placeholder="ساختمان بهار"></div>
     <div class="form-group"><label class="form-label">آدرس</label><input class="form-input" id="pAddress" value="${esc(p.address||'')}"></div>
-    <div class="form-group"><label class="form-label">وضعیت</label><select class="form-select" id="pStatus">
-      <option value="active" ${p.status==='active'?'selected':''}>در حال اجرا</option>
-      <option value="pending" ${p.status==='pending'?'selected':''}>در انتظار</option>
-      <option value="paused" ${p.status==='paused'?'selected':''}>متوقف</option>
-    </select></div>
+    <div class="form-group"><label class="form-label">وضعیت</label><select class="form-select" id="pStatus"><option value="active" ${p.status==='active'?'selected':''}>در حال اجرا</option><option value="pending" ${p.status==='pending'?'selected':''}>در انتظار</option><option value="paused" ${p.status==='paused'?'selected':''}>متوقف</option></select></div>
     <div class="form-group"><label class="form-label">تاریخ شروع</label>${dateInputHTML('pStart',p.startDate)}</div>
     <div class="form-group"><label class="form-label">توضیحات</label><textarea class="form-textarea" id="pDesc">${esc(p.description||'')}</textarea></div>
-    <div class="actions">
-      <button class="btn btn-primary" onclick="saveProject(${id?`'${id}'`:'null'})">${id?'ذخیره':'ایجاد'}</button>
-      <button class="btn btn-secondary" onclick="closeModal()">انصراف</button>
-    </div>
+    <div class="actions"><button class="btn btn-primary" onclick="saveProject(${id?`'${id}'`:'null'})">${id?'ذخیره':'ایجاد'}</button><button class="btn btn-secondary" onclick="closeModal()">انصراف</button></div>
     <div class="brand-modal"><div class="brand-name">✦ DAVIN NOVA ✦</div><div class="brand-sub">DESIGNED & ENGINEERED BY DAVIN</div><div class="brand-phone">۰۹۱۲۱۷۵۹۹۴۲</div></div>
   `;
   showModal();
@@ -906,9 +789,7 @@ function saveProject(id){
   saveDB(db);closeModal();renderPage(state.page);
 }
 function openProjectDetail(id){
-  var db=loadDB();
-  var p=db.projects.find(x=>x.id===id);
-  if(!p)return;
+  var db=loadDB();var p=db.projects.find(x=>x.id===id);if(!p)return;
   var total=projectTotalCost(id,db);var cash=projectCashPaid(id,db);var chqPend=projectChequePending(id,db);var uns=projectUnsettled(id,db);
   var conWage=db.contractors.filter(c=>c.projectId===id).reduce((s,c)=>s+contractorWage(c,db),0);
   var finalTotal=total+conWage;
@@ -919,19 +800,10 @@ function openProjectDetail(id){
       <div class="stat-card"><div class="stat-label">💰 مجموع کل</div><div class="stat-value">${money(total)}</div></div>
       <div class="stat-card green"><div class="stat-label">💵 نقد پرداخت</div><div class="stat-value">${money(cash)}</div></div>
       <div class="stat-card"><div class="stat-label">🧾 چک در جریان</div><div class="stat-value">${money(chqPend)}</div></div>
-      <div class="stat-card" style="--x:0"><div class="stat-label">⚠️ بلاتکلیف</div><div class="stat-value" style="color:#eab308">${money(uns)}</div></div>
+      <div class="stat-card"><div class="stat-label">⚠️ بلاتکلیف</div><div class="stat-value" style="color:#eab308">${money(uns)}</div></div>
     </div>
-    <div class="card">
-      <div style="font-size:12px;color:var(--text2)">وضعیت: ${labels[p.status]||'—'}</div>
-      <div style="font-size:12px;color:var(--text2);margin-top:4px">📍 ${esc(p.address||'—')}</div>
-      <div style="font-size:12px;color:var(--text2);margin-top:4px">📅 شروع: ${faDate(p.startDate)} ${p.endDate?'· پایان: '+faDate(p.endDate):''}</div>
-      <div style="font-size:12px;color:var(--text2);margin-top:4px">👷 پیمانکاران: ${money(conWage)}</div>
-      <div style="font-size:13px;font-weight:700;color:var(--primary);margin-top:8px;padding-top:8px;border-top:1px solid var(--border)">💵 هزینه تمام‌شده کل: ${money(finalTotal)}</div>
-    </div>
-    <div class="actions">
-      <button class="btn btn-primary" onclick="closeModal();openProjectForm('${id}')">✏️ ویرایش</button>
-      <button class="btn btn-danger" onclick="deleteProject('${id}')">🗑️ حذف</button>
-    </div>
+    <div class="card"><div style="font-size:12px;color:var(--text2)">وضعیت: ${labels[p.status]||'—'}</div><div style="font-size:12px;color:var(--text2);margin-top:4px">📍 ${esc(p.address||'—')}</div><div style="font-size:12px;color:var(--text2);margin-top:4px">📅 شروع: ${faDate(p.startDate)} ${p.endDate?'· پایان: '+faDate(p.endDate):''}</div><div style="font-size:12px;color:var(--text2);margin-top:4px">👷 پیمانکاران: ${money(conWage)}</div><div style="font-size:13px;font-weight:700;color:var(--primary);margin-top:8px;padding-top:8px;border-top:1px solid var(--border)">💵 هزینه تمام‌شده کل: ${money(finalTotal)}</div></div>
+    <div class="actions"><button class="btn btn-primary" onclick="closeModal();openProjectForm('${id}')">✏️ ویرایش</button><button class="btn btn-danger" onclick="deleteProject('${id}')">🗑️ حذف</button></div>
     <button class="btn btn-secondary btn-block" style="margin-top:10px" onclick="closeModal()">بستن</button>
     <div class="brand-modal"><div class="brand-name">✦ DAVIN NOVA ✦</div><div class="brand-sub">DESIGNED & ENGINEERED BY DAVIN</div><div class="brand-phone">۰۹۱۲۱۷۵۹۹۴۲</div></div>
   `;
@@ -940,109 +812,57 @@ function openProjectDetail(id){
 function deleteProject(id){
   if(!confirm('پروژه و داده‌های مرتبط حذف شود؟'))return;
   var db=loadDB();
-  db.projects=db.projects.filter(x=>x.id!==id);
-  db.expenses=db.expenses.filter(x=>x.projectId!==id);
-  db.materials=db.materials.filter(x=>x.projectId!==id);
-  db.contractors=db.contractors.filter(x=>x.projectId!==id);
+  db.projects=db.projects.filter(x=>x.id!==id);db.expenses=db.expenses.filter(x=>x.projectId!==id);db.materials=db.materials.filter(x=>x.projectId!==id);db.contractors=db.contractors.filter(x=>x.projectId!==id);
   saveDB(db);closeModal();toast('حذف شد','success');renderPage(state.page);
 }
 
-/* ===== EXPENSE FORM ===== */
 var expenseCash=[],expenseCheques=[];
 function openExpenseForm(id){
-  var db=loadDB();
-  var e=id?db.expenses.find(x=>x.id===id):null;
-  expenseCash=e?(e.cash||[]).map(x=>({...x})):[];
-  expenseCheques=e?(e.cheques||[]).map(x=>({...x})):[];
+  var db=loadDB();var e=id?db.expenses.find(x=>x.id===id):null;
+  expenseCash=e?(e.cash||[]).map(x=>({...x})):[];expenseCheques=e?(e.cheques||[]).map(x=>({...x})):[];
   var d=e||{title:'',category:'مصالح',date:todayISO(),projectId:'',note:'',totalAmount:'',warehouseItem:null};
   var projOpts=db.projects.map(p=>`<option value="${p.id}" ${p.id===d.projectId?'selected':''}>${esc(p.name)}</option>`).join('');
-  var wh = d.warehouseItem || {quantity:'',unit:'کیسه'};
+  var wh=d.warehouseItem||{quantity:'',unit:'کیسه'};
   document.getElementById('modalBody').innerHTML=`
     <div class="modal-title">${id?'ویرایش هزینه':'هزینه جدید'}</div>
     <div class="form-group"><label class="form-label">عنوان *</label><input class="form-input" id="eTitle" value="${esc(d.title||'')}" placeholder="خرید سیمان"></div>
     <div class="form-row">
       <div class="form-group"><label class="form-label">مبلغ کل (تومان) *</label>${moneyInputHTML('eTotal',d.totalAmount,'۰')}</div>
-      <div class="form-group"><label class="form-label">دسته</label><select class="form-select" id="eCategory" onchange="onCategoryChange()">
-        ${['مصالح','دستمزد','تجهیزات','مجوز','حمل و نقل','انبار','سایر'].map(c=>`<option value="${c}" ${c===d.category?'selected':''}>${c==='انبار'?'📦 انبار':c}</option>`).join('')}
-      </select></div>
+      <div class="form-group"><label class="form-label">دسته</label><select class="form-select" id="eCategory" onchange="onCategoryChange()">${['مصالح','دستمزد','تجهیزات','مجوز','حمل و نقل','انبار','سایر'].map(c=>`<option value="${c}" ${c===d.category?'selected':''}>${c==='انبار'?'📦 انبار':c}</option>`).join('')}</select></div>
     </div>
     <div id="warehouseFields" style="display:${d.category==='انبار'?'block':'none'};background:rgba(59,130,246,.06);border:1px solid rgba(59,130,246,.2);border-radius:10px;padding:10px;margin-bottom:12px">
       <div style="font-size:11px;color:#60a5fa;font-weight:700;margin-bottom:8px">📦 این هزینه به انبار اضافه می‌شود</div>
-      <div class="form-row">
-        <div class="form-group" style="margin:0"><label class="form-label">مقدار</label><input class="form-input" id="whQty" type="number" inputmode="numeric" value="${wh.quantity||''}" placeholder="۱۰"></div>
-        <div class="form-group" style="margin:0"><label class="form-label">واحد</label><input class="form-input" id="whUnit" value="${esc(wh.unit||'کیسه')}"></div>
-      </div>
+      <div class="form-row"><div class="form-group" style="margin:0"><label class="form-label">مقدار</label><input class="form-input" id="whQty" type="number" inputmode="numeric" value="${wh.quantity||''}" placeholder="۱۰"></div><div class="form-group" style="margin:0"><label class="form-label">واحد</label><input class="form-input" id="whUnit" value="${esc(wh.unit||'کیسه')}"></div></div>
     </div>
     <div class="form-group"><label class="form-label">پروژه</label><select class="form-select" id="eProject"><option value="">— بدون پروژه —</option>${projOpts}</select></div>
     <div class="form-group"><label class="form-label">تاریخ هزینه</label>${dateInputHTML('eDate',d.date)}</div>
-    <div class="payment-block">
-      <div class="payment-header"><span class="payment-title">💵 پرداخت نقدی (تا ۵)</span><button type="button" class="payment-add" id="cashBtn" onclick="addCashRow()">+ افزودن</button></div>
-      <div id="cashList"></div>
-    </div>
-    <div class="payment-block">
-      <div class="payment-header"><span class="payment-title">🧾 چک (تا ۵)</span><button type="button" class="payment-add" id="chqBtn" onclick="addChequeRow()">+ افزودن</button></div>
-      <div id="chqList"></div>
-    </div>
+    <div class="payment-block"><div class="payment-header"><span class="payment-title">💵 پرداخت نقدی (تا ۵)</span><button type="button" class="payment-add" id="cashBtn" onclick="addCashRow()">+ افزودن</button></div><div id="cashList"></div></div>
+    <div class="payment-block"><div class="payment-header"><span class="payment-title">🧾 چک (تا ۵)</span><button type="button" class="payment-add" id="chqBtn" onclick="addChequeRow()">+ افزودن</button></div><div id="chqList"></div></div>
     <div class="summary-box" id="expSummary"></div>
     <div class="form-group" style="margin-top:12px"><label class="form-label">یادداشت</label><textarea class="form-textarea" id="eNote">${esc(d.note||'')}</textarea></div>
-    <div class="actions">
-      <button class="btn btn-primary" onclick="saveExpense(${id?`'${id}'`:'null'})">${id?'ذخیره':'ثبت'}</button>
-      <button class="btn btn-secondary" onclick="closeModal()">انصراف</button>
-    </div>
+    <div class="actions"><button class="btn btn-primary" onclick="saveExpense(${id?`'${id}'`:'null'})">${id?'ذخیره':'ثبت'}</button><button class="btn btn-secondary" onclick="closeModal()">انصراف</button></div>
     ${id?`<button class="btn btn-danger btn-block" style="margin-top:10px" onclick="deleteExpense('${id}')">🗑️ حذف</button>`:''}
     <div class="brand-modal"><div class="brand-name">✦ DAVIN NOVA ✦</div><div class="brand-sub">DESIGNED & ENGINEERED BY DAVIN</div><div class="brand-phone">۰۹۱۲۱۷۵۹۹۴۲</div></div>
   `;
-  showModal();
-  renderCashRows();renderChequeRows();updateExpenseSummary();
+  showModal();renderCashRows();renderChequeRows();updateExpenseSummary();
 }
-function onCategoryChange(){
-  var cat=document.getElementById('eCategory').value;
-  document.getElementById('warehouseFields').style.display = cat==='انبار'?'block':'none';
-}
-function addCashRow(){
-  if(expenseCash.length>=5){toast('حداکثر ۵','error');return}
-  expenseCash.push({amount:'',date:todayISO(),note:''});
-  renderCashRows();updateExpenseSummary();
-}
+function onCategoryChange(){var cat=document.getElementById('eCategory').value;document.getElementById('warehouseFields').style.display=cat==='انبار'?'block':'none'}
+function addCashRow(){if(expenseCash.length>=5){toast('حداکثر ۵','error');return}expenseCash.push({amount:'',date:todayISO(),note:''});renderCashRows();updateExpenseSummary()}
 function removeCashRow(i){expenseCash.splice(i,1);renderCashRows();updateExpenseSummary()}
 function updateCashRow(i,f,v){expenseCash[i][f]=v;updateExpenseSummary()}
 function renderCashRows(){
   var el=document.getElementById('cashList');
   if(!expenseCash.length)el.innerHTML='<div style="font-size:11px;color:var(--text3);text-align:center;padding:8px">موردی اضافه نشده</div>';
-  else el.innerHTML=expenseCash.map((c,i)=>`
-    <div class="payment-row">
-      <div class="payment-row-header"><span>نقد ${num(i+1)}</span><button class="payment-del" onclick="removeCashRow(${i})">✕</button></div>
-      ${moneyInputHTML('cashAmt_'+i,c.amount,'مبلغ')}
-      <div style="margin-top:6px">${dateInputHTML('cashDate_'+i,c.date)}</div>
-      <input class="form-input" style="margin-top:6px" placeholder="یادداشت" value="${esc(c.note||'')}" oninput="updateCashRow(${i},'note',this.value)">
-    </div>`).join('');
+  else el.innerHTML=expenseCash.map((c,i)=>`<div class="payment-row"><div class="payment-row-header"><span>نقد ${num(i+1)}</span><button class="payment-del" onclick="removeCashRow(${i})">✕</button></div>${moneyInputHTML('cashAmt_'+i,c.amount,'مبلغ')}<div style="margin-top:6px">${dateInputHTML('cashDate_'+i,c.date)}</div><input class="form-input" style="margin-top:6px" placeholder="یادداشت" value="${esc(c.note||'')}" oninput="updateCashRow(${i},'note',this.value)"></div>`).join('');
   document.getElementById('cashBtn').disabled=expenseCash.length>=5;
 }
-function addChequeRow(){
-  if(expenseCheques.length>=5){toast('حداکثر ۵','error');return}
-  expenseCheques.push({bank:'',number:'',amount:'',dueDate:todayISO(),status:'pending',note:''});
-  renderChequeRows();updateExpenseSummary();
-}
+function addChequeRow(){if(expenseCheques.length>=5){toast('حداکثر ۵','error');return}expenseCheques.push({bank:'',number:'',amount:'',dueDate:todayISO(),status:'pending',note:''});renderChequeRows();updateExpenseSummary()}
 function removeChequeRow(i){expenseCheques.splice(i,1);renderChequeRows();updateExpenseSummary()}
 function updateChequeRow(i,f,v){expenseCheques[i][f]=v;updateExpenseSummary()}
 function renderChequeRows(){
   var el=document.getElementById('chqList');
   if(!expenseCheques.length)el.innerHTML='<div style="font-size:11px;color:var(--text3);text-align:center;padding:8px">موردی اضافه نشده</div>';
-  else el.innerHTML=expenseCheques.map((c,i)=>`
-    <div class="payment-row">
-      <div class="payment-row-header"><span>چک ${num(i+1)}</span><button class="payment-del" onclick="removeChequeRow(${i})">✕</button></div>
-      <div class="form-row" style="margin-bottom:6px">
-        <input class="form-input" placeholder="بانک" value="${esc(c.bank||'')}" oninput="updateChequeRow(${i},'bank',this.value)">
-        <input class="form-input" placeholder="شماره چک" value="${esc(c.number||'')}" oninput="updateChequeRow(${i},'number',this.value)">
-      </div>
-      <div style="margin-bottom:6px">${moneyInputHTML('chqAmt_'+i,c.amount,'مبلغ')}</div>
-      <select class="form-select" style="font-size:12px;padding:8px 12px;margin-bottom:6px" onchange="updateChequeRow(${i},'status',this.value)">
-        <option value="pending" ${c.status==='pending'?'selected':''}>⏳ در انتظار</option>
-        <option value="cashed" ${c.status==='cashed'?'selected':''}>✅ پاس شده</option>
-        <option value="bounced" ${c.status==='bounced'?'selected':''}>↩ برگشتی</option>
-      </select>
-      <div><label class="form-label" style="font-size:10px">سررسید</label>${dateInputHTML('chqDue_'+i,c.dueDate)}</div>
-    </div>`).join('');
+  else el.innerHTML=expenseCheques.map((c,i)=>`<div class="payment-row"><div class="payment-row-header"><span>چک ${num(i+1)}</span><button class="payment-del" onclick="removeChequeRow(${i})">✕</button></div><div class="form-row" style="margin-bottom:6px"><input class="form-input" placeholder="بانک" value="${esc(c.bank||'')}" oninput="updateChequeRow(${i},'bank',this.value)"><input class="form-input" placeholder="شماره چک" value="${esc(c.number||'')}" oninput="updateChequeRow(${i},'number',this.value)"></div><div style="margin-bottom:6px">${moneyInputHTML('chqAmt_'+i,c.amount,'مبلغ')}</div><select class="form-select" style="font-size:12px;padding:8px 12px;margin-bottom:6px" onchange="updateChequeRow(${i},'status',this.value)"><option value="pending" ${c.status==='pending'?'selected':''}>⏳ در انتظار</option><option value="cashed" ${c.status==='cashed'?'selected':''}>✅ پاس شده</option><option value="bounced" ${c.status==='bounced'?'selected':''}>↩ برگشتی</option></select><div><label class="form-label" style="font-size:10px">سررسید</label>${dateInputHTML('chqDue_'+i,c.dueDate)}</div></div>`).join('');
   document.getElementById('chqBtn').disabled=expenseCheques.length>=5;
 }
 function updateExpenseSummary(){
@@ -1051,101 +871,50 @@ function updateExpenseSummary(){
   var chqSum=0;for(var j=0;j<expenseCheques.length;j++)chqSum+=getMoney('chqAmt_'+j);
   var paid=cashSum+chqSum;var diff=total-paid;
   var el=document.getElementById('expSummary');if(!el)return;
-  el.innerHTML=`
-    <div class="summary-line"><span>💰 مبلغ کل:</span><b>${money(total)}</b></div>
-    <div class="summary-line"><span>💵 نقد:</span><b style="color:#34d399">${money(cashSum)}</b></div>
-    <div class="summary-line"><span>🧾 چک:</span><b style="color:#f59e0b">${money(chqSum)}</b></div>
-    <div class="summary-line" style="border-top:1px solid var(--border);padding-top:6px;margin-top:6px"><span>📊 جمع پرداخت‌ها:</span><b>${money(paid)}</b></div>
-    ${Math.abs(diff)>1?`<div class="summary-line"><span>⚠️ ${diff>0?'بلاتکلیف':'مازاد'}:</span><b class="${diff>0?'warn':'bad'}" style="${diff>0?'color:#eab308':''}">${money(Math.abs(diff))}</b></div>`:`<div class="summary-line"><span style="color:#34d399">✅ تراز</span><b style="color:#34d399">کامل</b></div>`}
-  `;
+  el.innerHTML=`<div class="summary-line"><span>💰 مبلغ کل:</span><b>${money(total)}</b></div><div class="summary-line"><span>💵 نقد:</span><b style="color:#34d399">${money(cashSum)}</b></div><div class="summary-line"><span>🧾 چک:</span><b style="color:#f59e0b">${money(chqSum)}</b></div><div class="summary-line" style="border-top:1px solid var(--border);padding-top:6px;margin-top:6px"><span>📊 جمع پرداخت‌ها:</span><b>${money(paid)}</b></div>${Math.abs(diff)>1?`<div class="summary-line"><span>⚠️ ${diff>0?'بلاتکلیف':'مازاد'}:</span><b style="${diff>0?'color:#eab308':'color:#f87171'}">${money(Math.abs(diff))}</b></div>`:`<div class="summary-line"><span style="color:#34d399">✅ تراز</span><b style="color:#34d399">کامل</b></div>`}`;
 }
 function saveExpense(id){
   var title=document.getElementById('eTitle').value.trim();
   var total=getMoney('eTotal');
   if(!title||total<=0){toast('عنوان و مبلغ الزامی','error');return}
   var cashArr=[];
-  for(var i=0;i<expenseCash.length;i++){
-    var amt=getMoney('cashAmt_'+i);
-    if(amt>0)cashArr.push({amount:amt,date:getJDate('cashDate_'+i),note:expenseCash[i].note||''});
-  }
+  for(var i=0;i<expenseCash.length;i++){var amt=getMoney('cashAmt_'+i);if(amt>0)cashArr.push({amount:amt,date:getJDate('cashDate_'+i),note:expenseCash[i].note||''})}
   var chqArr=[];
-  for(var j=0;j<expenseCheques.length;j++){
-    var camt=getMoney('chqAmt_'+j);
-    if(camt>0)chqArr.push({bank:expenseCheques[j].bank||'',number:expenseCheques[j].number||'',amount:camt,dueDate:getJDate('chqDue_'+j),status:expenseCheques[j].status||'pending',note:expenseCheques[j].note||''});
-  }
-  var cat=document.getElementById('eCategory').value;
-  var whItem = null;
-  if(cat==='انبار'){
-    var whQ=Number(document.getElementById('whQty').value)||0;
-    var whU=document.getElementById('whUnit').value.trim()||'عدد';
-    if(whQ>0) whItem = {quantity:whQ, unit:whU};
-  }
+  for(var j=0;j<expenseCheques.length;j++){var camt=getMoney('chqAmt_'+j);if(camt>0)chqArr.push({bank:expenseCheques[j].bank||'',number:expenseCheques[j].number||'',amount:camt,dueDate:getJDate('chqDue_'+j),status:expenseCheques[j].status||'pending',note:expenseCheques[j].note||''})}
+  var cat=document.getElementById('eCategory').value;var whItem=null;
+  if(cat==='انبار'){var whQ=Number(document.getElementById('whQty').value)||0;var whU=document.getElementById('whUnit').value.trim()||'عدد';if(whQ>0)whItem={quantity:whQ,unit:whU}}
   var data={title,totalAmount:total,category:cat,projectId:document.getElementById('eProject').value,date:getJDate('eDate'),note:document.getElementById('eNote').value.trim(),cash:cashArr,cheques:chqArr,warehouseItem:whItem};
-  var db=loadDB();
-  var expenseId = id || uid();
+  var db=loadDB();var expenseId=id||uid();
   if(id){var idx=db.expenses.findIndex(x=>x.id===id);if(idx>=0)db.expenses[idx]={...db.expenses[idx],...data};toast('ویرایش شد','success')}
   else{db.expenses.push({id:expenseId,...data});toast('ثبت شد','success')}
-  
-  // Handle warehouse sync
-  if(whItem){
-    // Remove old warehouse item linked to this expense
-    db.materials = db.materials.filter(m => m.expenseId !== expenseId);
-    // Add new warehouse item
-    db.materials.push({
-      id: uid(),
-      name: title,
-      quantity: whItem.quantity,
-      unit: whItem.unit,
-      unitPrice: total / whItem.quantity,
-      projectId: document.getElementById('eProject').value,
-      supplier: '',
-      expenseId: expenseId,
-      createdAt: todayISO()
-    });
-  } else {
-    // Remove warehouse item if category is not "انبار"
-    db.materials = db.materials.filter(m => m.expenseId !== expenseId);
-  }
-  
+  if(whItem){db.materials=db.materials.filter(m=>m.expenseId!==expenseId);db.materials.push({id:uid(),name:title,quantity:whItem.quantity,unit:whItem.unit,unitPrice:total/whItem.quantity,projectId:document.getElementById('eProject').value,supplier:'',expenseId:expenseId,createdAt:todayISO()})}
+  else{db.materials=db.materials.filter(m=>m.expenseId!==expenseId)}
   saveDB(db);closeModal();renderPage(state.page);
 }
 function deleteExpense(id){
   if(!confirm('حذف شود؟ آیتم انبار مرتبط هم حذف می‌شود'))return;
-  var db=loadDB();
-  db.expenses=db.expenses.filter(x=>x.id!==id);
-  db.materials=db.materials.filter(m=>m.expenseId!==id);
-  saveDB(db);closeModal();toast('حذف شد','success');renderPage(state.page);
+  var db=loadDB();db.expenses=db.expenses.filter(x=>x.id!==id);db.materials=db.materials.filter(m=>m.expenseId!==id);saveDB(db);closeModal();toast('حذف شد','success');renderPage(state.page);
 }
 
-/* ===== MATERIAL FORM (manual) ===== */
 function openMaterialForm(id){
-  var db=loadDB();
-  var m=id?db.materials.find(x=>x.id===id):{name:'',unit:'کیسه',quantity:'',unitPrice:'',projectId:'',supplier:''};
-  if(!m)return;
-  if(m.expenseId){toast('این آیتم از هزینه آمده، از بخش مالی ویرایش کنید','error');return}
+  var db=loadDB();var m=id?db.materials.find(x=>x.id===id):{name:'',unit:'کیسه',quantity:'',unitPrice:'',projectId:'',supplier:''};
+  if(!m)return;if(m.expenseId){toast('این آیتم از هزینه آمده','error');return}
   var projOpts=db.projects.map(p=>`<option value="${p.id}" ${p.id===m.projectId?'selected':''}>${esc(p.name)}</option>`).join('');
   document.getElementById('modalBody').innerHTML=`
     <div class="modal-title">${id?'ویرایش مصالح':'مصالح جدید'}</div>
     <div class="form-group"><label class="form-label">نام *</label><input class="form-input" id="mName" value="${esc(m.name||'')}" placeholder="سیمان تیپ ۲"></div>
-    <div class="form-row">
-      <div class="form-group"><label class="form-label">مقدار *</label><input class="form-input" id="mQty" type="number" inputmode="numeric" value="${m.quantity||''}"></div>
-      <div class="form-group"><label class="form-label">واحد</label><input class="form-input" id="mUnit" value="${esc(m.unit||'کیسه')}"></div>
-    </div>
+    <div class="form-row"><div class="form-group"><label class="form-label">مقدار *</label><input class="form-input" id="mQty" type="number" inputmode="numeric" value="${m.quantity||''}"></div><div class="form-group"><label class="form-label">واحد</label><input class="form-input" id="mUnit" value="${esc(m.unit||'کیسه')}"></div></div>
     <div class="form-group"><label class="form-label">قیمت واحد (تومان)</label>${moneyInputHTML('mPrice',m.unitPrice,'۰')}</div>
     <div class="form-group"><label class="form-label">پروژه</label><select class="form-select" id="mProject"><option value="">— بدون —</option>${projOpts}</select></div>
     <div class="form-group"><label class="form-label">تامین‌کننده</label><input class="form-input" id="mSupplier" value="${esc(m.supplier||'')}"></div>
-    <div class="actions">
-      <button class="btn btn-primary" onclick="saveMaterial(${id?`'${id}'`:'null'})">${id?'ذخیره':'افزودن'}</button>
-      <button class="btn btn-secondary" onclick="closeModal()">انصراف</button>
-    </div>
+    <div class="actions"><button class="btn btn-primary" onclick="saveMaterial(${id?`'${id}'`:'null'})">${id?'ذخیره':'افزودن'}</button><button class="btn btn-secondary" onclick="closeModal()">انصراف</button></div>
     ${id?`<button class="btn btn-danger btn-block" style="margin-top:10px" onclick="deleteMaterial('${id}')">🗑️ حذف</button>`:''}
     <div class="brand-modal"><div class="brand-name">✦ DAVIN NOVA ✦</div><div class="brand-sub">DESIGNED & ENGINEERED BY DAVIN</div><div class="brand-phone">۰۹۱۲۱۷۵۹۹۴۲</div></div>
   `;
   showModal();
 }
 function saveMaterial(id){
-  var name=document.getElementById('mName').value.trim();
-  var qty=Number(document.getElementById('mQty').value)||0;
+  var name=document.getElementById('mName').value.trim();var qty=Number(document.getElementById('mQty').value)||0;
   if(!name||qty<=0){toast('نام و مقدار الزامی','error');return}
   var data={name,quantity:qty,unit:document.getElementById('mUnit').value.trim()||'عدد',unitPrice:getMoney('mPrice'),projectId:document.getElementById('mProject').value,supplier:document.getElementById('mSupplier').value.trim()};
   var db=loadDB();
@@ -1155,39 +924,27 @@ function saveMaterial(id){
 }
 function deleteMaterial(id){
   if(!confirm('حذف شود؟'))return;
-  var db=loadDB();
-  var m = db.materials.find(x=>x.id===id);
-  if(m && m.expenseId){toast('این آیتم از هزینه آمده، از مالی حذف کنید','error');return}
+  var db=loadDB();var m=db.materials.find(x=>x.id===id);if(m&&m.expenseId){toast('این آیتم از هزینه آمده','error');return}
   db.materials=db.materials.filter(x=>x.id!==id);saveDB(db);closeModal();toast('حذف شد','success');renderPage(state.page);
 }
 
-/* ===== CONTRACTOR FORM ===== */
 function openContractorForm(id){
-  var db=loadDB();
-  var c=id?db.contractors.find(x=>x.id===id):{name:'',share:'',phone:'',projectId:'',payments:[]};
+  var db=loadDB();var c=id?db.contractors.find(x=>x.id===id):{name:'',share:'',phone:'',projectId:'',payments:[]};
   if(!c)return;
   var projOpts=db.projects.map(p=>`<option value="${p.id}" ${p.id===c.projectId?'selected':''}>${esc(p.name)}</option>`).join('');
   document.getElementById('modalBody').innerHTML=`
     <div class="modal-title">${id?'ویرایش پیمانکار':'پیمانکار جدید'}</div>
     <div class="form-group"><label class="form-label">نام پیمانکار *</label><input class="form-input" id="ctName" value="${esc(c.name||'')}" placeholder="آقای رحیم‌پور"></div>
-    <div class="form-row">
-      <div class="form-group"><label class="form-label">درصد سهم (٪) *</label><input class="form-input" id="ctShare" type="number" min="0" max="100" inputmode="numeric" value="${c.share||''}" placeholder="۱۰"></div>
-      <div class="form-group"><label class="form-label">شماره همراه</label><input class="form-input" id="ctPhone" value="${esc(c.phone||'')}" placeholder="0912..."></div>
-    </div>
+    <div class="form-row"><div class="form-group"><label class="form-label">درصد سهم (٪) *</label><input class="form-input" id="ctShare" type="number" min="0" max="100" inputmode="numeric" value="${c.share||''}" placeholder="۱۰"></div><div class="form-group"><label class="form-label">شماره همراه</label><input class="form-input" id="ctPhone" value="${esc(c.phone||'')}" placeholder="0912..."></div></div>
     <div class="form-group"><label class="form-label">پروژه *</label><select class="form-select" id="ctProject"><option value="">— انتخاب —</option>${projOpts}</select></div>
     <div style="font-size:11px;color:var(--text2);background:rgba(245,158,11,.08);border:1px solid rgba(245,158,11,.2);border-radius:10px;padding:10px;margin-bottom:12px">ℹ️ درصد پیمانکار از <b>مجموع کل هزینه‌های پروژه</b> محاسبه می‌شود.</div>
-    <div class="actions">
-      <button class="btn btn-primary" onclick="saveContractor(${id?`'${id}'`:'null'})">${id?'ذخیره':'افزودن'}</button>
-      <button class="btn btn-secondary" onclick="closeModal()">انصراف</button>
-    </div>
+    <div class="actions"><button class="btn btn-primary" onclick="saveContractor(${id?`'${id}'`:'null'})">${id?'ذخیره':'افزودن'}</button><button class="btn btn-secondary" onclick="closeModal()">انصراف</button></div>
     <div class="brand-modal"><div class="brand-name">✦ DAVIN NOVA ✦</div><div class="brand-sub">DESIGNED & ENGINEERED BY DAVIN</div><div class="brand-phone">۰۹۱۲۱۷۵۹۹۴۲</div></div>
   `;
   showModal();
 }
 function saveContractor(id){
-  var name=document.getElementById('ctName').value.trim();
-  var share=Number(document.getElementById('ctShare').value)||0;
-  var projectId=document.getElementById('ctProject').value;
+  var name=document.getElementById('ctName').value.trim();var share=Number(document.getElementById('ctShare').value)||0;var projectId=document.getElementById('ctProject').value;
   if(!name){toast('نام الزامی','error');return}
   if(share<0||share>100){toast('درصد ۰ تا ۱۰۰','error');return}
   if(!projectId){toast('پروژه الزامی','error');return}
@@ -1195,46 +952,23 @@ function saveContractor(id){
   var db=loadDB();
   if(id){var i=db.contractors.findIndex(x=>x.id===id);if(i>=0)db.contractors[i]={...db.contractors[i],...data};toast('ویرایش شد','success')}
   else{db.contractors.push({id:uid(),...data,payments:[]});toast('اضافه شد','success')}
-  var sameProj=db.contractors.filter(c=>c.projectId===projectId);
-  var totalShare=sameProj.reduce((s,c)=>s+(Number(c.share)||0),0);
-  if(totalShare>100)setTimeout(()=>toast('⚠️ مجموع درصد پیمانکاران > ۱۰۰٪','error'),800);
+  var sameProj=db.contractors.filter(c=>c.projectId===projectId);var totalShare=sameProj.reduce((s,c)=>s+(Number(c.share)||0),0);
+  if(totalShare>100)setTimeout(()=>toast('⚠️ مجموع درصد > ۱۰۰٪','error'),800);
   saveDB(db);closeModal();renderPage(state.page);
 }
 
-/* ===== CONTRACTOR PAYMENTS ===== */
 function openContractorPay(id){
-  var db=loadDB();
-  var c=db.contractors.find(x=>x.id===id);
-  if(!c)return;
+  var db=loadDB();var c=db.contractors.find(x=>x.id===id);if(!c)return;
   var wage=contractorWage(c,db);var paid=contractorPaidTotal(c);var rem=Math.max(0,wage-paid);
   document.getElementById('modalBody').innerHTML=`
     <div class="modal-title">💰 پرداخت به ${esc(c.name)}</div>
-    <div class="summary-box" style="margin-bottom:12px">
-      <div class="summary-line"><span>دستمزد متعلقه:</span><b style="color:#f59e0b">${money(wage)}</b></div>
-      <div class="summary-line"><span>پرداخت شده:</span><b style="color:#34d399">${money(paid)}</b></div>
-      <div class="summary-line"><span>باقیمانده:</span><b style="color:#f87171">${money(rem)}</b></div>
-    </div>
-    <div class="payment-block">
-      <div class="payment-header"><span class="payment-title">➕ پرداخت جدید</span></div>
-      <div class="form-row">
-        <div class="form-group"><label class="form-label">نوع</label><select class="form-select" id="cpType"><option value="cash">💵 نقدی</option><option value="cheque">🧾 چک</option></select></div>
-        <div class="form-group"><label class="form-label">مبلغ</label>${moneyInputHTML('cpAmount','','۰')}</div>
-      </div>
-      <div class="form-group"><label class="form-label">تاریخ</label>${dateInputHTML('cpDate',todayISO())}</div>
-      <div id="cpChequeFields" style="display:none">
-        <div class="form-row">
-          <div class="form-group"><label class="form-label">بانک</label><input class="form-input" id="cpBank" placeholder="ملت"></div>
-          <div class="form-group"><label class="form-label">شماره چک</label><input class="form-input" id="cpNumber" placeholder="123456"></div>
-        </div>
-        <div class="form-group"><label class="form-label">سررسید</label>${dateInputHTML('cpDue',todayISO())}</div>
-      </div>
-      <button class="btn btn-primary btn-block" style="margin-top:10px" onclick="addContractorPayment('${id}')">➕ افزودن پرداخت</button>
-    </div>
-    <div class="payment-block"><div class="payment-header"><span class="payment-title">📋 تاریخچه پرداخت‌ها</span></div><div id="cpHistory"></div></div>
+    <div class="summary-box" style="margin-bottom:12px"><div class="summary-line"><span>دستمزد متعلقه:</span><b style="color:#f59e0b">${money(wage)}</b></div><div class="summary-line"><span>پرداخت شده:</span><b style="color:#34d399">${money(paid)}</b></div><div class="summary-line"><span>باقیمانده:</span><b style="color:#f87171">${money(rem)}</b></div></div>
+    <div class="payment-block"><div class="payment-header"><span class="payment-title">➕ پرداخت جدید</span></div><div class="form-row"><div class="form-group"><label class="form-label">نوع</label><select class="form-select" id="cpType"><option value="cash">💵 نقدی</option><option value="cheque">🧾 چک</option></select></div><div class="form-group"><label class="form-label">مبلغ</label>${moneyInputHTML('cpAmount','','۰')}</div></div><div class="form-group"><label class="form-label">تاریخ</label>${dateInputHTML('cpDate',todayISO())}</div><div id="cpChequeFields" style="display:none"><div class="form-row"><div class="form-group"><label class="form-label">بانک</label><input class="form-input" id="cpBank" placeholder="ملت"></div><div class="form-group"><label class="form-label">شماره چک</label><input class="form-input" id="cpNumber" placeholder="123456"></div></div><div class="form-group"><label class="form-label">سررسید</label>${dateInputHTML('cpDue',todayISO())}</div></div><button class="btn btn-primary btn-block" style="margin-top:10px" onclick="addContractorPayment('${id}')">➕ افزودن پرداخت</button></div>
+    <div class="payment-block"><div class="payment-header"><span class="payment-title">📋 تاریخچه</span></div><div id="cpHistory"></div></div>
     <button class="btn btn-secondary btn-block" style="margin-top:10px" onclick="closeModal()">بستن</button>
     <div class="brand-modal"><div class="brand-name">✦ DAVIN NOVA ✦</div><div class="brand-sub">DESIGNED & ENGINEERED BY DAVIN</div><div class="brand-phone">۰۹۱۲۱۷۵۹۹۴۲</div></div>
   `;
-  document.getElementById('cpType').addEventListener('change',function(){document.getElementById('cpChequeFields').style.display=this.value==='cheque'?'block':'none';});
+  document.getElementById('cpType').addEventListener('change',function(){document.getElementById('cpChequeFields').style.display=this.value==='cheque'?'block':'none'});
   renderContractorPayHistory(id);showModal();
 }
 function renderContractorPayHistory(cid){
@@ -1244,11 +978,10 @@ function renderContractorPayHistory(cid){
   el.innerHTML=payments.map((p,i)=>`<div class="payment-history-item"><div style="flex:1;min-width:0"><div class="ph-type ${p.type==='cheque'?'cheque':''}">${p.type==='cheque'?'🧾 چک':'💵 نقد'}</div><div class="ph-date">${faDate(p.date)}${p.type==='cheque'&&p.dueDate?' · سررسید '+faDate(p.dueDate):''}${p.bank?' · '+esc(p.bank):''}${p.status?' · '+({pending:'در انتظار',cashed:'پاس',bounced:'برگشتی'}[p.status]||''):''}</div></div><div class="ph-amount">${money(p.amount)}</div><button class="ph-del" onclick="removeContractorPayment(${i},'${cid}')">✕</button></div>`).join('');
 }
 function addContractorPayment(cid){
-  var type=document.getElementById('cpType').value;
-  var amount=getMoney('cpAmount');
+  var type=document.getElementById('cpType').value;var amount=getMoney('cpAmount');
   if(amount<=0){toast('مبلغ الزامی','error');return}
   var p={id:uid(),type,amount,date:getJDate('cpDate')};
-  if(type==='cheque'){p.bank=document.getElementById('cpBank').value.trim();p.number=document.getElementById('cpNumber').value.trim();p.dueDate=getJDate('cpDue');p.status='pending';}
+  if(type==='cheque'){p.bank=document.getElementById('cpBank').value.trim();p.number=document.getElementById('cpNumber').value.trim();p.dueDate=getJDate('cpDue');p.status='pending'}
   var db=loadDB();var c=db.contractors.find(x=>x.id===cid);
   if(c){if(!c.payments)c.payments=[];c.payments.push(p);saveDB(db)}
   toast('پرداخت اضافه شد','success');renderContractorPayHistory(cid);
@@ -1266,60 +999,29 @@ function deleteContractor(id){
   var db=loadDB();db.contractors=db.contractors.filter(x=>x.id!==id);saveDB(db);toast('حذف شد','success');renderPage(state.page);
 }
 
-/* ===== REPORT ===== */
 function showReport(){
   var db=loadDB();var html='<div class="modal-title">📊 گزارش کامل</div>';var t=allTotals(db);
-  html+=`<div class="card">
-    <div style="font-weight:700;font-size:13px;margin-bottom:8px">🌐 مجموع کل سیستم</div>
-    <div style="display:flex;justify-content:space-between;font-size:12px;color:var(--text2);margin:4px 0;gap:8px"><span>مجموع کل هزینه‌ها:</span><b style="color:var(--text);word-break:break-all">${money(t.total)}</b></div>
-    <div style="display:flex;justify-content:space-between;font-size:12px;color:var(--text2);margin:4px 0;gap:8px"><span>نقد پرداخت شده:</span><b style="color:#34d399;word-break:break-all">${money(t.cash)}</b></div>
-    <div style="display:flex;justify-content:space-between;font-size:12px;color:var(--text2);margin:4px 0;gap:8px"><span>چک در جریان:</span><b style="color:#f59e0b;word-break:break-all">${money(t.chqPending)}</b></div>
-    <div style="display:flex;justify-content:space-between;font-size:12px;color:var(--text2);margin:4px 0;gap:8px"><span>⚠️ بلاتکلیف:</span><b style="color:#eab308;word-break:break-all">${money(t.unsettled)}</b></div>
-    <div style="display:flex;justify-content:space-between;font-size:12px;color:var(--text2);margin:4px 0;gap:8px"><span>دستمزد پیمانکاران:</span><b style="color:#a78bfa;word-break:break-all">${money(t.conWage)}</b></div>
-  </div>`;
+  html+=`<div class="card"><div style="font-weight:700;font-size:13px;margin-bottom:8px">🌐 مجموع کل</div><div style="display:flex;justify-content:space-between;font-size:12px;color:var(--text2);margin:4px 0;gap:8px"><span>مجموع کل هزینه‌ها:</span><b style="color:var(--text);word-break:break-all">${money(t.total)}</b></div><div style="display:flex;justify-content:space-between;font-size:12px;color:var(--text2);margin:4px 0;gap:8px"><span>نقد پرداخت شده:</span><b style="color:#34d399;word-break:break-all">${money(t.cash)}</b></div><div style="display:flex;justify-content:space-between;font-size:12px;color:var(--text2);margin:4px 0;gap:8px"><span>چک در جریان:</span><b style="color:#f59e0b;word-break:break-all">${money(t.chqPending)}</b></div><div style="display:flex;justify-content:space-between;font-size:12px;color:var(--text2);margin:4px 0;gap:8px"><span>⚠️ بلاتکلیف:</span><b style="color:#eab308;word-break:break-all">${money(t.unsettled)}</b></div><div style="display:flex;justify-content:space-between;font-size:12px;color:var(--text2);margin:4px 0;gap:8px"><span>دستمزد پیمانکاران:</span><b style="color:#a78bfa;word-break:break-all">${money(t.conWage)}</b></div></div>`;
   if(!db.projects.length)html+='<div class="empty"><div class="empty-icon">📊</div><div class="empty-text">پروژه‌ای نیست</div></div>';
-  else{
-    db.projects.forEach(p=>{
-      var total=projectTotalCost(p.id,db);var cash=projectCashPaid(p.id,db);var chqPend=projectChequePending(p.id,db);var uns=projectUnsettled(p.id,db);
-      var conWage=db.contractors.filter(c=>c.projectId===p.id).reduce((s,c)=>s+contractorWage(c,db),0);
-      html+=`<div class="card" style="margin-bottom:12px">
-        <div style="font-weight:700;font-size:14px;margin-bottom:8px">🏗️ ${esc(p.name)}${p.status==='done'?' ✅':''}</div>
-        <div style="display:flex;justify-content:space-between;font-size:12px;color:var(--text2);margin:4px 0;gap:8px"><span>📅 شروع:</span><b style="color:var(--text)">${faDate(p.startDate)}</b></div>
-        ${p.endDate?`<div style="display:flex;justify-content:space-between;font-size:12px;color:var(--text2);margin:4px 0;gap:8px"><span>📅 پایان:</span><b style="color:var(--text)">${faDate(p.endDate)}</b></div>`:''}
-        <div style="display:flex;justify-content:space-between;font-size:12px;color:var(--text2);margin:4px 0;gap:8px"><span>مجموع کل هزینه:</span><b style="color:#f87171;word-break:break-all">${money(total)}</b></div>
-        <div style="display:flex;justify-content:space-between;font-size:12px;color:var(--text2);margin:4px 0;gap:8px"><span>پرداخت نقدی:</span><b style="color:#34d399;word-break:break-all">${money(cash)}</b></div>
-        <div style="display:flex;justify-content:space-between;font-size:12px;color:var(--text2);margin:4px 0;gap:8px"><span>چک در جریان:</span><b style="color:#f59e0b;word-break:break-all">${money(chqPend)}</b></div>
-        <div style="display:flex;justify-content:space-between;font-size:12px;color:var(--text2);margin:4px 0;gap:8px"><span>⚠️ بلاتکلیف:</span><b style="color:#eab308;word-break:break-all">${money(uns)}</b></div>
-        <div style="display:flex;justify-content:space-between;font-size:12px;color:var(--text2);margin:4px 0;gap:8px"><span>دستمزد پیمانکاران:</span><b style="color:#a78bfa;word-break:break-all">${money(conWage)}</b></div>
-        <div style="display:flex;justify-content:space-between;font-size:13px;margin-top:8px;padding-top:8px;border-top:1px solid var(--border);gap:8px"><span style="color:var(--text2)">💵 هزینه تمام‌شده:</span><b style="color:#f59e0b;word-break:break-all">${money(total+conWage)}</b></div>
-      </div>`;
-    });
-  }
+  else db.projects.forEach(p=>{
+    var total=projectTotalCost(p.id,db);var cash=projectCashPaid(p.id,db);var chqPend=projectChequePending(p.id,db);var uns=projectUnsettled(p.id,db);
+    var conWage=db.contractors.filter(c=>c.projectId===p.id).reduce((s,c)=>s+contractorWage(c,db),0);
+    html+=`<div class="card" style="margin-bottom:12px"><div style="font-weight:700;font-size:14px;margin-bottom:8px">🏗️ ${esc(p.name)}${p.status==='done'?' ✅':''}</div><div style="display:flex;justify-content:space-between;font-size:12px;color:var(--text2);margin:4px 0;gap:8px"><span>📅 شروع:</span><b style="color:var(--text)">${faDate(p.startDate)}</b></div>${p.endDate?`<div style="display:flex;justify-content:space-between;font-size:12px;color:var(--text2);margin:4px 0;gap:8px"><span>📅 پایان:</span><b style="color:var(--text)">${faDate(p.endDate)}</b></div>`:''}<div style="display:flex;justify-content:space-between;font-size:12px;color:var(--text2);margin:4px 0;gap:8px"><span>مجموع کل:</span><b style="color:#f87171;word-break:break-all">${money(total)}</b></div><div style="display:flex;justify-content:space-between;font-size:12px;color:var(--text2);margin:4px 0;gap:8px"><span>نقد:</span><b style="color:#34d399;word-break:break-all">${money(cash)}</b></div><div style="display:flex;justify-content:space-between;font-size:12px;color:var(--text2);margin:4px 0;gap:8px"><span>چک در جریان:</span><b style="color:#f59e0b;word-break:break-all">${money(chqPend)}</b></div><div style="display:flex;justify-content:space-between;font-size:12px;color:var(--text2);margin:4px 0;gap:8px"><span>⚠️ بلاتکلیف:</span><b style="color:#eab308;word-break:break-all">${money(uns)}</b></div><div style="display:flex;justify-content:space-between;font-size:12px;color:var(--text2);margin:4px 0;gap:8px"><span>دستمزد پیمانکاران:</span><b style="color:#a78bfa;word-break:break-all">${money(conWage)}</b></div><div style="display:flex;justify-content:space-between;font-size:13px;margin-top:8px;padding-top:8px;border-top:1px solid var(--border);gap:8px"><span style="color:var(--text2)">💵 هزینه تمام‌شده:</span><b style="color:#f59e0b;word-break:break-all">${money(total+conWage)}</b></div></div>`;
+  });
   html+='<button class="btn btn-secondary btn-block" style="margin-top:10px" onclick="closeModal()">بستن</button>';
   html+='<div class="brand-modal"><div class="brand-name">✦ DAVIN NOVA ✦</div><div class="brand-sub">DESIGNED & ENGINEERED BY DAVIN</div><div class="brand-phone">۰۹۱۲۱۷۵۹۹۴۲</div></div>';
   document.getElementById('modalBody').innerHTML=html;showModal();
 }
 
-/* ===== MODAL / BACKUP ===== */
 function showModal(){document.getElementById('modal').classList.add('show')}
 function closeModal(){document.getElementById('modal').classList.remove('show')}
 function openBackup(){
-  document.getElementById('modalBody').innerHTML=`
-    <div class="modal-title">⚙️ تنظیمات و پشتیبان</div>
-    <div class="list-item" onclick="showReport()"><div class="list-icon purple">📊</div><div class="list-body"><div class="list-title">گزارش کامل</div><div class="list-sub">خلاصه مالی</div></div></div>
-    <div class="list-item" onclick="exportData()"><div class="list-icon blue">💾</div><div class="list-body"><div class="list-title">خروجی (JSON)</div><div class="list-sub">پشتیبان کامل</div></div></div>
-    <div class="list-item" onclick="importData()"><div class="list-icon green">📥</div><div class="list-body"><div class="list-title">بازیابی</div><div class="list-sub">بارگذاری فایل</div></div></div>
-    <div class="list-item" onclick="clearAll()"><div class="list-icon red">🗑️</div><div class="list-body"><div class="list-title" style="color:#f87171">حذف همه</div><div class="list-sub">غیرقابل بازگشت</div></div></div>
-    <button class="btn btn-secondary btn-block" style="margin-top:10px" onclick="closeModal()">بستن</button>
-    <div class="brand-modal"><div class="brand-name">✦ DAVIN NOVA ✦</div><div class="brand-sub">DESIGNED & ENGINEERED BY DAVIN</div><div class="brand-phone">۰۹۱۲۱۷۵۹۹۴۲</div></div>
-  `;
+  document.getElementById('modalBody').innerHTML=`<div class="modal-title">⚙️ تنظیمات و پشتیبان</div><div class="list-item" onclick="showReport()"><div class="list-icon purple">📊</div><div class="list-body"><div class="list-title">گزارش کامل</div><div class="list-sub">خلاصه مالی</div></div></div><div class="list-item" onclick="exportData()"><div class="list-icon blue">💾</div><div class="list-body"><div class="list-title">خروجی (JSON)</div><div class="list-sub">پشتیبان کامل</div></div></div><div class="list-item" onclick="importData()"><div class="list-icon green">📥</div><div class="list-body"><div class="list-title">بازیابی</div><div class="list-sub">بارگذاری فایل</div></div></div><div class="list-item" onclick="clearAll()"><div class="list-icon red">🗑️</div><div class="list-body"><div class="list-title" style="color:#f87171">حذف همه</div><div class="list-sub">غیرقابل بازگشت</div></div></div><button class="btn btn-secondary btn-block" style="margin-top:10px" onclick="closeModal()">بستن</button><div class="brand-modal"><div class="brand-name">✦ DAVIN NOVA ✦</div><div class="brand-sub">DESIGNED & ENGINEERED BY DAVIN</div><div class="brand-phone">۰۹۱۲۱۷۵۹۹۴۲</div></div>`;
   showModal();
 }
 function exportData(){
-  var db=loadDB();
-  var blob=new Blob([JSON.stringify(db,null,2)],{type:'application/json'});
-  var url=URL.createObjectURL(blob);
-  var a=document.createElement('a');a.href=url;a.download='davin-nova-backup-'+todayISO()+'.json';a.click();
+  var db=loadDB();var blob=new Blob([JSON.stringify(db,null,2)],{type:'application/json'});
+  var url=URL.createObjectURL(blob);var a=document.createElement('a');a.href=url;a.download='davin-nova-backup-'+todayISO()+'.json';a.click();
   setTimeout(()=>URL.revokeObjectURL(url),1000);toast('دانلود شد','success');
 }
 function importData(){document.getElementById('fileInput').click()}
@@ -1335,7 +1037,6 @@ function clearAll(){
   localStorage.removeItem(DB_KEY);loadDB();toast('حذف شد','success');closeModal();renderPage(state.page);
 }
 
-/* ===== TOAST / UTILS ===== */
 var toastTimer=null;
 function toast(msg,type){
   var el=document.getElementById('toast');el.textContent=msg;el.className='toast'+(type?' '+type:'');
@@ -1344,53 +1045,54 @@ function toast(msg,type){
 }
 function esc(s){if(s==null)return '';return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
 
-/* ===== INIT ===== */
 document.addEventListener('DOMContentLoaded',()=>{
   loadDB();
   try{
     document.getElementById('headerDate').textContent='📅 '+faDateFull();
     var j=isoToJalali(todayISO());
     document.getElementById('headerDateFull').textContent=j?toFaDigits(j.jy)+'/'+toFaDigits(String(j.jm).padStart(2,'0'))+'/'+toFaDigits(String(j.jd).padStart(2,'0')):'';
-  }catch(e){console.error(e)}
+  }catch(e){}
   
-  // Project filters
   document.querySelectorAll('#projectFilters .chip').forEach(c=>c.addEventListener('click',()=>{
     document.querySelectorAll('#projectFilters .chip').forEach(x=>x.classList.remove('active'));
     c.classList.add('active');state.projectFilter=c.dataset.filter;renderProjects();
   }));
   
-  // Expense filters
   document.querySelectorAll('#expenseFilters .chip[data-filter]').forEach(c=>c.addEventListener('click',()=>{
     document.querySelectorAll('#expenseFilters .chip').forEach(x=>x.classList.remove('active'));
     document.querySelectorAll('#chequeMenu .chip-menu-item').forEach(x=>x.classList.remove('active'));
     document.getElementById('chequeChip').classList.remove('active');
+    document.getElementById('chequeChip').textContent='🔽 چک‌ها';
     c.classList.add('active');
     state.expenseFilter=c.dataset.filter;
+    currentChequeFilter=null;
     renderExpenses();
   }));
   
-  // Cheque menu items
   document.querySelectorAll('#chequeMenu .chip-menu-item').forEach(item=>item.addEventListener('click',(ev)=>{
     ev.stopPropagation();
     document.querySelectorAll('#expenseFilters .chip').forEach(x=>x.classList.remove('active'));
     document.querySelectorAll('#chequeMenu .chip-menu-item').forEach(x=>x.classList.remove('active'));
     item.classList.add('active');
     document.getElementById('chequeChip').classList.add('active');
-    document.getElementById('chequeChip').textContent = item.textContent.trim();
+    document.getElementById('chequeChip').textContent=item.textContent.trim();
     state.expenseFilter=item.dataset.cfilter;
+    currentChequeFilter=item.dataset.cfilter;
     document.getElementById('chequeMenu').classList.remove('show');
     renderExpenses();
   }));
   
-  // Due soon toast
-  var db=loadDB();
-  var dueSoon=0;
+  document.getElementById('main').addEventListener('scroll',()=>{
+    var menu=document.getElementById('chequeMenu');if(menu)menu.classList.remove('show');
+  });
+  
+  var db=loadDB();var dueSoon=0;
   db.expenses.forEach(e=>(e.cheques||[]).forEach(c=>{if(c.status==='pending'&&daysUntil(c.dueDate)<=7&&daysUntil(c.dueDate)>=-30)dueSoon++}));
   if(dueSoon&&!sessionStorage.getItem('chqRem')){sessionStorage.setItem('chqRem','1');setTimeout(()=>toast('⚠️ '+num(dueSoon)+' چک نزدیک سررسید','error'),800)}
   else setTimeout(()=>toast('👋 به ساخت‌یار خوش آمدید','success'),500);
   
   renderPage('dashboard');
-  console.log('%c🏗️ ساخت‌یار v7.0 — DAVIN NOVA','color:#f59e0b;font-size:16px;font-weight:bold');
+  console.log('%c🏗️ ساخت‌یار v7.1 — DAVIN NOVA','color:#f59e0b;font-size:16px;font-weight:bold');
 });
 </script>
 </body>
