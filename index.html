@@ -14,10 +14,11 @@ body{font-family:'Vazirmatn',sans-serif;background:#0a0e1a;color:#e8ecf5;font-si
 :root{--bg:#0a0e1a;--bg2:#0f1524;--card:#151b2d;--card2:#1c2438;--border:#252e45;--text:#e8ecf5;--text2:#8b95ad;--text3:#5a6480;--primary:#f59e0b;--primary2:#fb923c;--success:#10b981;--success2:#34d399;--danger:#ef4444;--danger2:#f87171;--info:#3b82f6;--purple:#8b5cf6;--safe-bottom:env(safe-area-inset-bottom,0px);--safe-top:env(safe-area-inset-top,0px)}
 #app{height:100vh;height:100dvh;display:flex;flex-direction:column;max-width:500px;margin:0 auto;background:var(--bg)}
 .header{padding:calc(14px + var(--safe-top)) 18px 12px;background:linear-gradient(180deg,#0f1524 0%,var(--bg) 100%);border-bottom:1px solid var(--border);flex-shrink:0;z-index:10}
-.header-row{display:flex;justify-content:space-between;align-items:center;gap:10px}
+.header-row{display:flex;justify-content:space-between;align-items:flex-start;gap:10px}
 .header-title{font-size:19px;font-weight:800;background:linear-gradient(135deg,var(--primary),var(--primary2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
 .header-sub{font-size:11px;color:var(--text2);margin-top:2px;font-weight:500}
-.header-btn{width:40px;height:40px;border-radius:12px;background:var(--card);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:18px;cursor:pointer;transition:.2s}
+.header-date{font-size:11px;color:var(--primary);margin-top:4px;font-weight:600;display:flex;align-items:center;gap:4px}
+.header-btn{width:40px;height:40px;border-radius:12px;background:var(--card);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:18px;cursor:pointer;transition:.2s;flex-shrink:0}
 .header-btn:active{transform:scale(.92);background:var(--card2)}
 .main{flex:1;overflow-y:auto;overflow-x:hidden;padding:16px 16px calc(120px + var(--safe-bottom));scroll-behavior:smooth}
 .main::-webkit-scrollbar{width:0}
@@ -44,7 +45,7 @@ body{font-family:'Vazirmatn',sans-serif;background:#0a0e1a;color:#e8ecf5;font-si
 .stat-card.purple::before{background:linear-gradient(90deg,#8b5cf6,#a78bfa)}
 .stat-card.red::before{background:linear-gradient(90deg,#ef4444,#f87171)}
 .stat-label{font-size:11px;color:var(--text2);font-weight:500;margin-bottom:6px}
-.stat-value{font-size:15px;font-weight:800;color:var(--text);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.stat-value{font-size:14px;font-weight:800;color:var(--text);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .btn{padding:12px 18px;border-radius:12px;border:none;font-family:inherit;font-size:13px;font-weight:700;cursor:pointer;transition:.2s;display:inline-flex;align-items:center;justify-content:center;gap:6px}
 .btn:active{transform:scale(.96)}
 .btn-primary{background:linear-gradient(135deg,var(--primary),var(--primary2));color:#0a0e1a;box-shadow:0 4px 16px rgba(245,158,11,.3)}
@@ -112,11 +113,11 @@ body{font-family:'Vazirmatn',sans-serif;background:#0a0e1a;color:#e8ecf5;font-si
 .hero-card{background:linear-gradient(135deg,#1e2a4a 0%,#2a1a0f 100%);border:1px solid var(--border);border-radius:20px;padding:20px;margin-bottom:14px;position:relative;overflow:hidden}
 .hero-card::after{content:'🏗️';position:absolute;left:-20px;bottom:-20px;font-size:120px;opacity:.06;transform:rotate(-15deg)}
 .hero-title{font-size:12px;color:var(--text2);margin-bottom:6px}
-.hero-amount{font-size:22px;font-weight:800;color:var(--primary);margin-bottom:12px;word-break:break-all}
-.hero-amount small{font-size:12px;color:var(--text2);font-weight:500}
+.hero-amount{font-size:20px;font-weight:800;color:var(--primary);margin-bottom:12px;word-break:break-all}
+.hero-amount small{font-size:11px;color:var(--text2);font-weight:500}
 .hero-divider{height:1px;background:linear-gradient(90deg,transparent,var(--border),transparent);margin:12px 0}
-.hero-line{display:flex;justify-content:space-between;font-size:12px;color:var(--text2);margin:6px 0}
-.hero-line b{font-weight:800;font-size:12px;word-break:break-all}
+.hero-line{display:flex;justify-content:space-between;font-size:12px;color:var(--text2);margin:6px 0;gap:8px}
+.hero-line b{font-weight:800;font-size:12px;word-break:break-all;text-align:left}
 .actions{display:flex;gap:6px;margin-top:10px}
 .actions .btn{flex:1}
 .payment-block{background:var(--card2);border:1px solid var(--border);border-radius:14px;padding:12px;margin-bottom:10px}
@@ -128,8 +129,8 @@ body{font-family:'Vazirmatn',sans-serif;background:#0a0e1a;color:#e8ecf5;font-si
 .payment-row-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:6px;font-size:11px;color:var(--primary);font-weight:700}
 .payment-del{background:rgba(239,68,68,.15);color:#f87171;border:none;width:24px;height:24px;border-radius:6px;font-size:12px;cursor:pointer;font-family:inherit}
 .summary-box{background:linear-gradient(135deg,rgba(245,158,11,.08),rgba(139,92,246,.08));border:1px solid var(--border);border-radius:12px;padding:12px;margin-top:10px}
-.summary-line{display:flex;justify-content:space-between;font-size:12px;color:var(--text2);margin:4px 0}
-.summary-line b{color:var(--text);word-break:break-all}
+.summary-line{display:flex;justify-content:space-between;font-size:12px;color:var(--text2);margin:4px 0;gap:8px}
+.summary-line b{color:var(--text);word-break:break-all;text-align:left}
 .summary-line .warn{color:#f59e0b}
 .summary-line .bad{color:#f87171}
 .brand-footer{text-align:center;padding:24px 20px 16px;margin-top:20px;opacity:.7}
@@ -150,13 +151,13 @@ body{font-family:'Vazirmatn',sans-serif;background:#0a0e1a;color:#e8ecf5;font-si
 .contractor-pay-line{display:flex;justify-content:space-between;font-size:12px;margin:3px 0;gap:8px}
 .contractor-pay-line b{font-weight:800;word-break:break-all;text-align:left}
 .payment-history{margin-top:8px;border-top:1px solid var(--border);padding-top:8px}
-.payment-history-title{font-size:11px;color:var(--text2);margin-bottom:6px;font-weight:600}
 .payment-history-item{background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:8px 10px;margin-bottom:6px;font-size:11px;display:flex;justify-content:space-between;align-items:center;gap:8px}
-.payment-history-item .ph-type{font-weight:700;color:var(--primary)}
+.payment-history-item .ph-type{font-weight:700;color:var(--primary);font-size:11px}
 .payment-history-item .ph-type.cheque{color:#a78bfa}
-.payment-history-item .ph-amount{font-weight:800;color:var(--text);word-break:break-all}
-.payment-history-item .ph-date{color:var(--text2);font-size:10px}
+.payment-history-item .ph-amount{font-weight:800;color:var(--text);word-break:break-all;font-size:11px}
+.payment-history-item .ph-date{color:var(--text2);font-size:10px;margin-top:2px}
 .payment-history-item .ph-del{background:rgba(239,68,68,.15);color:#f87171;border:none;width:20px;height:20px;border-radius:5px;font-size:10px;cursor:pointer;font-family:inherit;flex-shrink:0}
+.cash-detail{font-size:10px;color:var(--text3);margin-top:4px}
 </style>
 </head>
 <body>
@@ -164,9 +165,10 @@ body{font-family:'Vazirmatn',sans-serif;background:#0a0e1a;color:#e8ecf5;font-si
 <div id="app">
   <div class="header">
     <div class="header-row">
-      <div>
+      <div style="flex:1;min-width:0">
         <div class="header-title" id="pageTitle">ساخت‌یار</div>
         <div class="header-sub" id="pageSub">مدیریت حرفه‌ای پروژه‌های ساختمانی</div>
+        <div class="header-date" id="headerDate">📅 —</div>
       </div>
       <div class="header-btn" onclick="openBackup()">⚙️</div>
     </div>
@@ -196,12 +198,7 @@ body{font-family:'Vazirmatn',sans-serif;background:#0a0e1a;color:#e8ecf5;font-si
       <div id="dashCheques"></div>
       <div class="section-title"><span>📊 هزینه‌های اخیر</span><a onclick="switchPage('finance')">همه ←</a></div>
       <div id="dashExpenses"></div>
-      <div class="brand-footer">
-        <div class="brand-line"></div>
-        <div class="brand-name">✦ DAVIN NOVA ✦</div>
-        <div class="brand-sub">DESIGNED & ENGINEERED BY DAVIN</div>
-        <div class="brand-phone">۰۹۱۲۱۷۵۹۹۴۲</div>
-      </div>
+      <div class="brand-footer"><div class="brand-line"></div><div class="brand-name">✦ DAVIN NOVA ✦</div><div class="brand-sub">DESIGNED & ENGINEERED BY DAVIN</div><div class="brand-phone">۰۹۱۲۱۷۵۹۹۴۲</div></div>
     </div>
 
     <div class="page" id="page-projects">
@@ -287,11 +284,10 @@ function g2d(gy,gm,gd){var d=div((gy+div(gm-8,6)+100100)*1461,4)+div(153*mod(gm+
 function d2g(jdn){var j,i,gd,gm,gy;j=4*jdn+139361631;j=j+div(div(4*jdn+183187720,146097)*3,4)*4-3908;i=div(mod(j,1461),4)*5+308;gd=div(mod(i,153),5)+1;gm=mod(div(i,153),12)+1;gy=div(j,1461)-100100+div(8-gm,6);return{gy:gy,gm:gm,gd:gd}}
 function toJalaali(gy,gm,gd){return d2j(g2d(gy,gm,gd))}
 function toGregorian(jy,jm,jd){return d2g(j2d(jy,jm,jd))}
-function isValidJalaaliDate(jy,jm,jd){return jy>=-61&&jy<=3177&&jm>=1&&jm<=12&&jd>=1&&jd<=(jm<=6?31:30)}
-return{toJalaali:toJalaali,toGregorian:toGregorian,isValidJalaaliDate:isValidJalaaliDate}}();
+return{toJalaali:toJalaali,toGregorian:toGregorian}}();
 
 /* ===== STATE & DB ===== */
-const DB_KEY='sakhtyar_v3';
+const DB_KEY='sakhtyar_v4';
 let state={page:'dashboard',projectFilter:'all',expenseFilter:'all'};
 
 function loadDB(){
@@ -301,11 +297,37 @@ function loadDB(){
 }
 function saveDB(d){localStorage.setItem(DB_KEY,JSON.stringify(d))}
 function uid(){return Date.now().toString(36)+Math.random().toString(36).slice(2,7)}
+
+/* ===== NUMBER FORMATTING ===== */
+const FA_DIGITS=['۰','۱','۲','۳','۴','۵','۶','۷','۸','۹'];
+function toFaDigits(s){return String(s).replace(/\d/g,d=>FA_DIGITS[d])}
+function toEnDigits(s){return String(s).replace(/[۰-۹]/g,d=>'۰۱۲۳۴۵۶۷۸۹'.indexOf(d))}
 function num(n){if(n===0)return '۰';if(!n)return '۰';return Number(n).toLocaleString('fa-IR')}
 function money(n){return num(n)+' تومان'}
+function yearFa(y){return toFaDigits(y)}
 function todayISO(){var d=new Date();return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`}
 
+/* ===== MONEY INPUT WITH SEPARATOR ===== */
+function moneyInputHTML(id,value,placeholder){
+  var raw=value?String(Math.round(Number(value))):'';
+  var display=raw?toFaDigits(Number(raw).toLocaleString('en-US').replace(/,/g,'٬')):'';
+  return `<input type="text" class="form-input money-input" id="${id}" inputmode="numeric" value="${display}" data-raw="${raw}" placeholder="${placeholder||'۰'}" oninput="formatMoneyInput(this)">`;
+}
+function formatMoneyInput(el){
+  var v=toEnDigits(el.value).replace(/[^\d]/g,'');
+  if(v.length>1)v=v.replace(/^0+/,'');
+  el.dataset.raw=v;
+  el.value=v?toFaDigits(Number(v).toLocaleString('en-US').replace(/,/g,'٬')):'';
+}
+function getMoney(id){
+  var el=document.getElementById(id);
+  if(!el)return 0;
+  return Number(el.dataset.raw||0)||0;
+}
+
 /* ===== JALALI HELPERS ===== */
+const WEEK_DAYS=['یکشنبه','دوشنبه','سه‌شنبه','چهارشنبه','پنجشنبه','جمعه','شنبه'];
+const MONTHS=['فروردین','اردیبهشت','خرداد','تیر','مرداد','شهریور','مهر','آبان','آذر','دی','بهمن','اسفند'];
 function isoToJalali(iso){
   if(!iso)return null;
   try{var d=new Date(iso);if(isNaN(d))return null;return jalaali.toJalaali(d.getFullYear(),d.getMonth()+1,d.getDate())}catch(e){return null}
@@ -313,21 +335,29 @@ function isoToJalali(iso){
 function jalaliToISO(jy,jm,jd){
   try{var g=jalaali.toGregorian(jy,jm,jd);return `${g.gy}-${String(g.gm).padStart(2,'0')}-${String(g.gd).padStart(2,'0')}`}catch(e){return ''}
 }
-function faDate(iso){var j=isoToJalali(iso);if(!j)return '—';return `${num(j.jy)}/${num(j.jm).padStart(2,'۰')}/${num(j.jd).padStart(2,'۰')}`}
+function faDate(iso){
+  var j=isoToJalali(iso);if(!j)return '—';
+  return `${yearFa(j.jy)}/${toFaDigits(String(j.jm).padStart(2,'0'))}/${toFaDigits(String(j.jd).padStart(2,'0'))}`;
+}
+function faDateFull(){
+  var d=new Date();
+  var j=jalaali.toJalaali(d.getFullYear(),d.getMonth()+1,d.getDate());
+  var wd=WEEK_DAYS[d.getDay()];
+  return `${wd} ${toFaDigits(j.jd)} ${MONTHS[j.jm-1]} ${yearFa(j.jy)}`;
+}
 function daysUntil(iso){if(!iso)return 999;var d=new Date(iso),n=new Date();return Math.ceil((d-n)/86400000)}
 
 /* ===== JALALI DATE INPUT ===== */
-const MONTHS=['فروردین','اردیبهشت','خرداد','تیر','مرداد','شهریور','مهر','آبان','آذر','دی','بهمن','اسفند'];
 function dateInputHTML(id,isoValue){
   if(!isoValue)isoValue=todayISO();
   var j=isoToJalali(isoValue)||isoToJalali(todayISO());
-  var years=[],months=MONTHS.map((m,i)=>({v:i+1,t:m})),days=[];
+  var years=[],days=[];
   for(var y=1390;y<=1420;y++)years.push(y);
   var daysInMonth=(j.jm<=6)?31:30;
   for(var d=1;d<=daysInMonth;d++)days.push(d);
-  var yOpts=years.map(y=>`<option value="${y}" ${y===j.jy?'selected':''}>${num(y)}</option>`).join('');
-  var mOpts=months.map(m=>`<option value="${m.v}" ${m.v===j.jm?'selected':''}>${m.t}</option>`).join('');
-  var dOpts=days.map(d=>`<option value="${d}" ${d===j.jd?'selected':''}>${num(d)}</option>`).join('');
+  var yOpts=years.map(y=>`<option value="${y}" ${y===j.jy?'selected':''}>${yearFa(y)}</option>`).join('');
+  var mOpts=MONTHS.map((m,i)=>`<option value="${i+1}" ${i+1===j.jm?'selected':''}>${m}</option>`).join('');
+  var dOpts=days.map(d=>`<option value="${d}" ${d===j.jd?'selected':''}>${toFaDigits(d)}</option>`).join('');
   return `<div class="jdate" data-id="${id}">
     <select id="${id}_y" onchange="syncJDate('${id}')">${yOpts}</select>
     <select id="${id}_m" onchange="syncJDate('${id}')">${mOpts}</select>
@@ -339,7 +369,7 @@ function syncJDate(id){
   var dSel=document.getElementById(id+'_d');
   var maxD=(m<=6)?31:30;
   var current=Number(dSel.value);if(current>maxD)current=maxD;
-  var html='';for(var i=1;i<=maxD;i++)html+=`<option value="${i}" ${i===current?'selected':''}>${num(i)}</option>`;
+  var html='';for(var i=1;i<=maxD;i++)html+=`<option value="${i}" ${i===current?'selected':''}>${toFaDigits(i)}</option>`;
   dSel.innerHTML=html;
 }
 function getJDate(id){
@@ -387,17 +417,13 @@ function renderPage(p){
 }
 
 /* ===== CALCULATIONS ===== */
-function expenseCashSum(e){(e.cash||[]).forEach(c=>{});return (e.cash||[]).reduce((s,c)=>s+(Number(c.amount)||0),0)}
+function expenseCashSum(e){return (e.cash||[]).reduce((s,c)=>s+(Number(c.amount)||0),0)}
 function expenseChequePending(e){return (e.cheques||[]).filter(c=>c.status==='pending').reduce((s,c)=>s+(Number(c.amount)||0),0)}
 function expenseChequeCashed(e){return (e.cheques||[]).filter(c=>c.status==='cashed').reduce((s,c)=>s+(Number(c.amount)||0),0)}
-function expenseChequeTotal(e){return (e.cheques||[]).reduce((s,c)=>s+(Number(c.amount)||0),0)}
 function projectTotalCost(projectId,db){return db.expenses.filter(e=>e.projectId===projectId).reduce((s,e)=>s+(Number(e.totalAmount)||0),0)}
 function projectCashPaid(projectId,db){return db.expenses.filter(e=>e.projectId===projectId).reduce((s,e)=>s+expenseCashSum(e)+expenseChequeCashed(e),0)}
 function projectChequePending(projectId,db){return db.expenses.filter(e=>e.projectId===projectId).reduce((s,e)=>s+expenseChequePending(e),0)}
-function contractorWage(c,db){
-  var total=projectTotalCost(c.projectId,db);
-  return Math.round(total*(Number(c.share)||0)/100);
-}
+function contractorWage(c,db){return Math.round(projectTotalCost(c.projectId,db)*(Number(c.share)||0)/100)}
 function contractorPaidTotal(c){return (c.payments||[]).reduce((s,p)=>s+(Number(p.amount)||0),0)}
 function allTotals(db){
   var total=db.expenses.reduce((s,e)=>s+(Number(e.totalAmount)||0),0);
@@ -432,7 +458,7 @@ function renderDashboard(){
   }).join('');
 
   var cheques=[];
-  db.expenses.forEach(e=>(e.cheques||[]).forEach(c=>{if(c.status==='pending')cheques.push({...c,expenseTitle:e.title,expenseId:e.id})}));
+  db.expenses.forEach(e=>(e.cheques||[]).forEach(c=>{if(c.status==='pending')cheques.push({...c,expenseTitle:e.title})}));
   cheques.sort((a,b)=>new Date(a.dueDate)-new Date(b.dueDate));cheques=cheques.slice(0,3);
   var chEl=document.getElementById('dashCheques');
   if(!cheques.length)chEl.innerHTML='<div class="empty" style="padding:20px"><div class="empty-text">چک در انتظاری نیست</div></div>';
@@ -551,7 +577,7 @@ function renderContractors(){
 /* ===== PROJECT FORM ===== */
 function openProjectForm(id){
   var db=loadDB();
-  var p=id?db.projects.find(x=>x.id===id):{name:'',address:'',startDate:todayISO(),endDate:'',status:'active',progress:0,description:''};
+  var p=id?db.projects.find(x=>x.id===id):{name:'',address:'',startDate:todayISO(),endDate:todayISO(),status:'active',progress:0,description:''};
   if(!p)return;
   document.getElementById('modalBody').innerHTML=`
     <div class="modal-title">${id?'ویرایش پروژه':'پروژه جدید'}</div>
@@ -596,7 +622,7 @@ function openProjectDetail(id){
     <div class="modal-title">${esc(p.name)}</div>
     <div class="stats-grid">
       <div class="stat-card"><div class="stat-label">💰 مجموع کل</div><div class="stat-value">${money(total)}</div></div>
-      <div class="stat-card green"><div class="stat-label">💵 نقد پرداخت شده</div><div class="stat-value">${money(cash)}</div></div>
+      <div class="stat-card green"><div class="stat-label">💵 نقد پرداخت</div><div class="stat-value">${money(cash)}</div></div>
       <div class="stat-card"><div class="stat-label">🧾 چک در جریان</div><div class="stat-value">${money(chqPend)}</div></div>
       <div class="stat-card purple"><div class="stat-label">👷 پیمانکاران</div><div class="stat-value">${money(conWage)}</div></div>
     </div>
@@ -639,13 +665,13 @@ function openExpenseForm(id){
     <div class="modal-title">${id?'ویرایش هزینه':'هزینه جدید'}</div>
     <div class="form-group"><label class="form-label">عنوان *</label><input class="form-input" id="eTitle" value="${esc(d.title||'')}" placeholder="خرید سیمان"></div>
     <div class="form-row">
-      <div class="form-group"><label class="form-label">مبلغ کل (تومان) *</label><input class="form-input" id="eTotal" type="number" value="${d.totalAmount||''}" oninput="updateExpenseSummary()"></div>
+      <div class="form-group"><label class="form-label">مبلغ کل (تومان) *</label>${moneyInputHTML('eTotal',d.totalAmount,'۰')}</div>
       <div class="form-group"><label class="form-label">دسته</label><select class="form-select" id="eCategory">
         ${['مصالح','دستمزد','تجهیزات','مجوز','حمل و نقل','سایر'].map(c=>`<option value="${c}" ${c===d.category?'selected':''}>${c}</option>`).join('')}
       </select></div>
     </div>
     <div class="form-group"><label class="form-label">پروژه</label><select class="form-select" id="eProject"><option value="">— بدون پروژه —</option>${projOpts}</select></div>
-    <div class="form-group"><label class="form-label">تاریخ</label>${dateInputHTML('eDate',d.date)}</div>
+    <div class="form-group"><label class="form-label">تاریخ هزینه</label>${dateInputHTML('eDate',d.date)}</div>
 
     <div class="payment-block">
       <div class="payment-header"><span class="payment-title">💵 پرداخت نقدی (تا ۵)</span><button type="button" class="payment-add" id="cashBtn" onclick="addCashRow()">+ افزودن</button></div>
@@ -683,10 +709,9 @@ function renderCashRows(){
   else el.innerHTML=expenseCash.map((c,i)=>`
     <div class="payment-row">
       <div class="payment-row-header"><span>نقد ${num(i+1)}</span><button class="payment-del" onclick="removeCashRow(${i})">✕</button></div>
-      <div class="form-row">
-        <input class="form-input" type="number" placeholder="مبلغ" value="${c.amount||''}" oninput="updateCashRow(${i},'amount',this.value)">
-        <input class="form-input" type="text" placeholder="یادداشت" value="${esc(c.note||'')}" oninput="updateCashRow(${i},'note',this.value)">
-      </div>
+      ${moneyInputHTML('cashAmt_'+i,c.amount,'مبلغ')}
+      <div style="margin-top:6px">${dateInputHTML('cashDate_'+i,c.date)}</div>
+      <input class="form-input" style="margin-top:6px" placeholder="یادداشت" value="${esc(c.note||'')}" oninput="updateCashRow(${i},'note',this.value)">
     </div>`).join('');
   document.getElementById('cashBtn').disabled=expenseCash.length>=5;
 }
@@ -707,22 +732,20 @@ function renderChequeRows(){
         <input class="form-input" placeholder="بانک" value="${esc(c.bank||'')}" oninput="updateChequeRow(${i},'bank',this.value)">
         <input class="form-input" placeholder="شماره چک" value="${esc(c.number||'')}" oninput="updateChequeRow(${i},'number',this.value)">
       </div>
-      <div class="form-row" style="margin-bottom:6px">
-        <input class="form-input" type="number" placeholder="مبلغ" value="${c.amount||''}" oninput="updateChequeRow(${i},'amount',this.value)">
-        <select class="form-select" style="font-size:12px;padding:8px 12px" onchange="updateChequeRow(${i},'status',this.value)">
-          <option value="pending" ${c.status==='pending'?'selected':''}>⏳ در انتظار</option>
-          <option value="cashed" ${c.status==='cashed'?'selected':''}>✅ پاس شده</option>
-          <option value="bounced" ${c.status==='bounced'?'selected':''}>↩ برگشتی</option>
-        </select>
-      </div>
-      <div class="form-group" style="margin:0"><label class="form-label" style="font-size:10px">سررسید</label>${dateInputHTML('chqDue_'+i,c.dueDate)}</div>
+      <div style="margin-bottom:6px">${moneyInputHTML('chqAmt_'+i,c.amount,'مبلغ')}</div>
+      <select class="form-select" style="font-size:12px;padding:8px 12px;margin-bottom:6px" onchange="updateChequeRow(${i},'status',this.value)">
+        <option value="pending" ${c.status==='pending'?'selected':''}>⏳ در انتظار</option>
+        <option value="cashed" ${c.status==='cashed'?'selected':''}>✅ پاس شده</option>
+        <option value="bounced" ${c.status==='bounced'?'selected':''}>↩ برگشتی</option>
+      </select>
+      <div><label class="form-label" style="font-size:10px">سررسید</label>${dateInputHTML('chqDue_'+i,c.dueDate)}</div>
     </div>`).join('');
   document.getElementById('chqBtn').disabled=expenseCheques.length>=5;
 }
 function updateExpenseSummary(){
-  var total=Number(document.getElementById('eTotal')?.value)||0;
-  var cashSum=expenseCash.reduce((s,c)=>s+(Number(c.amount)||0),0);
-  var chqSum=expenseCheques.reduce((s,c)=>s+(Number(c.amount)||0),0);
+  var total=getMoney('eTotal');
+  var cashSum=0;for(var i=0;i<expenseCash.length;i++)cashSum+=getMoney('cashAmt_'+i);
+  var chqSum=0;for(var j=0;j<expenseCheques.length;j++)chqSum+=getMoney('chqAmt_'+j);
   var paid=cashSum+chqSum;var diff=total-paid;
   var el=document.getElementById('expSummary');if(!el)return;
   el.innerHTML=`
@@ -735,12 +758,26 @@ function updateExpenseSummary(){
 }
 function saveExpense(id){
   var title=document.getElementById('eTitle').value.trim();
-  var total=Number(document.getElementById('eTotal').value)||0;
+  var total=getMoney('eTotal');
   if(!title||total<=0){toast('عنوان و مبلغ الزامی','error');return}
-  expenseCheques.forEach((c,i)=>{c.dueDate=getJDate('chqDue_'+i)});
-  var data={title,totalAmount:total,category:document.getElementById('eCategory').value,projectId:document.getElementById('eProject').value,date:getJDate('eDate'),note:document.getElementById('eNote').value.trim(),cash:expenseCash.filter(c=>Number(c.amount)>0).map(c=>({...c,amount:Number(c.amount)})),cheques:expenseCheques.filter(c=>Number(c.amount)>0).map(c=>({...c,amount:Number(c.amount)}))};
+  // sync cash amounts and dates
+  var cashArr=[];
+  for(var i=0;i<expenseCash.length;i++){
+    var amt=getMoney('cashAmt_'+i);
+    if(amt>0){
+      cashArr.push({amount:amt,date:getJDate('cashDate_'+i),note:expenseCash[i].note||''});
+    }
+  }
+  var chqArr=[];
+  for(var j=0;j<expenseCheques.length;j++){
+    var camt=getMoney('chqAmt_'+j);
+    if(camt>0){
+      chqArr.push({bank:expenseCheques[j].bank||'',number:expenseCheques[j].number||'',amount:camt,dueDate:getJDate('chqDue_'+j),status:expenseCheques[j].status||'pending',note:expenseCheques[j].note||''});
+    }
+  }
+  var data={title,totalAmount:total,category:document.getElementById('eCategory').value,projectId:document.getElementById('eProject').value,date:getJDate('eDate'),note:document.getElementById('eNote').value.trim(),cash:cashArr,cheques:chqArr};
   var db=loadDB();
-  if(id){var i=db.expenses.findIndex(x=>x.id===id);if(i>=0)db.expenses[i]={...db.expenses[i],...data};toast('ویرایش شد','success')}
+  if(id){var idx=db.expenses.findIndex(x=>x.id===id);if(idx>=0)db.expenses[idx]={...db.expenses[idx],...data};toast('ویرایش شد','success')}
   else{db.expenses.push({id:uid(),...data});toast('ثبت شد','success')}
   saveDB(db);closeModal();renderPage(state.page);
 }
@@ -759,10 +796,10 @@ function openMaterialForm(id){
     <div class="modal-title">${id?'ویرایش مصالح':'مصالح جدید'}</div>
     <div class="form-group"><label class="form-label">نام *</label><input class="form-input" id="mName" value="${esc(m.name||'')}" placeholder="سیمان تیپ ۲"></div>
     <div class="form-row">
-      <div class="form-group"><label class="form-label">مقدار *</label><input class="form-input" id="mQty" type="number" value="${m.quantity||''}"></div>
+      <div class="form-group"><label class="form-label">مقدار *</label><input class="form-input" id="mQty" type="number" inputmode="numeric" value="${m.quantity||''}"></div>
       <div class="form-group"><label class="form-label">واحد</label><input class="form-input" id="mUnit" value="${esc(m.unit||'کیسه')}"></div>
     </div>
-    <div class="form-group"><label class="form-label">قیمت واحد (تومان)</label><input class="form-input" id="mPrice" type="number" value="${m.unitPrice||''}"></div>
+    <div class="form-group"><label class="form-label">قیمت واحد (تومان)</label>${moneyInputHTML('mPrice',m.unitPrice,'۰')}</div>
     <div class="form-group"><label class="form-label">پروژه</label><select class="form-select" id="mProject"><option value="">— بدون —</option>${projOpts}</select></div>
     <div class="form-group"><label class="form-label">تامین‌کننده</label><input class="form-input" id="mSupplier" value="${esc(m.supplier||'')}"></div>
     <div class="actions">
@@ -778,7 +815,7 @@ function saveMaterial(id){
   var name=document.getElementById('mName').value.trim();
   var qty=Number(document.getElementById('mQty').value)||0;
   if(!name||qty<=0){toast('نام و مقدار الزامی','error');return}
-  var data={name,quantity:qty,unit:document.getElementById('mUnit').value.trim()||'عدد',unitPrice:Number(document.getElementById('mPrice').value)||0,projectId:document.getElementById('mProject').value,supplier:document.getElementById('mSupplier').value.trim()};
+  var data={name,quantity:qty,unit:document.getElementById('mUnit').value.trim()||'عدد',unitPrice:getMoney('mPrice'),projectId:document.getElementById('mProject').value,supplier:document.getElementById('mSupplier').value.trim()};
   var db=loadDB();
   if(id){var i=db.materials.findIndex(x=>x.id===id);if(i>=0)db.materials[i]={...db.materials[i],...data};toast('ویرایش شد','success')}
   else{db.materials.push({id:uid(),...data});toast('اضافه شد','success')}
@@ -799,7 +836,7 @@ function openContractorForm(id){
     <div class="modal-title">${id?'ویرایش پیمانکار':'پیمانکار جدید'}</div>
     <div class="form-group"><label class="form-label">نام پیمانکار *</label><input class="form-input" id="ctName" value="${esc(c.name||'')}" placeholder="آقای رضایی"></div>
     <div class="form-row">
-      <div class="form-group"><label class="form-label">درصد سهم (٪) *</label><input class="form-input" id="ctShare" type="number" min="0" max="100" value="${c.share||''}" placeholder="۱۰"></div>
+      <div class="form-group"><label class="form-label">درصد سهم (٪) *</label><input class="form-input" id="ctShare" type="number" min="0" max="100" inputmode="numeric" value="${c.share||''}" placeholder="۱۰"></div>
       <div class="form-group"><label class="form-label">شماره همراه</label><input class="form-input" id="ctPhone" value="${esc(c.phone||'')}" placeholder="0912..."></div>
     </div>
     <div class="form-group"><label class="form-label">پروژه *</label><select class="form-select" id="ctProject"><option value="">— انتخاب —</option>${projOpts}</select></div>
@@ -832,12 +869,10 @@ function saveContractor(id){
 }
 
 /* ===== CONTRACTOR PAYMENTS ===== */
-var contractorPayments=[];
 function openContractorPay(id){
   var db=loadDB();
   var c=db.contractors.find(x=>x.id===id);
   if(!c)return;
-  contractorPayments=(c.payments||[]).map(x=>({...x}));
   var wage=contractorWage(c,db);
   var paid=contractorPaidTotal(c);
   var remaining=Math.max(0,wage-paid);
@@ -852,19 +887,19 @@ function openContractorPay(id){
     <div class="payment-block">
       <div class="payment-header"><span class="payment-title">➕ پرداخت جدید</span></div>
       <div class="form-row">
-        <div class="form-group"><label class="form-label">نوع پرداخت</label><select class="form-select" id="cpType">
+        <div class="form-group"><label class="form-label">نوع</label><select class="form-select" id="cpType">
           <option value="cash">💵 نقدی</option>
           <option value="cheque">🧾 چک</option>
         </select></div>
-        <div class="form-group"><label class="form-label">مبلغ (تومان)</label><input class="form-input" id="cpAmount" type="number" placeholder="0"></div>
+        <div class="form-group"><label class="form-label">مبلغ</label>${moneyInputHTML('cpAmount','','۰')}</div>
       </div>
       <div class="form-group"><label class="form-label">تاریخ</label>${dateInputHTML('cpDate',todayISO())}</div>
-      <div class="form-group" id="cpChequeFields" style="display:none">
+      <div id="cpChequeFields" style="display:none">
         <div class="form-row">
-          <div class="form-group" style="margin:0"><label class="form-label">بانک</label><input class="form-input" id="cpBank" placeholder="ملت"></div>
-          <div class="form-group" style="margin:0"><label class="form-label">شماره چک</label><input class="form-input" id="cpNumber" placeholder="123456"></div>
+          <div class="form-group"><label class="form-label">بانک</label><input class="form-input" id="cpBank" placeholder="ملت"></div>
+          <div class="form-group"><label class="form-label">شماره چک</label><input class="form-input" id="cpNumber" placeholder="123456"></div>
         </div>
-        <div class="form-group" style="margin:8px 0 0"><label class="form-label">سررسید</label>${dateInputHTML('cpDue',todayISO())}</div>
+        <div class="form-group"><label class="form-label">سررسید</label>${dateInputHTML('cpDue',todayISO())}</div>
       </div>
       <button class="btn btn-primary btn-block" style="margin-top:10px" onclick="addContractorPayment('${id}')">➕ افزودن پرداخت</button>
     </div>
@@ -884,11 +919,14 @@ function openContractorPay(id){
   showModal();
 }
 function renderContractorPayHistory(cid){
+  var db=loadDB();
+  var c=db.contractors.find(x=>x.id===cid);
+  var payments=c?(c.payments||[]):[];
   var el=document.getElementById('cpHistory');if(!el)return;
-  if(!contractorPayments.length){el.innerHTML='<div style="font-size:11px;color:var(--text3);text-align:center;padding:8px">پرداختی ثبت نشده</div>';return}
-  el.innerHTML=contractorPayments.map((p,i)=>`
+  if(!payments.length){el.innerHTML='<div style="font-size:11px;color:var(--text3);text-align:center;padding:8px">پرداختی ثبت نشده</div>';return}
+  el.innerHTML=payments.map((p,i)=>`
     <div class="payment-history-item">
-      <div>
+      <div style="flex:1;min-width:0">
         <div class="ph-type ${p.type==='cheque'?'cheque':''}">${p.type==='cheque'?'🧾 چک':'💵 نقد'}</div>
         <div class="ph-date">${faDate(p.date)}${p.type==='cheque'&&p.dueDate?' · سررسید '+faDate(p.dueDate):''}${p.bank?' · '+esc(p.bank):''}${p.status?' · '+({pending:'در انتظار',cashed:'پاس',bounced:'برگشتی'}[p.status]||''):''}</div>
       </div>
@@ -899,7 +937,7 @@ function renderContractorPayHistory(cid){
 }
 function addContractorPayment(cid){
   var type=document.getElementById('cpType').value;
-  var amount=Number(document.getElementById('cpAmount').value)||0;
+  var amount=getMoney('cpAmount');
   if(amount<=0){toast('مبلغ الزامی','error');return}
   var p={id:uid(),type,amount,date:getJDate('cpDate')};
   if(type==='cheque'){
@@ -908,23 +946,20 @@ function addContractorPayment(cid){
     p.dueDate=getJDate('cpDue');
     p.status='pending';
   }
-  contractorPayments.push(p);
-  // save immediately
   var db=loadDB();
   var c=db.contractors.find(x=>x.id===cid);
-  if(c){c.payments=contractorPayments.map(x=>({...x}));saveDB(db)}
+  if(c){if(!c.payments)c.payments=[];c.payments.push(p);saveDB(db)}
   toast('پرداخت اضافه شد','success');
   renderContractorPayHistory(cid);
-  document.getElementById('cpAmount').value='';
+  var amtEl=document.getElementById('cpAmount');amtEl.value='';amtEl.dataset.raw='0';
   document.getElementById('cpBank').value='';
   document.getElementById('cpNumber').value='';
 }
 function removeContractorPayment(i,cid){
   if(!confirm('این پرداخت حذف شود؟'))return;
-  contractorPayments.splice(i,1);
   var db=loadDB();
   var c=db.contractors.find(x=>x.id===cid);
-  if(c){c.payments=contractorPayments.map(x=>({...x}));saveDB(db)}
+  if(c&&c.payments){c.payments.splice(i,1);saveDB(db)}
   renderContractorPayHistory(cid);
   toast('حذف شد','success');
 }
@@ -940,10 +975,10 @@ function showReport(){
   var t=allTotals(db);
   html+=`<div class="card">
     <div style="font-weight:700;font-size:13px;margin-bottom:8px">🌐 مجموع کل سیستم</div>
-    <div style="display:flex;justify-content:space-between;font-size:12px;color:var(--text2);margin:4px 0"><span>مجموع کل هزینه‌ها:</span><b style="color:var(--text)">${money(t.total)}</b></div>
-    <div style="display:flex;justify-content:space-between;font-size:12px;color:var(--text2);margin:4px 0"><span>نقد پرداخت شده:</span><b style="color:#34d399">${money(t.cash)}</b></div>
-    <div style="display:flex;justify-content:space-between;font-size:12px;color:var(--text2);margin:4px 0"><span>چک در جریان:</span><b style="color:#f59e0b">${money(t.chqPending)}</b></div>
-    <div style="display:flex;justify-content:space-between;font-size:12px;color:var(--text2);margin:4px 0"><span>دستمزد پیمانکاران:</span><b style="color:#a78bfa">${money(t.conWage)}</b></div>
+    <div style="display:flex;justify-content:space-between;font-size:12px;color:var(--text2);margin:4px 0;gap:8px"><span>مجموع کل هزینه‌ها:</span><b style="color:var(--text);word-break:break-all">${money(t.total)}</b></div>
+    <div style="display:flex;justify-content:space-between;font-size:12px;color:var(--text2);margin:4px 0;gap:8px"><span>نقد پرداخت شده:</span><b style="color:#34d399;word-break:break-all">${money(t.cash)}</b></div>
+    <div style="display:flex;justify-content:space-between;font-size:12px;color:var(--text2);margin:4px 0;gap:8px"><span>چک در جریان:</span><b style="color:#f59e0b;word-break:break-all">${money(t.chqPending)}</b></div>
+    <div style="display:flex;justify-content:space-between;font-size:12px;color:var(--text2);margin:4px 0;gap:8px"><span>دستمزد پیمانکاران:</span><b style="color:#a78bfa;word-break:break-all">${money(t.conWage)}</b></div>
   </div>`;
   if(!db.projects.length)html+='<div class="empty"><div class="empty-icon">📊</div><div class="empty-text">پروژه‌ای نیست</div></div>';
   else{
@@ -955,11 +990,11 @@ function showReport(){
       var finalTotal=total+conWage;
       html+=`<div class="card" style="margin-bottom:12px">
         <div style="font-weight:700;font-size:14px;margin-bottom:8px">🏗️ ${esc(p.name)}</div>
-        <div style="display:flex;justify-content:space-between;font-size:12px;color:var(--text2);margin:4px 0"><span>مجموع کل هزینه:</span><b style="color:#f87171">${money(total)}</b></div>
-        <div style="display:flex;justify-content:space-between;font-size:12px;color:var(--text2);margin:4px 0"><span>پرداخت نقدی:</span><b style="color:#34d399">${money(cash)}</b></div>
-        <div style="display:flex;justify-content:space-between;font-size:12px;color:var(--text2);margin:4px 0"><span>چک در جریان:</span><b style="color:#f59e0b">${money(chqPend)}</b></div>
-        <div style="display:flex;justify-content:space-between;font-size:12px;color:var(--text2);margin:4px 0"><span>دستمزد پیمانکاران:</span><b style="color:#a78bfa">${money(conWage)}</b></div>
-        <div style="display:flex;justify-content:space-between;font-size:13px;margin-top:8px;padding-top:8px;border-top:1px solid var(--border)"><span style="color:var(--text2)">💵 هزینه تمام‌شده:</span><b style="color:#f59e0b">${money(finalTotal)}</b></div>
+        <div style="display:flex;justify-content:space-between;font-size:12px;color:var(--text2);margin:4px 0;gap:8px"><span>مجموع کل هزینه:</span><b style="color:#f87171;word-break:break-all">${money(total)}</b></div>
+        <div style="display:flex;justify-content:space-between;font-size:12px;color:var(--text2);margin:4px 0;gap:8px"><span>پرداخت نقدی:</span><b style="color:#34d399;word-break:break-all">${money(cash)}</b></div>
+        <div style="display:flex;justify-content:space-between;font-size:12px;color:var(--text2);margin:4px 0;gap:8px"><span>چک در جریان:</span><b style="color:#f59e0b;word-break:break-all">${money(chqPend)}</b></div>
+        <div style="display:flex;justify-content:space-between;font-size:12px;color:var(--text2);margin:4px 0;gap:8px"><span>دستمزد پیمانکاران:</span><b style="color:#a78bfa;word-break:break-all">${money(conWage)}</b></div>
+        <div style="display:flex;justify-content:space-between;font-size:13px;margin-top:8px;padding-top:8px;border-top:1px solid var(--border);gap:8px"><span style="color:var(--text2)">💵 هزینه تمام‌شده:</span><b style="color:#f59e0b;word-break:break-all">${money(finalTotal)}</b></div>
       </div>`;
     });
   }
@@ -1019,6 +1054,8 @@ function esc(s){if(s==null)return '';return String(s).replace(/[&<>"']/g,c=>({'&
 /* ===== EVENTS ===== */
 document.addEventListener('DOMContentLoaded',()=>{
   loadDB();
+  // Update header date
+  document.getElementById('headerDate').textContent='📅 '+faDateFull();
   document.querySelectorAll('#projectFilters .chip').forEach(c=>c.addEventListener('click',()=>{
     document.querySelectorAll('#projectFilters .chip').forEach(x=>x.classList.remove('active'));
     c.classList.add('active');state.projectFilter=c.dataset.filter;renderProjects();
@@ -1033,7 +1070,7 @@ document.addEventListener('DOMContentLoaded',()=>{
   if(dueSoon&&!sessionStorage.getItem('chqRem')){sessionStorage.setItem('chqRem','1');setTimeout(()=>toast(`⚠️ ${num(dueSoon)} چک نزدیک سررسید`,'error'),800)}
   else setTimeout(()=>toast('👋 به ساخت‌یار خوش آمدید','success'),500);
   renderPage('dashboard');
-  console.log('%c🏗️ ساخت‌یار v3.0 — DAVIN NOVA','color:#f59e0b;font-size:16px;font-weight:bold');
+  console.log('%c🏗️ ساخت‌یار v4.0 — DAVIN NOVA','color:#f59e0b;font-size:16px;font-weight:bold');
 });
 </script>
 </body>
