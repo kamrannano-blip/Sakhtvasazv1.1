@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
 <meta name="theme-color" content="#0a0e1a">
 <meta name="apple-mobile-web-app-capable" content="yes">
-<title>ساخت‌یار | Construction Pro</title>
+<title>ساخت‌یار | DAVIN NOVA</title>
 <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
@@ -19,7 +19,7 @@ body{font-family:'Vazirmatn',sans-serif;background:#0a0e1a;color:#e8ecf5;font-si
 .header-sub{font-size:11px;color:var(--text2);margin-top:2px;font-weight:500}
 .header-btn{width:40px;height:40px;border-radius:12px;background:var(--card);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:18px;cursor:pointer;transition:.2s}
 .header-btn:active{transform:scale(.92);background:var(--card2)}
-.main{flex:1;overflow-y:auto;overflow-x:hidden;padding:16px 16px calc(110px + var(--safe-bottom));scroll-behavior:smooth}
+.main{flex:1;overflow-y:auto;overflow-x:hidden;padding:16px 16px calc(120px + var(--safe-bottom));scroll-behavior:smooth}
 .main::-webkit-scrollbar{width:0}
 .page{display:none;animation:fadeIn .3s ease}
 .page.active{display:block}
@@ -36,7 +36,6 @@ body{font-family:'Vazirmatn',sans-serif;background:#0a0e1a;color:#e8ecf5;font-si
 .fab:active{transform:scale(.88)}
 .fab.show{display:flex}
 .card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:16px;margin-bottom:12px;transition:.2s}
-.card:active{transform:scale(.98)}
 .stats-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:14px}
 .stat-card{background:linear-gradient(135deg,var(--card) 0%,var(--card2) 100%);border:1px solid var(--border);border-radius:16px;padding:14px;position:relative;overflow:hidden}
 .stat-card::before{content:'';position:absolute;top:0;left:0;width:100%;height:3px;background:linear-gradient(90deg,var(--primary),var(--primary2))}
@@ -46,7 +45,6 @@ body{font-family:'Vazirmatn',sans-serif;background:#0a0e1a;color:#e8ecf5;font-si
 .stat-card.red::before{background:linear-gradient(90deg,#ef4444,#f87171)}
 .stat-label{font-size:11px;color:var(--text2);font-weight:500;margin-bottom:6px}
 .stat-value{font-size:17px;font-weight:800;color:var(--text);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-.stat-value small{font-size:10px;font-weight:500;color:var(--text2);margin-right:3px}
 .btn{padding:12px 18px;border-radius:12px;border:none;font-family:inherit;font-size:13px;font-weight:700;cursor:pointer;transition:.2s;display:inline-flex;align-items:center;justify-content:center;gap:6px}
 .btn:active{transform:scale(.96)}
 .btn-primary{background:linear-gradient(135deg,var(--primary),var(--primary2));color:#0a0e1a;box-shadow:0 4px 16px rgba(245,158,11,.3)}
@@ -65,9 +63,12 @@ body{font-family:'Vazirmatn',sans-serif;background:#0a0e1a;color:#e8ecf5;font-si
 .form-label{display:block;font-size:12px;font-weight:600;color:var(--text2);margin-bottom:6px}
 .form-input,.form-select,.form-textarea{width:100%;padding:12px 14px;background:var(--card);border:1px solid var(--border);border-radius:12px;color:var(--text);font-family:inherit;font-size:14px;transition:.2s;outline:none}
 .form-input:focus,.form-select:focus,.form-textarea:focus{border-color:var(--primary);background:var(--card2);box-shadow:0 0 0 3px rgba(245,158,11,.1)}
-.form-textarea{resize:none;min-height:70px}
+.form-textarea{resize:none;min-height:60px}
 .form-select{appearance:none;background-image:url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%238b95ad' stroke-width='2'%3e%3cpolyline points='6 9 12 15 18 9'/%3e%3c/svg%3e");background-repeat:no-repeat;background-position:left 14px center;background-size:16px;padding-left:40px}
 .form-row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.jdate{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:6px}
+.jdate select{padding:12px 8px;background:var(--card);border:1px solid var(--border);border-radius:12px;color:var(--text);font-family:inherit;font-size:13px;outline:none;appearance:none;text-align:center}
+.jdate select:focus{border-color:var(--primary)}
 .list-item{display:flex;align-items:center;gap:12px;padding:13px;background:var(--card);border:1px solid var(--border);border-radius:14px;margin-bottom:10px;transition:.2s}
 .list-item:active{background:var(--card2)}
 .list-icon{width:42px;height:42px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0}
@@ -81,7 +82,6 @@ body{font-family:'Vazirmatn',sans-serif;background:#0a0e1a;color:#e8ecf5;font-si
 .list-sub{font-size:11px;color:var(--text2);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .list-value{font-size:12px;font-weight:800;color:var(--primary);flex-shrink:0}
 .list-value.expense{color:#f87171}
-.list-value.income{color:#34d399}
 .empty{text-align:center;padding:50px 20px;color:var(--text2)}
 .empty-icon{font-size:56px;margin-bottom:12px;opacity:.4}
 .empty-text{font-size:13px;font-weight:600}
@@ -119,25 +119,36 @@ body{font-family:'Vazirmatn',sans-serif;background:#0a0e1a;color:#e8ecf5;font-si
 .progress-info{display:flex;justify-content:space-between;font-size:11px;color:var(--text2);margin-top:6px}
 .actions{display:flex;gap:6px;margin-top:10px}
 .actions .btn{flex:1}
-.cheque-item{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:14px;margin-bottom:10px;position:relative;overflow:hidden}
-.cheque-item::before{content:'';position:absolute;right:0;top:0;bottom:0;width:4px}
-.cheque-item.danger::before{background:var(--danger)}
-.cheque-item.warn::before{background:var(--primary)}
-.cheque-item.ok::before{background:var(--success)}
-.cheque-item.done::before{background:var(--text3)}
-.cheque-top{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:8px}
-.cheque-bank{font-size:13px;font-weight:700}
-.cheque-amount{font-size:15px;font-weight:800;color:var(--primary)}
-.cheque-amount.paid{color:#f87171}
-.cheque-amount.received{color:#34d399}
-.cheque-meta{font-size:11px;color:var(--text2);display:flex;flex-wrap:wrap;gap:10px;margin-bottom:10px}
-.cheque-badge{position:absolute;top:14px;left:14px;padding:3px 9px;border-radius:20px;font-size:10px;font-weight:700}
-.cheque-badge.pending{background:rgba(245,158,11,.15);color:var(--primary)}
-.cheque-badge.cashed{background:rgba(16,185,129,.15);color:#34d399}
-.cheque-badge.bounced{background:rgba(239,68,68,.15);color:#f87171}
-.cheque-actions{display:flex;gap:6px;margin-top:10px}
-.cheque-actions .btn{flex:1;padding:7px 10px;font-size:11px}
-.settings-list .list-item{cursor:pointer}
+.payment-block{background:var(--card2);border:1px solid var(--border);border-radius:14px;padding:12px;margin-bottom:10px}
+.payment-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
+.payment-title{font-size:12px;font-weight:700;color:var(--text)}
+.payment-add{background:rgba(245,158,11,.15);color:var(--primary);border:1px solid rgba(245,158,11,.3);border-radius:8px;padding:4px 10px;font-size:11px;font-weight:700;cursor:pointer;font-family:inherit}
+.payment-add:disabled{opacity:.4;cursor:not-allowed}
+.payment-row{background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:10px;margin-bottom:8px;position:relative}
+.payment-row-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:6px;font-size:11px;color:var(--primary);font-weight:700}
+.payment-del{background:rgba(239,68,68,.15);color:#f87171;border:none;width:24px;height:24px;border-radius:6px;font-size:12px;cursor:pointer;font-family:inherit}
+.summary-box{background:linear-gradient(135deg,rgba(245,158,11,.08),rgba(139,92,246,.08));border:1px solid var(--border);border-radius:12px;padding:12px;margin-top:10px}
+.summary-line{display:flex;justify-content:space-between;font-size:12px;color:var(--text2);margin:4px 0}
+.summary-line b{color:var(--text)}
+.summary-line .warn{color:#f59e0b}
+.summary-line .bad{color:#f87171}
+.brand-footer{text-align:center;padding:24px 20px 16px;margin-top:20px;opacity:.7}
+.brand-line{height:1px;background:linear-gradient(90deg,transparent,var(--border),transparent);margin:0 auto 14px;max-width:200px}
+.brand-name{font-size:13px;font-weight:800;letter-spacing:2px;background:linear-gradient(135deg,var(--primary),var(--primary2),var(--purple));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:3px}
+.brand-sub{font-size:9px;color:var(--text3);letter-spacing:1px;margin-bottom:3px}
+.brand-phone{font-size:10px;color:var(--text2);letter-spacing:.5px;font-weight:600}
+.brand-modal{text-align:center;padding:16px 0 4px;margin-top:12px;border-top:1px solid var(--border);opacity:.7}
+.brand-modal .brand-name{font-size:12px}
+.brand-modal .brand-sub{font-size:8px}
+.brand-modal .brand-phone{font-size:9px}
+.contractor-card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:14px;margin-bottom:10px}
+.contractor-head{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:8px}
+.contractor-name{font-size:14px;font-weight:700}
+.contractor-share{font-size:12px;font-weight:800;color:var(--primary);background:rgba(245,158,11,.12);padding:3px 10px;border-radius:20px}
+.contractor-info{font-size:11px;color:var(--text2);margin:3px 0}
+.contractor-pay{background:linear-gradient(135deg,rgba(16,185,129,.08),rgba(59,130,246,.08));border-radius:10px;padding:10px;margin-top:8px}
+.contractor-pay-line{display:flex;justify-content:space-between;font-size:12px;margin:3px 0}
+.contractor-pay-line b{font-weight:800}
 </style>
 </head>
 <body>
@@ -154,6 +165,7 @@ body{font-family:'Vazirmatn',sans-serif;background:#0a0e1a;color:#e8ecf5;font-si
   </div>
 
   <div class="main" id="main">
+    <!-- DASHBOARD -->
     <div class="page active" id="page-dashboard">
       <div class="hero-card">
         <div class="hero-title">💰 مجموع بودجه پروژه‌ها</div>
@@ -169,16 +181,23 @@ body{font-family:'Vazirmatn',sans-serif;background:#0a0e1a;color:#e8ecf5;font-si
         <div class="stat-card"><div class="stat-label">📁 پروژه‌ها</div><div class="stat-value" id="statProjects">۰</div></div>
         <div class="stat-card blue"><div class="stat-label">🧾 هزینه‌ها</div><div class="stat-value" id="statExpenses">۰</div></div>
         <div class="stat-card green"><div class="stat-label">📦 مواد</div><div class="stat-value" id="statMaterials">۰</div></div>
-        <div class="stat-card purple"><div class="stat-label">👷 کارگران</div><div class="stat-value" id="statWorkers">۰</div></div>
+        <div class="stat-card purple"><div class="stat-label">👷 پیمانکاران</div><div class="stat-value" id="statContractors">۰</div></div>
       </div>
-      <div class="section-title"><span>⏰ چک‌های نزدیک سررسید</span><a onclick="switchPage('finance')">همه ←</a></div>
+      <div class="section-title"><span>👷 دستمزد پیمانکاران</span><a onclick="switchPage('more')">همه ←</a></div>
+      <div id="dashContractors"></div>
+      <div class="section-title"><span>⏰ چک‌های نزدیک سررسید</span></div>
       <div id="dashCheques"></div>
       <div class="section-title"><span>📊 هزینه‌های اخیر</span><a onclick="switchPage('finance')">همه ←</a></div>
       <div id="dashExpenses"></div>
-      <div class="section-title"><span>🏗️ پروژه‌های فعال</span><a onclick="switchPage('projects')">همه ←</a></div>
-      <div id="dashProjects"></div>
+      <div class="brand-footer">
+        <div class="brand-line"></div>
+        <div class="brand-name">✦ DAVIN NOVA ✦</div>
+        <div class="brand-sub">DESIGNED & ENGINEERED BY DAVIN</div>
+        <div class="brand-phone">۰۹۱۲۱۷۵۹۹۴۲</div>
+      </div>
     </div>
 
+    <!-- PROJECTS -->
     <div class="page" id="page-projects">
       <div class="chips" id="projectFilters">
         <div class="chip active" data-filter="all">همه</div>
@@ -188,57 +207,63 @@ body{font-family:'Vazirmatn',sans-serif;background:#0a0e1a;color:#e8ecf5;font-si
         <div class="chip" data-filter="paused">متوقف</div>
       </div>
       <div id="projectsList"></div>
+      <div class="brand-footer">
+        <div class="brand-line"></div>
+        <div class="brand-name">✦ DAVIN NOVA ✦</div>
+        <div class="brand-sub">DESIGNED & ENGINEERED BY DAVIN</div>
+        <div class="brand-phone">۰۹۱۲۱۷۵۹۹۴۲</div>
+      </div>
     </div>
 
+    <!-- FINANCE -->
     <div class="page" id="page-finance">
-      <div class="chips" id="financeTabs">
-        <div class="chip active" data-tab="expenses">💸 هزینه‌ها</div>
-        <div class="chip" data-tab="cheques">🧾 چک‌ها</div>
+      <div class="chips" id="expenseFilters">
+        <div class="chip active" data-filter="all">همه</div>
+        <div class="chip" data-filter="مصالح">مصالح</div>
+        <div class="chip" data-filter="دستمزد">دستمزد</div>
+        <div class="chip" data-filter="تجهیزات">تجهیزات</div>
+        <div class="chip" data-filter="مجوز">مجوز</div>
+        <div class="chip" data-filter="حمل و نقل">حمل و نقل</div>
+        <div class="chip" data-filter="سایر">سایر</div>
       </div>
-      <div id="financeExpenses">
-        <div class="chips" id="expenseFilters">
-          <div class="chip active" data-filter="all">همه</div>
-          <div class="chip" data-filter="مصالح">مصالح</div>
-          <div class="chip" data-filter="دستمزد">دستمزد</div>
-          <div class="chip" data-filter="تجهیزات">تجهیزات</div>
-          <div class="chip" data-filter="مجوز">مجوز</div>
-          <div class="chip" data-filter="سایر">سایر</div>
-        </div>
-        <div id="expensesList"></div>
-      </div>
-      <div id="financeCheques" style="display:none">
-        <div class="chips" id="chequeFilters">
-          <div class="chip active" data-filter="all">همه</div>
-          <div class="chip" data-filter="received">📥 دریافتی</div>
-          <div class="chip" data-filter="paid">📤 پرداختی</div>
-          <div class="chip" data-filter="pending">⏳ در انتظار</div>
-          <div class="chip" data-filter="cashed">✅ پاس شده</div>
-        </div>
-        <div id="chequesList"></div>
+      <div id="expensesList"></div>
+      <div class="brand-footer">
+        <div class="brand-line"></div>
+        <div class="brand-name">✦ DAVIN NOVA ✦</div>
+        <div class="brand-sub">DESIGNED & ENGINEERED BY DAVIN</div>
+        <div class="brand-phone">۰۹۱۲۱۷۵۹۹۴۲</div>
       </div>
     </div>
 
+    <!-- MATERIALS -->
     <div class="page" id="page-materials">
       <div class="stats-grid">
         <div class="stat-card green"><div class="stat-label">📦 اقلام انبار</div><div class="stat-value" id="matCount">۰</div></div>
         <div class="stat-card"><div class="stat-label">💵 ارزش کل</div><div class="stat-value" id="matValue">۰</div></div>
       </div>
       <div id="materialsList"></div>
+      <div class="brand-footer">
+        <div class="brand-line"></div>
+        <div class="brand-name">✦ DAVIN NOVA ✦</div>
+        <div class="brand-sub">DESIGNED & ENGINEERED BY DAVIN</div>
+        <div class="brand-phone">۰۹۱۲۱۷۵۹۹۴۲</div>
+      </div>
     </div>
 
+    <!-- MORE -->
     <div class="page" id="page-more">
-      <div class="section-title"><span>👷 کارگران و پیمانکاران</span></div>
-      <div id="workersList"></div>
-      <div class="section-title"><span>🤝 شرکا</span></div>
-      <div id="partnersList"></div>
-      <div class="section-title"><span>✅ وظایف</span></div>
-      <div id="tasksList"></div>
+      <div class="section-title"><span>👷 پیمانکاران</span></div>
+      <div id="contractorsList"></div>
       <div class="section-title"><span>🛠️ ابزارها</span></div>
-      <div class="settings-list">
-        <div class="list-item" onclick="showReport()"><div class="list-icon purple">📊</div><div class="list-body"><div class="list-title">گزارش کامل</div><div class="list-sub">خلاصه مالی هر پروژه</div></div><div style="color:var(--text2)">←</div></div>
-        <div class="list-item" onclick="exportData()"><div class="list-icon blue">💾</div><div class="list-body"><div class="list-title">خروجی داده‌ها</div><div class="list-sub">پشتیبان JSON</div></div><div style="color:var(--text2)">←</div></div>
-        <div class="list-item" onclick="importData()"><div class="list-icon green">📥</div><div class="list-body"><div class="list-title">بازیابی</div><div class="list-sub">بارگذاری از فایل</div></div><div style="color:var(--text2)">←</div></div>
-        <div class="list-item" onclick="clearAll()"><div class="list-icon red">🗑️</div><div class="list-body"><div class="list-title" style="color:#f87171">حذف همه</div><div class="list-sub">غیرقابل بازگشت</div></div><div style="color:var(--text2)">←</div></div>
+      <div class="list-item" onclick="showReport()"><div class="list-icon purple">📊</div><div class="list-body"><div class="list-title">گزارش کامل</div><div class="list-sub">خلاصه مالی هر پروژه</div></div><div style="color:var(--text2)">←</div></div>
+      <div class="list-item" onclick="exportData()"><div class="list-icon blue">💾</div><div class="list-body"><div class="list-title">خروجی داده‌ها</div><div class="list-sub">پشتیبان JSON</div></div><div style="color:var(--text2)">←</div></div>
+      <div class="list-item" onclick="importData()"><div class="list-icon green">📥</div><div class="list-body"><div class="list-title">بازیابی</div><div class="list-sub">بارگذاری از فایل</div></div><div style="color:var(--text2)">←</div></div>
+      <div class="list-item" onclick="clearAll()"><div class="list-icon red">🗑️</div><div class="list-body"><div class="list-title" style="color:#f87171">حذف همه</div><div class="list-sub">غیرقابل بازگشت</div></div><div style="color:var(--text2)">←</div></div>
+      <div class="brand-footer">
+        <div class="brand-line"></div>
+        <div class="brand-name">✦ DAVIN NOVA ✦</div>
+        <div class="brand-sub">DESIGNED & ENGINEERED BY DAVIN</div>
+        <div class="brand-phone">۰۹۱۲۱۷۵۹۹۴۲</div>
       </div>
     </div>
   </div>
@@ -265,138 +290,213 @@ body{font-family:'Vazirmatn',sans-serif;background:#0a0e1a;color:#e8ecf5;font-si
 <input type="file" id="fileInput" accept=".json" style="display:none" onchange="handleImport(event)">
 
 <script>
-/* ============================================
-   ساخت‌یار v1.0 — Construction Pro
-   Offline-first PWA
-============================================ */
+/* ===== JALAALI LIBRARY (inline, offline) ===== */
+var jalaali=function(){function div(a,b){return~~(a/b)}function mod(a,b){return a-~~(a/b)*b}var breaks=[-61,9,38,199,426,686,756,818,1111,1181,1210,1635,2060,2097,2192,2262,2324,2394,2456,3178];function jalCal(jy){var bl=breaks.length,gy=jy+621,leapJ=jalCal.leap,march,n,i;function leap(y){return mod(y,33)%4===1&&(mod(y,33)!==0||mod(y-1,33)!==0)}var jp=breaks[0];for(i=1;i<bl;i+=1){var jm=breaks[i];var jump=jm-jp;if(jy<jm)break;jp=jm}n=jy-jp;if(leapJ===false)return{leap:leap(jy),gy:gy,march:0}}return{leap:false,gy:0,march:0}}
+var jalaali=function(){var breaks=[-61,9,38,199,426,686,756,818,1111,1181,1210,1635,2060,2097,2192,2262,2324,2394,2456,3178];
+function div(a,b){return~~(a/b)}function mod(a,b){return a-~~(a/b)*b}
+function jalCal(jy){var bl=breaks.length,gy=jy+621,leapJ=jalCal.leap,march,n,i;function leap(y){return mod(y,33)%4===1&&mod(y,33)!==0&&mod(y-1,33)!==0}
+var jp=breaks[0];for(i=1;i<bl;i+=1){var jm=breaks[i],jump=jm-jp;if(jy<jm)break;jp=jm}n=jy-jp;if(n<0)return{leap:false,gy:0,march:0};if(n<jump){leapJ=leap(jy);march=div(n,33)*8+div(mod(n,33),4);if(mod(n,33)===4&&n===jump-1)march+=1}else{leapJ=leap(jy);march=div(n,33)*8+div(mod(n,33),4)}march=jp+march;return{leap:leapJ,gy:gy,march:march}}
+function j2d(jy,jm,jd){var r=jalCal(jy);return g2d(r.gy,3,r.march)+(jm-1)*31-div(jm,7)*(jm-7)+jd-1}
+function d2j(jdn){var gy=d2g(jdn).gy,jy=gy-621,r=jalCal(jy),jdn1f=g2d(gy,3,r.march),jdn1f_,k,jm,jd;if(jdn>=jdn1f){k=jdn-jdn1f}else{jy-=1;r=jalCal(jy);jdn1f=g2d(gy,3,r.march);jdn1f_=g2d(gy-1,3,jalCal(jy).march);k=jdn-jdn1f_}
+if(k>=0&&k<=185){jm=1+div(k,31);jd=mod(k,31)+1;return{jy:jy,jm:jm,jd:jd}}else{k-=186}
+jm=7+div(k,30);jd=mod(k,30)+1;return{jy:jy,jm:jm,jd:jd}}
+function g2d(gy,gm,gd){var d=div((gy+div(gm-8,6)+100100)*1461,4)+div(153*mod(gm+9,12)+2,5)+gd-34840408;d=d-div(div(gy+100100+div(gm-8,6),100)*3,4)+752;return d}
+function d2g(jdn){var j,i,gd,gm,gy;j=4*jdn+139361631;j=j+div(div(4*jdn+183187720,146097)*3,4)*4-3908;i=div(mod(j,1461),4)*5+308;gd=div(mod(i,153),5)+1;gm=mod(div(i,153),12)+1;gy=div(j,1461)-100100+div(8-gm,6);return{gy:gy,gm:gm,gd:gd}}
+function toJalaali(gy,gm,gd){return d2j(g2d(gy,gm,gd))}
+function toGregorian(jy,jm,jd){return d2g(j2d(jy,jm,jd))}
+function isValidJalaaliDate(jy,jm,jd){return jy>=-61&&jy<=3177&&jm>=1&&jm<=12&&jd>=1&&jd<=(jm<=6?31:30)}
+function isLeapJalaaliYear(jy){return jalCal(jy).leap}
+return{toJalaali:toJalaali,toGregorian:toGregorian,isValidJalaaliDate:isValidJalaaliDate,isLeapJalaaliYear:isLeapJalaaliYear}}();
 
-const DB_KEY = 'sakhtyar_v1';
-let state = { page:'dashboard', projectFilter:'all', expenseFilter:'all', chequeFilter:'all', financeTab:'expenses', dashWelcome:false };
+/* ===== STATE & DB ===== */
+const DB_KEY='sakhtyar_v2';
+let state={page:'dashboard',projectFilter:'all',expenseFilter:'all'};
 
 function loadDB(){
-  let d = localStorage.getItem(DB_KEY);
-  if(!d){
-    d = { projects:[], expenses:[], cheques:[], materials:[], workers:[], partners:[], tasks:[] };
-    localStorage.setItem(DB_KEY, JSON.stringify(d));
-  }
-  try { return JSON.parse(d); } catch(e){ return { projects:[], expenses:[], cheques:[], materials:[], workers:[], partners:[], tasks:[] }; }
+  let d=localStorage.getItem(DB_KEY);
+  if(!d){d={projects:[],expenses:[],materials:[],contractors:[]};localStorage.setItem(DB_KEY,JSON.stringify(d))}
+  try{return JSON.parse(d)}catch(e){return{projects:[],expenses:[],materials:[],contractors:[]}}
 }
-function saveDB(d){ localStorage.setItem(DB_KEY, JSON.stringify(d)); }
-function uid(){ return Date.now().toString(36) + Math.random().toString(36).slice(2,7); }
-function num(n){ if(!n && n!==0) return '۰'; return Number(n).toLocaleString('fa-IR'); }
-function money(n){ return num(n) + ' تومان'; }
-function shortMoney(n){
-  n = Number(n)||0;
-  if(n >= 1000000000) return num((n/1000000000).toFixed(1)) + ' میلیارد';
-  if(n >= 1000000) return num((n/1000000).toFixed(1)) + ' میلیون';
-  if(n >= 1000) return num((n/1000).toFixed(0)) + ' هزار';
-  return num(n);
+function saveDB(d){localStorage.setItem(DB_KEY,JSON.stringify(d))}
+function uid(){return Date.now().toString(36)+Math.random().toString(36).slice(2,7)}
+function num(n){if(!n&&n!==0)return '۰';return Number(n).toLocaleString('fa-IR')}
+function shortMoney(n){n=Number(n)||0;if(n>=1000000000)return num((n/1000000000).toFixed(1))+' میلیارد';if(n>=1000000)return num((n/1000000).toFixed(1))+' میلیون';if(n>=1000)return num((n/1000).toFixed(0))+' هزار';return num(n)}
+
+/* ===== JALALI HELPERS ===== */
+function isoToJalali(iso){
+  if(!iso)return null;
+  try{var d=new Date(iso);if(isNaN(d))return null;return jalaali.toJalaali(d.getFullYear(),d.getMonth()+1,d.getDate())}catch(e){return null}
 }
-function today(){ return new Date().toISOString().split('T')[0]; }
-function faDate(iso){
-  if(!iso) return '';
-  try {
-    const d = new Date(iso);
-    return new Intl.DateTimeFormat('fa-IR',{year:'numeric',month:'2-digit',day:'2-digit'}).format(d);
-  } catch(e){ return iso; }
+function jalaliToISO(jy,jm,jd){
+  try{var g=jalaali.toGregorian(jy,jm,jd);var s=`${g.gy}-${String(g.gm).padStart(2,'0')}-${String(g.gd).padStart(2,'0')}`;return s}catch(e){return ''}
 }
-function daysUntil(iso){
-  if(!iso) return 999;
-  const d = new Date(iso); const now = new Date();
-  return Math.ceil((d - now) / (1000*60*60*24));
+function faDate(iso){var j=isoToJalali(iso);if(!j)return '—';return `${num(j.jy)}/${num(j.jm).padStart(2,'۰')}/${num(j.jd).padStart(2,'۰')}`}
+function todayISO(){var d=new Date();return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`}
+function daysUntil(iso){if(!iso)return 999;var d=new Date(iso),n=new Date();return Math.ceil((d-n)/86400000)}
+
+/* ===== JALALI DATE INPUT ===== */
+const MONTHS=['فروردین','اردیبهشت','خرداد','تیر','مرداد','شهریور','مهر','آبان','آذر','دی','بهمن','اسفند'];
+function dateInputHTML(id,isoValue){
+  var j=isoToJalali(isoValue)||{jy:1404,jm:1,jd:1};
+  var years=[],months=MONTHS.map((m,i)=>({v:i+1,t:m})),days=[];
+  for(var y=1390;y<=1420;y++)years.push(y);
+  var daysInMonth=(j.jm<=6)?31:30;
+  for(var d=1;d<=daysInMonth;d++)days.push(d);
+  var yOpts=years.map(y=>`<option value="${y}" ${y===j.jy?'selected':''}>${num(y)}</option>`).join('');
+  var mOpts=months.map(m=>`<option value="${m.v}" ${m.v===j.jm?'selected':''}>${m.t}</option>`).join('');
+  var dOpts=days.map(d=>`<option value="${d}" ${d===j.jd?'selected':''}>${num(d)}</option>`).join('');
+  return `<div class="jdate" data-id="${id}">
+    <select id="${id}_y" onchange="syncJDate('${id}')">${yOpts}</select>
+    <select id="${id}_m" onchange="syncJDate('${id}')">${mOpts}</select>
+    <select id="${id}_d">${dOpts}</select>
+  </div>`;
+}
+function syncJDate(id){
+  var y=Number(document.getElementById(id+'_y').value);
+  var m=Number(document.getElementById(id+'_m').value);
+  var dSel=document.getElementById(id+'_d');
+  var maxD=(m<=6)?31:30;
+  var current=Number(dSel.value);
+  if(current>maxD)current=maxD;
+  var html='';for(var i=1;i<=maxD;i++)html+=`<option value="${i}" ${i===current?'selected':''}>${num(i)}</option>`;
+  dSel.innerHTML=html;
+}
+function getJDate(id){
+  var y=Number(document.getElementById(id+'_y').value);
+  var m=Number(document.getElementById(id+'_m').value);
+  var d=Number(document.getElementById(id+'_d').value);
+  return jalaliToISO(y,m,d);
 }
 
-/* ===== NAVIGATION ===== */
-const PAGES = {
-  dashboard:{title:'ساخت‌یار', sub:'مدیریت حرفه‌ای پروژه‌های ساختمانی', fab:false},
-  projects:{title:'پروژه‌ها', sub:'مدیریت پروژه‌های ساختمانی', fab:true, fabAction:'addProject'},
-  finance:{title:'مالی', sub:'هزینه‌ها، چک‌ها و گزارش', fab:true, fabAction:'financeFab'},
-  materials:{title:'انبار', sub:'مدیریت مصالح و موجودی', fab:true, fabAction:'addMaterial'},
-  more:{title:'بیشتر', sub:'کارگران، شرکا، ابزارها', fab:false}
+/* ===== PAGES ===== */
+const PAGES={
+  dashboard:{title:'ساخت‌یار',sub:'مدیریت حرفه‌ای پروژه‌های ساختمانی',fab:false},
+  projects:{title:'پروژه‌ها',sub:'مدیریت پروژه‌های ساختمانی',fab:true,fabAction:'addProject'},
+  finance:{title:'مالی',sub:'هزینه‌ها و پرداخت‌ها',fab:true,fabAction:'addExpense'},
+  materials:{title:'انبار',sub:'مدیریت مصالح و موجودی',fab:true,fabAction:'addMaterial'},
+  more:{title:'بیشتر',sub:'پیمانکاران و ابزارها',fab:true,fabAction:'addContractor'}
 };
-
 function switchPage(p){
-  if(!PAGES[p]) return;
-  state.page = p;
-  document.querySelectorAll('.page').forEach(x => x.classList.remove('active'));
+  if(!PAGES[p])return;
+  state.page=p;
+  document.querySelectorAll('.page').forEach(x=>x.classList.remove('active'));
   document.getElementById('page-'+p).classList.add('active');
-  document.querySelectorAll('.nav-item').forEach(x => x.classList.remove('active'));
+  document.querySelectorAll('.nav-item').forEach(x=>x.classList.remove('active'));
   document.querySelector(`.nav-item[data-page="${p}"]`).classList.add('active');
-  document.getElementById('pageTitle').textContent = PAGES[p].title;
-  document.getElementById('pageSub').textContent = PAGES[p].sub;
-  const fab = document.getElementById('fab');
-  if(PAGES[p].fab) fab.classList.add('show'); else fab.classList.remove('show');
-  document.getElementById('main').scrollTop = 0;
+  document.getElementById('pageTitle').textContent=PAGES[p].title;
+  document.getElementById('pageSub').textContent=PAGES[p].sub;
+  var fab=document.getElementById('fab');
+  if(PAGES[p].fab)fab.classList.add('show');else fab.classList.remove('show');
+  document.getElementById('main').scrollTop=0;
   renderPage(p);
 }
-
 function onFab(){
-  const act = PAGES[state.page].fabAction;
-  if(act === 'addProject') openProjectForm();
-  else if(act === 'financeFab'){
-    if(state.financeTab === 'expenses') openExpenseForm();
-    else openChequeForm();
-  }
-  else if(act === 'addMaterial') openMaterialForm();
+  var act=PAGES[state.page].fabAction;
+  if(act==='addProject')openProjectForm();
+  else if(act==='addExpense')openExpenseForm();
+  else if(act==='addMaterial')openMaterialForm();
+  else if(act==='addContractor')openContractorForm();
 }
-
-/* ===== RENDER ===== */
 function renderPage(p){
-  if(p === 'dashboard') renderDashboard();
-  if(p === 'projects') renderProjects();
-  if(p === 'finance'){ renderExpenses(); renderCheques(); }
-  if(p === 'materials') renderMaterials();
-  if(p === 'more'){ renderWorkers(); renderPartners(); renderTasks(); }
+  if(p==='dashboard')renderDashboard();
+  if(p==='projects')renderProjects();
+  if(p==='finance')renderExpenses();
+  if(p==='materials')renderMaterials();
+  if(p==='more')renderContractors();
 }
 
+/* ===== CALCULATIONS ===== */
+function projectDirectCost(projectId,db){
+  return db.expenses.filter(e=>e.projectId===projectId).reduce((s,e)=>s+(Number(e.totalAmount)||0),0);
+}
+function contractorWage(c,db){
+  var direct=projectDirectCost(c.projectId,db);
+  return Math.round(direct*(Number(c.share)||0)/100);
+}
+function allContractorsWage(db){
+  return db.contractors.reduce((s,c)=>s+contractorWage(c,db),0);
+}
+
+/* ===== RENDER: DASHBOARD ===== */
 function renderDashboard(){
-  const db = loadDB();
-  const totalBudget = db.projects.reduce((s,p) => s + (Number(p.budget)||0), 0);
-  const totalSpent = db.expenses.reduce((s,e) => s + (Number(e.amount)||0), 0);
-  const rem = totalBudget - totalSpent;
-  const pct = totalBudget > 0 ? Math.min(100, (totalSpent/totalBudget*100)) : 0;
-  document.getElementById('heroBudget').innerHTML = shortMoney(totalBudget) + ' <small>تومان</small>';
-  document.getElementById('heroPercent').textContent = num(pct.toFixed(0)) + '٪';
-  document.getElementById('heroProgress').style.width = pct + '%';
-  document.getElementById('heroSpent').textContent = shortMoney(totalSpent);
-  document.getElementById('heroRemaining').textContent = shortMoney(rem);
-  document.getElementById('statProjects').textContent = num(db.projects.length);
-  document.getElementById('statExpenses').textContent = num(db.expenses.length);
-  document.getElementById('statMaterials').textContent = num(db.materials.length);
-  document.getElementById('statWorkers').textContent = num(db.workers.length);
+  var db=loadDB();
+  var totalBudget=db.projects.reduce((s,p)=>s+(Number(p.budget)||0),0);
+  var totalSpent=db.expenses.reduce((s,e)=>s+(Number(e.totalAmount)||0),0);
+  var rem=totalBudget-totalSpent;
+  var pct=totalBudget>0?Math.min(100,totalSpent/totalBudget*100):0;
+  document.getElementById('heroBudget').innerHTML=shortMoney(totalBudget)+' <small>تومان</small>';
+  document.getElementById('heroPercent').textContent=num(pct.toFixed(0))+'٪';
+  document.getElementById('heroProgress').style.width=pct+'%';
+  document.getElementById('heroSpent').textContent=shortMoney(totalSpent);
+  document.getElementById('heroRemaining').textContent=shortMoney(rem);
+  document.getElementById('statProjects').textContent=num(db.projects.length);
+  document.getElementById('statExpenses').textContent=num(db.expenses.length);
+  document.getElementById('statMaterials').textContent=num(db.materials.length);
+  document.getElementById('statContractors').textContent=num(db.contractors.length);
 
-  // Cheques near due
-  const cheques = db.cheques.filter(c => c.status === 'pending').sort((a,b) => new Date(a.dueDate) - new Date(b.dueDate)).slice(0,3);
-  const chEl = document.getElementById('dashCheques');
-  if(!cheques.length) chEl.innerHTML = '<div class="empty" style="padding:24px"><div class="empty-text">چک در انتظاری وجود ندارد</div></div>';
-  else chEl.innerHTML = cheques.map(c => renderChequeHTML(c, true)).join('');
+  // Contractors summary
+  var cEl=document.getElementById('dashContractors');
+  if(!db.contractors.length){cEl.innerHTML='<div class="empty" style="padding:20px"><div class="empty-text">پیمانکاری ثبت نشده</div></div>'}
+  else{
+    cEl.innerHTML=db.contractors.slice(0,3).map(c=>{
+      var proj=db.projects.find(p=>p.id===c.projectId);
+      var wage=contractorWage(c,db);
+      var paid=Number(c.paidAmount)||0;
+      var remaining=Math.max(0,wage-paid);
+      return `<div class="list-item"><div class="list-icon purple">👷</div>
+        <div class="list-body"><div class="list-title">${esc(c.name)}</div><div class="list-sub">${num(c.share)}٪ · ${proj?esc(proj.name):'—'}</div></div>
+        <div class="list-value">${shortMoney(wage)}</div></div>`;
+    }).join('');
+  }
 
-  // Recent expenses
-  const recent = db.expenses.slice().sort((a,b) => new Date(b.date) - new Date(a.date)).slice(0,3);
-  const exEl = document.getElementById('dashExpenses');
-  if(!recent.length) exEl.innerHTML = '<div class="empty" style="padding:24px"><div class="empty-text">هنوز هزینه‌ای ثبت نشده</div></div>';
-  else exEl.innerHTML = recent.map(e => {
-    const proj = db.projects.find(p => p.id === e.projectId);
-    return `<div class="list-item"><div class="list-icon orange">💸</div><div class="list-body"><div class="list-title">${esc(e.title)}</div><div class="list-sub">${esc(e.category)} · ${proj ? esc(proj.name) : 'بدون پروژه'} · ${faDate(e.date)}</div></div><div class="list-value expense">${shortMoney(e.amount)}</div></div>`;
+  // Cheques due soon (from expenses)
+  var cheques=[];
+  db.expenses.forEach(e=>{
+    (e.cheques||[]).forEach((c,i)=>{
+      if(c.status==='pending')cheques.push({...c,expenseTitle:e.title,expenseId:e.id,index:i,projectId:e.projectId});
+    });
+  });
+  cheques.sort((a,b)=>new Date(a.dueDate)-new Date(b.dueDate));
+  cheques=cheques.slice(0,3);
+  var chEl=document.getElementById('dashCheques');
+  if(!cheques.length)chEl.innerHTML='<div class="empty" style="padding:20px"><div class="empty-text">چک در انتظاری نیست</div></div>';
+  else chEl.innerHTML=cheques.map(c=>{
+    var days=daysUntil(c.dueDate);
+    var color=days<=7?'#f87171':days<=30?'#f59e0b':'#34d399';
+    return `<div class="list-item"><div class="list-icon orange">🧾</div>
+      <div class="list-body"><div class="list-title">${esc(c.bank)} · ${esc(c.number||'—')}</div>
+      <div class="list-sub">${esc(c.expenseTitle)} · ${faDate(c.dueDate)}</div></div>
+      <div class="list-value" style="color:${color}">${shortMoney(c.amount)}</div></div>`;
   }).join('');
 
-  // Active projects
-  const active = db.projects.filter(p => p.status === 'active').slice(0,3);
-  const prEl = document.getElementById('dashProjects');
-  if(!active.length) prEl.innerHTML = '<div class="empty" style="padding:24px"><div class="empty-text">پروژه فعالی ندارید</div></div>';
-  else prEl.innerHTML = active.map(p => renderProjectCard(p)).join('');
+  // Recent expenses
+  var recent=db.expenses.slice().sort((a,b)=>new Date(b.date)-new Date(a.date)).slice(0,3);
+  var exEl=document.getElementById('dashExpenses');
+  if(!recent.length)exEl.innerHTML='<div class="empty" style="padding:20px"><div class="empty-text">هزینه‌ای ثبت نشده</div></div>';
+  else exEl.innerHTML=recent.map(e=>{
+    var proj=db.projects.find(p=>p.id===e.projectId);
+    return `<div class="list-item"><div class="list-icon orange">💸</div>
+      <div class="list-body"><div class="list-title">${esc(e.title)}</div>
+      <div class="list-sub">${esc(e.category)} · ${proj?esc(proj.name):'—'} · ${faDate(e.date)}</div></div>
+      <div class="list-value expense">${shortMoney(e.totalAmount)}</div></div>`;
+  }).join('');
 }
 
-function renderProjectCard(p){
-  const db = loadDB();
-  const spent = db.expenses.filter(e => e.projectId === p.id).reduce((s,e) => s + (Number(e.amount)||0), 0);
-  const pct = Math.min(100, p.progress || 0);
-  const badgeLabels = { active:'در حال اجرا', pending:'در انتظار', done:'تکمیل شده', paused:'متوقف' };
+/* ===== RENDER: PROJECTS ===== */
+function renderProjects(){
+  var db=loadDB();
+  var list=db.projects;
+  if(state.projectFilter!=='all')list=list.filter(p=>p.status===state.projectFilter);
+  var el=document.getElementById('projectsList');
+  if(!list.length){el.innerHTML='<div class="empty"><div class="empty-icon">🏗️</div><div class="empty-text">پروژه‌ای نیست</div><div class="empty-sub">با دکمه + بسازید</div></div>';return}
+  el.innerHTML=list.map(p=>renderProjectCard(p,db)).join('');
+}
+function renderProjectCard(p,db){
+  var spent=projectDirectCost(p.id,db);
+  var pct=Math.min(100,p.progress||0);
+  var labels={active:'در حال اجرا',pending:'در انتظار',done:'تکمیل شده',paused:'متوقف'};
   return `<div class="project-card" onclick="openProjectDetail('${p.id}')">
-    <div class="project-header">
-      <div class="project-name">${esc(p.name)}</div>
-      <div class="badge ${p.status||'pending'}">${badgeLabels[p.status]||'نامشخص'}</div>
-    </div>
+    <div class="project-header"><div class="project-name">${esc(p.name)}</div><div class="badge ${p.status||'pending'}">${labels[p.status]||'—'}</div></div>
     <div style="padding:0 14px 14px">
       <div class="project-meta"><span>📍 ${esc(p.address||'—')}</span><span>💰 ${shortMoney(p.budget)}</span></div>
       <div class="project-progress"><div class="project-progress-fill" style="width:${pct}%"></div></div>
@@ -405,152 +505,87 @@ function renderProjectCard(p){
   </div>`;
 }
 
-function renderProjects(){
-  const db = loadDB();
-  let list = db.projects;
-  if(state.projectFilter !== 'all') list = list.filter(p => p.status === state.projectFilter);
-  const el = document.getElementById('projectsList');
-  if(!list.length){
-    el.innerHTML = '<div class="empty"><div class="empty-icon">🏗️</div><div class="empty-text">پروژه‌ای وجود ندارد</div><div class="empty-sub">با دکمه + پروژه جدید بسازید</div></div>';
-    return;
-  }
-  el.innerHTML = list.map(p => renderProjectCard(p)).join('');
-}
-
+/* ===== RENDER: EXPENSES ===== */
 function renderExpenses(){
-  const db = loadDB();
-  let list = db.expenses.slice().sort((a,b) => new Date(b.date) - new Date(a.date));
-  if(state.expenseFilter !== 'all') list = list.filter(e => e.category === state.expenseFilter);
-  const el = document.getElementById('expensesList');
-  if(!list.length){
-    el.innerHTML = '<div class="empty"><div class="empty-icon">💸</div><div class="empty-text">هزینه‌ای ثبت نشده</div><div class="empty-sub">با دکمه + هزینه ثبت کنید</div></div>';
-    return;
-  }
-  el.innerHTML = list.map(e => {
-    const proj = db.projects.find(p => p.id === e.projectId);
+  var db=loadDB();
+  var list=db.expenses.slice().sort((a,b)=>new Date(b.date)-new Date(a.date));
+  if(state.expenseFilter!=='all')list=list.filter(e=>e.category===state.expenseFilter);
+  var el=document.getElementById('expensesList');
+  if(!list.length){el.innerHTML='<div class="empty"><div class="empty-icon">💸</div><div class="empty-text">هزینه‌ای نیست</div><div class="empty-sub">با دکمه + ثبت کنید</div></div>';return}
+  el.innerHTML=list.map(e=>{
+    var proj=db.projects.find(p=>p.id===e.projectId);
+    var cashTotal=(e.cash||[]).reduce((s,c)=>s+(Number(c.amount)||0),0);
+    var chqTotal=(e.cheques||[]).reduce((s,c)=>s+(Number(c.amount)||0),0);
+    var info=[];
+    if((e.cash||[]).length)info.push(`${num((e.cash||[]).length)} نقد`);
+    if((e.cheques||[]).length)info.push(`${num((e.cheques||[]).length)} چک`);
     return `<div class="list-item" onclick="openExpenseForm('${e.id}')">
-      <div class="list-icon ${e.paid ? 'green' : 'orange'}">${e.paid ? '✅' : '💸'}</div>
-      <div class="list-body">
-        <div class="list-title">${esc(e.title)}</div>
-        <div class="list-sub">${esc(e.category)} · ${proj ? esc(proj.name) : 'بدون پروژه'} · ${faDate(e.date)}</div>
-      </div>
-      <div class="list-value expense">${shortMoney(e.amount)}</div>
+      <div class="list-icon orange">💸</div>
+      <div class="list-body"><div class="list-title">${esc(e.title)}</div>
+      <div class="list-sub">${esc(e.category)} · ${proj?esc(proj.name):'—'} · ${faDate(e.date)}${info.length?' · '+info.join(' + '):''}</div></div>
+      <div class="list-value expense">${shortMoney(e.totalAmount)}</div>
     </div>`;
   }).join('');
 }
 
-function renderChequeHTML(c, compact){
-  const db = loadDB();
-  const proj = db.projects.find(p => p.id === c.projectId);
-  const days = daysUntil(c.dueDate);
-  let cls = 'ok';
-  if(c.status !== 'pending') cls = 'done';
-  else if(days < 0) cls = 'danger';
-  else if(days <= 7) cls = 'danger';
-  else if(days <= 30) cls = 'warn';
-  const statusLabels = { pending:'در انتظار', cashed:'پاس شده', bounced:'برگشتی', returned:'پس داده' };
-  const typeLabel = c.type === 'received' ? '📥 دریافتی' : '📤 پرداختی';
-  const daysText = c.status === 'pending' ? (days < 0 ? `${num(Math.abs(days))} روز گذشته` : days === 0 ? 'امروز' : `${num(days)} روز مانده`) : statusLabels[c.status];
-  if(compact){
-    return `<div class="cheque-item ${cls}" style="margin-bottom:8px;padding:10px 12px">
-      <div class="cheque-top"><div class="cheque-bank" style="font-size:12px">${esc(c.bank)} · ${typeLabel}</div><div class="cheque-amount ${c.type}">${shortMoney(c.amount)}</div></div>
-      <div class="cheque-meta" style="margin:0"><span>📅 ${faDate(c.dueDate)}</span><span style="color:${days<=7?'#f87171':'#8b95ad'}">⏰ ${daysText}</span></div>
-    </div>`;
-  }
-  return `<div class="cheque-item ${cls}">
-    <div class="cheque-top"><div><div class="cheque-bank">${esc(c.bank)}</div><div style="font-size:10px;color:var(--text2);margin-top:2px">${typeLabel} · شماره ${esc(c.number||'—')}</div></div><div class="cheque-amount ${c.type}">${shortMoney(c.amount)}</div></div>
-    <div class="cheque-meta"><span>📅 ${faDate(c.dueDate)}</span><span style="color:${days<=7 && c.status==='pending'?'#f87171':'#8b95ad'}">⏰ ${daysText}</span>${proj ? `<span>🏗️ ${esc(proj.name)}</span>` : ''}</div>
-    ${c.note ? `<div style="font-size:11px;color:var(--text2);margin-bottom:8px">📝 ${esc(c.note)}</div>` : ''}
-    <div class="cheque-actions">
-      ${c.status === 'pending' ? `<button class="btn btn-secondary" onclick="event.stopPropagation();updateChequeStatus('${c.id}','cashed')">✅ پاس شد</button>
-      <button class="btn btn-secondary" onclick="event.stopPropagation();updateChequeStatus('${c.id}','bounced')">↩ برگشتی</button>` : `<button class="btn btn-secondary" onclick="event.stopPropagation();updateChequeStatus('${c.id}','pending')">🔄 بازگردانی</button>`}
-      <button class="btn btn-secondary" onclick="event.stopPropagation();openChequeForm('${c.id}')">✏️</button>
-      <button class="btn btn-danger" onclick="event.stopPropagation();deleteCheque('${c.id}')">🗑️</button>
-    </div>
-  </div>`;
-}
-
-function renderCheques(){
-  const db = loadDB();
-  let list = db.cheques.slice().sort((a,b) => new Date(a.dueDate) - new Date(b.dueDate));
-  if(state.chequeFilter === 'received') list = list.filter(c => c.type === 'received');
-  else if(state.chequeFilter === 'paid') list = list.filter(c => c.type === 'paid');
-  else if(state.chequeFilter === 'pending') list = list.filter(c => c.status === 'pending');
-  else if(state.chequeFilter === 'cashed') list = list.filter(c => c.status === 'cashed');
-  const el = document.getElementById('chequesList');
-  if(!list.length){ el.innerHTML = '<div class="empty"><div class="empty-icon">🧾</div><div class="empty-text">چکی ثبت نشده</div><div class="empty-sub">با دکمه + چک اضافه کنید</div></div>'; return; }
-  el.innerHTML = list.map(c => renderChequeHTML(c, false)).join('');
-}
-
+/* ===== RENDER: MATERIALS ===== */
 function renderMaterials(){
-  const db = loadDB();
-  document.getElementById('matCount').textContent = num(db.materials.length);
-  const totalVal = db.materials.reduce((s,m) => s + (Number(m.quantity)||0) * (Number(m.unitPrice)||0), 0);
-  document.getElementById('matValue').textContent = shortMoney(totalVal);
-  const el = document.getElementById('materialsList');
-  if(!db.materials.length){ el.innerHTML = '<div class="empty"><div class="empty-icon">📦</div><div class="empty-text">انبار خالی است</div><div class="empty-sub">با دکمه + مصالح اضافه کنید</div></div>'; return; }
-  el.innerHTML = db.materials.map(m => {
-    const proj = db.projects.find(p => p.id === m.projectId);
+  var db=loadDB();
+  document.getElementById('matCount').textContent=num(db.materials.length);
+  var totalVal=db.materials.reduce((s,m)=>s+(Number(m.quantity)||0)*(Number(m.unitPrice)||0),0);
+  document.getElementById('matValue').textContent=shortMoney(totalVal);
+  var el=document.getElementById('materialsList');
+  if(!db.materials.length){el.innerHTML='<div class="empty"><div class="empty-icon">📦</div><div class="empty-text">انبار خالی</div><div class="empty-sub">با دکمه + اضافه کنید</div></div>';return}
+  el.innerHTML=db.materials.map(m=>{
+    var proj=db.projects.find(p=>p.id===m.projectId);
     return `<div class="list-item" onclick="openMaterialForm('${m.id}')">
       <div class="list-icon green">📦</div>
-      <div class="list-body"><div class="list-title">${esc(m.name)}</div><div class="list-sub">${num(m.quantity)} ${esc(m.unit||'')} · ${shortMoney(m.unitPrice)} · ${proj ? esc(proj.name) : 'بدون پروژه'}</div></div>
+      <div class="list-body"><div class="list-title">${esc(m.name)}</div>
+      <div class="list-sub">${num(m.quantity)} ${esc(m.unit||'')} · ${shortMoney(m.unitPrice)} · ${proj?esc(proj.name):'—'}</div></div>
       <div class="list-value">${shortMoney((Number(m.quantity)||0)*(Number(m.unitPrice)||0))}</div>
     </div>`;
   }).join('');
 }
 
-function renderWorkers(){
-  const db = loadDB();
-  const el = document.getElementById('workersList');
-  if(!db.workers.length){ el.innerHTML = '<div class="empty" style="padding:24px"><div class="empty-text">کارگری ثبت نشده</div><div class="empty-sub"><a onclick="openWorkerForm()" style="color:var(--primary);cursor:pointer">افزودن +</a></div></div>'; return; }
-  el.innerHTML = db.workers.map(w => {
-    const proj = db.projects.find(p => p.id === w.projectId);
-    return `<div class="list-item" onclick="openWorkerForm('${w.id}')">
-      <div class="list-icon blue">👷</div>
-      <div class="list-body"><div class="list-title">${esc(w.name)}</div><div class="list-sub">${esc(w.role)} · ${shortMoney(w.dailyWage)}/روز · ${proj ? esc(proj.name) : 'بدون پروژه'}</div></div>
-    </div>`;
-  }).join('');
-}
-
-function renderPartners(){
-  const db = loadDB();
-  const el = document.getElementById('partnersList');
-  if(!db.partners.length){ el.innerHTML = '<div class="empty" style="padding:24px"><div class="empty-text">شریکی ثبت نشده</div><div class="empty-sub"><a onclick="openPartnerForm()" style="color:var(--primary);cursor:pointer">افزودن +</a></div></div>'; return; }
-  el.innerHTML = db.partners.map(p => {
-    const proj = db.projects.find(x => x.id === p.projectId);
-    return `<div class="list-item" onclick="openPartnerForm('${p.id}')">
-      <div class="list-icon purple">🤝</div>
-      <div class="list-body"><div class="list-title">${esc(p.name)}</div><div class="list-sub">${num(p.share)}٪ سهم · ${proj ? esc(proj.name) : 'بدون پروژه'}</div></div>
-    </div>`;
-  }).join('');
-}
-
-function renderTasks(){
-  const db = loadDB();
-  const el = document.getElementById('tasksList');
-  if(!db.tasks.length){ el.innerHTML = '<div class="empty" style="padding:24px"><div class="empty-text">وظیفه‌ای ثبت نشده</div><div class="empty-sub"><a onclick="openTaskForm()" style="color:var(--primary);cursor:pointer">افزودن +</a></div></div>'; return; }
-  el.innerHTML = db.tasks.map(t => {
-    const proj = db.projects.find(x => x.id === t.projectId);
-    const done = t.status === 'done';
-    return `<div class="list-item" onclick="toggleTask('${t.id}')">
-      <div class="list-icon ${done?'green':'orange'}">${done?'✅':'⬜'}</div>
-      <div class="list-body"><div class="list-title" style="${done?'text-decoration:line-through;opacity:.6':''}">${esc(t.title)}</div><div class="list-sub">${proj ? esc(proj.name) : 'بدون پروژه'}${t.deadline ? ' · '+faDate(t.deadline) : ''}</div></div>
-      <button class="btn btn-sm btn-danger" onclick="event.stopPropagation();deleteTask('${t.id}')">🗑️</button>
+/* ===== RENDER: CONTRACTORS ===== */
+function renderContractors(){
+  var db=loadDB();
+  var el=document.getElementById('contractorsList');
+  if(!db.contractors.length){el.innerHTML='<div class="empty" style="padding:24px"><div class="empty-icon">👷</div><div class="empty-text">پیمانکاری نیست</div><div class="empty-sub">با دکمه + اضافه کنید</div></div>';return}
+  el.innerHTML=db.contractors.map(c=>{
+    var proj=db.projects.find(p=>p.id===c.projectId);
+    var wage=contractorWage(c,db);
+    var paid=Number(c.paidAmount)||0;
+    var remaining=Math.max(0,wage-paid);
+    return `<div class="contractor-card">
+      <div class="contractor-head"><div class="contractor-name">${esc(c.name)}</div><div class="contractor-share">${num(c.share)}٪</div></div>
+      <div class="contractor-info">📞 ${esc(c.phone||'—')}</div>
+      <div class="contractor-info">🏗️ ${proj?esc(proj.name):'—'}</div>
+      <div class="contractor-pay">
+        <div class="contractor-pay-line"><span>دستمزد متعلقه:</span><b style="color:#f59e0b">${shortMoney(wage)}</b></div>
+        <div class="contractor-pay-line"><span>پرداخت شده:</span><b style="color:#34d399">${shortMoney(paid)}</b></div>
+        <div class="contractor-pay-line"><span>باقیمانده:</span><b style="color:#f87171">${shortMoney(remaining)}</b></div>
+      </div>
+      <div class="actions">
+        <button class="btn btn-sm btn-primary" onclick="openContractorForm('${c.id}')">✏️ ویرایش</button>
+        <button class="btn btn-sm btn-secondary" onclick="openContractorPay('${c.id}')">💰 پرداخت</button>
+        <button class="btn btn-sm btn-danger" onclick="deleteContractor('${c.id}')">🗑️</button>
+      </div>
     </div>`;
   }).join('');
 }
 
 /* ===== PROJECT FORM ===== */
 function openProjectForm(id){
-  const db = loadDB();
-  const p = id ? db.projects.find(x => x.id === id) : { name:'', address:'', budget:'', startDate:today(), endDate:'', status:'active', progress:0, description:'' };
-  if(!p) return;
-  document.getElementById('modalBody').innerHTML = `
+  var db=loadDB();
+  var p=id?db.projects.find(x=>x.id===id):{name:'',address:'',budget:'',startDate:todayISO(),endDate:'',status:'active',progress:0,description:''};
+  if(!p)return;
+  document.getElementById('modalBody').innerHTML=`
     <div class="modal-title">${id?'ویرایش پروژه':'پروژه جدید'}</div>
-    <div class="form-group"><label class="form-label">نام پروژه *</label><input class="form-input" id="pName" value="${esc(p.name||'')}" placeholder="مثلاً برج آفتاب"></div>
-    <div class="form-group"><label class="form-label">آدرس</label><input class="form-input" id="pAddress" value="${esc(p.address||'')}" placeholder="تهران، ..."></div>
+    <div class="form-group"><label class="form-label">نام پروژه *</label><input class="form-input" id="pName" value="${esc(p.name||'')}" placeholder="برج آفتاب"></div>
+    <div class="form-group"><label class="form-label">آدرس</label><input class="form-input" id="pAddress" value="${esc(p.address||'')}"></div>
     <div class="form-row">
-      <div class="form-group"><label class="form-label">بودجه (تومان)</label><input class="form-input" id="pBudget" type="number" value="${p.budget||''}" placeholder="0"></div>
+      <div class="form-group"><label class="form-label">بودجه (تومان)</label><input class="form-input" id="pBudget" type="number" value="${p.budget||''}"></div>
       <div class="form-group"><label class="form-label">وضعیت</label><select class="form-select" id="pStatus">
         <option value="active" ${p.status==='active'?'selected':''}>در حال اجرا</option>
         <option value="pending" ${p.status==='pending'?'selected':''}>در انتظار</option>
@@ -558,533 +593,414 @@ function openProjectForm(id){
         <option value="done" ${p.status==='done'?'selected':''}>تکمیل شده</option>
       </select></div>
     </div>
-    <div class="form-row">
-      <div class="form-group"><label class="form-label">تاریخ شروع</label><input class="form-input" id="pStart" type="date" value="${p.startDate||''}"></div>
-      <div class="form-group"><label class="form-label">تاریخ پایان</label><input class="form-input" id="pEnd" type="date" value="${p.endDate||''}"></div>
-    </div>
+    <div class="form-group"><label class="form-label">تاریخ شروع (شمسی)</label>${dateInputHTML('pStart',p.startDate)}</div>
+    <div class="form-group"><label class="form-label">تاریخ پایان (شمسی)</label>${dateInputHTML('pEnd',p.endDate)}</div>
     <div class="form-group"><label class="form-label">درصد پیشرفت: <b id="progLabel" style="color:var(--primary)">${num(p.progress||0)}٪</b></label><input class="form-input" id="pProgress" type="range" min="0" max="100" value="${p.progress||0}" oninput="document.getElementById('progLabel').textContent = Number(this.value).toLocaleString('fa-IR')+'٪'"></div>
-    <div class="form-group"><label class="form-label">توضیحات</label><textarea class="form-textarea" id="pDesc" placeholder="یادداشت...">${esc(p.description||'')}</textarea></div>
+    <div class="form-group"><label class="form-label">توضیحات</label><textarea class="form-textarea" id="pDesc">${esc(p.description||'')}</textarea></div>
     <div class="actions">
       <button class="btn btn-primary" onclick="saveProject(${id?`'${id}'`:'null'})">${id?'ذخیره':'ایجاد'}</button>
       <button class="btn btn-secondary" onclick="closeModal()">انصراف</button>
     </div>
+    <div class="brand-modal"><div class="brand-name">✦ DAVIN NOVA ✦</div><div class="brand-sub">DESIGNED & ENGINEERED BY DAVIN</div><div class="brand-phone">۰۹۱۲۱۷۵۹۹۴۲</div></div>
   `;
   showModal();
 }
-
 function saveProject(id){
-  const name = document.getElementById('pName').value.trim();
-  if(!name){ toast('نام پروژه را وارد کنید','error'); return; }
-  const data = {
-    name, address: document.getElementById('pAddress').value.trim(),
-    budget: Number(document.getElementById('pBudget').value)||0,
-    status: document.getElementById('pStatus').value,
-    startDate: document.getElementById('pStart').value,
-    endDate: document.getElementById('pEnd').value,
-    progress: Number(document.getElementById('pProgress').value)||0,
-    description: document.getElementById('pDesc').value.trim()
-  };
-  const db = loadDB();
-  if(id){
-    const idx = db.projects.findIndex(x => x.id === id);
-    if(idx >= 0) db.projects[idx] = { ...db.projects[idx], ...data };
-    toast('پروژه ویرایش شد','success');
-  } else {
-    db.projects.push({ id:uid(), ...data, createdAt: today() });
-    toast('پروژه ایجاد شد','success');
-  }
-  saveDB(db);
-  closeModal();
-  renderPage(state.page);
+  var name=document.getElementById('pName').value.trim();
+  if(!name){toast('نام الزامی است','error');return}
+  var data={name,address:document.getElementById('pAddress').value.trim(),budget:Number(document.getElementById('pBudget').value)||0,status:document.getElementById('pStatus').value,startDate:getJDate('pStart'),endDate:getJDate('pEnd'),progress:Number(document.getElementById('pProgress').value)||0,description:document.getElementById('pDesc').value.trim()};
+  var db=loadDB();
+  if(id){var i=db.projects.findIndex(x=>x.id===id);if(i>=0)db.projects[i]={...db.projects[i],...data};toast('ویرایش شد','success')}
+  else{db.projects.push({id:uid(),...data,createdAt:todayISO()});toast('پروژه ساخته شد','success')}
+  saveDB(db);closeModal();renderPage(state.page);
 }
-
 function openProjectDetail(id){
-  const db = loadDB();
-  const p = db.projects.find(x => x.id === id);
-  if(!p) return;
-  const spent = db.expenses.filter(e => e.projectId === id).reduce((s,e) => s + (Number(e.amount)||0), 0);
-  const remaining = (Number(p.budget)||0) - spent;
-  const badgeLabels = { active:'در حال اجرا', pending:'در انتظار', done:'تکمیل شده', paused:'متوقف' };
-  document.getElementById('modalBody').innerHTML = `
+  var db=loadDB();
+  var p=db.projects.find(x=>x.id===id);
+  if(!p)return;
+  var spent=projectDirectCost(id,db);
+  var remaining=(Number(p.budget)||0)-spent;
+  var conWage=db.contractors.filter(c=>c.projectId===id).reduce((s,c)=>s+contractorWage(c,db),0);
+  var totalFinal=spent+conWage;
+  var labels={active:'در حال اجرا',pending:'در انتظار',done:'تکمیل شده',paused:'متوقف'};
+  document.getElementById('modalBody').innerHTML=`
     <div class="modal-title">${esc(p.name)}</div>
     <div class="stats-grid">
       <div class="stat-card"><div class="stat-label">💰 بودجه</div><div class="stat-value">${shortMoney(p.budget)}</div></div>
-      <div class="stat-card red"><div class="stat-label">💸 هزینه شده</div><div class="stat-value">${shortMoney(spent)}</div></div>
-      <div class="stat-card green"><div class="stat-label">💵 باقیمانده</div><div class="stat-value">${shortMoney(remaining)}</div></div>
-      <div class="stat-card purple"><div class="stat-label">📊 پیشرفت</div><div class="stat-value">${num(p.progress||0)}٪</div></div>
+      <div class="stat-card red"><div class="stat-label">💸 هزینه مستقیم</div><div class="stat-value">${shortMoney(spent)}</div></div>
+      <div class="stat-card purple"><div class="stat-label">👷 دستمزد پیمانکاران</div><div class="stat-value">${shortMoney(conWage)}</div></div>
+      <div class="stat-card green"><div class="stat-label">💵 هزینه تمام‌شده</div><div class="stat-value">${shortMoney(totalFinal)}</div></div>
     </div>
     <div class="card">
-      <div style="font-size:12px;color:var(--text2);margin-bottom:6px">وضعیت: ${badgeLabels[p.status]||'—'}</div>
-      <div style="font-size:12px;color:var(--text2)">📍 ${esc(p.address||'—')}</div>
+      <div style="font-size:12px;color:var(--text2)">وضعیت: ${labels[p.status]||'—'}</div>
+      <div style="font-size:12px;color:var(--text2);margin-top:4px">📍 ${esc(p.address||'—')}</div>
       <div style="font-size:12px;color:var(--text2);margin-top:4px">📅 ${faDate(p.startDate)} ${p.endDate?'→ '+faDate(p.endDate):''}</div>
-      ${p.description?`<div style="font-size:12px;color:var(--text2);margin-top:8px">📝 ${esc(p.description)}</div>`:''}
+      <div style="font-size:12px;color:var(--text2);margin-top:4px">📊 پیشرفت: ${num(p.progress||0)}٪</div>
     </div>
     <div class="actions">
       <button class="btn btn-primary" onclick="closeModal();openProjectForm('${id}')">✏️ ویرایش</button>
       <button class="btn btn-danger" onclick="deleteProject('${id}')">🗑️ حذف</button>
     </div>
     <button class="btn btn-secondary btn-block" style="margin-top:10px" onclick="closeModal()">بستن</button>
+    <div class="brand-modal"><div class="brand-name">✦ DAVIN NOVA ✦</div><div class="brand-sub">DESIGNED & ENGINEERED BY DAVIN</div><div class="brand-phone">۰۹۱۲۱۷۵۹۹۴۲</div></div>
   `;
   showModal();
 }
-
 function deleteProject(id){
-  if(!confirm('پروژه و تمام داده‌های مرتبط حذف شود؟')) return;
-  const db = loadDB();
-  db.projects = db.projects.filter(x => x.id !== id);
-  db.expenses = db.expenses.filter(x => x.projectId !== id);
-  db.cheques = db.cheques.filter(x => x.projectId !== id);
-  db.materials = db.materials.filter(x => x.projectId !== id);
-  db.workers = db.workers.filter(x => x.projectId !== id);
-  db.partners = db.partners.filter(x => x.projectId !== id);
-  db.tasks = db.tasks.filter(x => x.projectId !== id);
-  saveDB(db);
-  closeModal();
-  toast('پروژه حذف شد','success');
-  renderPage(state.page);
+  if(!confirm('پروژه و داده‌های مرتبط حذف شود؟'))return;
+  var db=loadDB();
+  db.projects=db.projects.filter(x=>x.id!==id);
+  db.expenses=db.expenses.filter(x=>x.projectId!==id);
+  db.materials=db.materials.filter(x=>x.projectId!==id);
+  db.contractors=db.contractors.filter(x=>x.projectId!==id);
+  saveDB(db);closeModal();toast('حذف شد','success');renderPage(state.page);
 }
 
-/* ===== EXPENSE FORM ===== */
+/* ===== EXPENSE FORM (with payments) ===== */
+var expenseCash=[],expenseCheques=[];
 function openExpenseForm(id){
-  const db = loadDB();
-  const e = id ? db.expenses.find(x => x.id === id) : { title:'', category:'مصالح', amount:'', date:today(), projectId:'', paid:true, note:'' };
-  if(!e) return;
-  const projOpts = db.projects.map(p => `<option value="${p.id}" ${p.id===e.projectId?'selected':''}>${esc(p.name)}</option>`).join('');
-  document.getElementById('modalBody').innerHTML = `
+  var db=loadDB();
+  var e=id?db.expenses.find(x=>x.id===id):null;
+  expenseCash=e?(e.cash||[]).map(x=>({...x})):[];
+  expenseCheques=e?(e.cheques||[]).map(x=>({...x})):[];
+  var d=e||{title:'',category:'مصالح',date:todayISO(),projectId:'',note:'',totalAmount:''};
+  var projOpts=db.projects.map(p=>`<option value="${p.id}" ${p.id===d.projectId?'selected':''}>${esc(p.name)}</option>`).join('');
+  document.getElementById('modalBody').innerHTML=`
     <div class="modal-title">${id?'ویرایش هزینه':'هزینه جدید'}</div>
-    <div class="form-group"><label class="form-label">عنوان *</label><input class="form-input" id="eTitle" value="${esc(e.title||'')}" placeholder="مثلاً خرید سیمان"></div>
+    <div class="form-group"><label class="form-label">عنوان *</label><input class="form-input" id="eTitle" value="${esc(d.title||'')}" placeholder="خرید سیمان"></div>
     <div class="form-row">
-      <div class="form-group"><label class="form-label">مبلغ (تومان) *</label><input class="form-input" id="eAmount" type="number" value="${e.amount||''}" placeholder="0"></div>
+      <div class="form-group"><label class="form-label">مبلغ کل (تومان) *</label><input class="form-input" id="eTotal" type="number" value="${d.totalAmount||''}" oninput="updateExpenseSummary()"></div>
       <div class="form-group"><label class="form-label">دسته</label><select class="form-select" id="eCategory">
-        ${['مصالح','دستمزد','تجهیزات','مجوز','حمل و نقل','سایر'].map(c => `<option value="${c}" ${c===e.category?'selected':''}>${c}</option>`).join('')}
+        ${['مصالح','دستمزد','تجهیزات','مجوز','حمل و نقل','سایر'].map(c=>`<option value="${c}" ${c===d.category?'selected':''}>${c}</option>`).join('')}
       </select></div>
     </div>
     <div class="form-group"><label class="form-label">پروژه</label><select class="form-select" id="eProject"><option value="">— بدون پروژه —</option>${projOpts}</select></div>
-    <div class="form-row">
-      <div class="form-group"><label class="form-label">تاریخ</label><input class="form-input" id="eDate" type="date" value="${e.date||today()}"></div>
-      <div class="form-group"><label class="form-label">وضعیت پرداخت</label><select class="form-select" id="ePaid"><option value="1" ${e.paid?'selected':''}>پرداخت شده</option><option value="0" ${!e.paid?'selected':''}>پرداخت نشده</option></select></div>
+    <div class="form-group"><label class="form-label">تاریخ (شمسی)</label>${dateInputHTML('eDate',d.date)}</div>
+
+    <div class="payment-block">
+      <div class="payment-header"><span class="payment-title">💵 پرداخت نقدی (تا ۵ مورد)</span><button type="button" class="payment-add" id="cashBtn" onclick="addCashRow()">+ افزودن</button></div>
+      <div id="cashList"></div>
     </div>
-    <div class="form-group"><label class="form-label">یادداشت</label><textarea class="form-textarea" id="eNote">${esc(e.note||'')}</textarea></div>
+
+    <div class="payment-block">
+      <div class="payment-header"><span class="payment-title">🧾 چک (تا ۵ مورد)</span><button type="button" class="payment-add" id="chqBtn" onclick="addChequeRow()">+ افزودن</button></div>
+      <div id="chqList"></div>
+    </div>
+
+    <div class="summary-box" id="expSummary"></div>
+
+    <div class="form-group" style="margin-top:12px"><label class="form-label">یادداشت</label><textarea class="form-textarea" id="eNote">${esc(d.note||'')}</textarea></div>
     <div class="actions">
       <button class="btn btn-primary" onclick="saveExpense(${id?`'${id}'`:'null'})">${id?'ذخیره':'ثبت'}</button>
       <button class="btn btn-secondary" onclick="closeModal()">انصراف</button>
     </div>
     ${id?`<button class="btn btn-danger btn-block" style="margin-top:10px" onclick="deleteExpense('${id}')">🗑️ حذف</button>`:''}
+    <div class="brand-modal"><div class="brand-name">✦ DAVIN NOVA ✦</div><div class="brand-sub">DESIGNED & ENGINEERED BY DAVIN</div><div class="brand-phone">۰۹۱۲۱۷۵۹۹۴۲</div></div>
   `;
   showModal();
+  renderCashRows();renderChequeRows();updateExpenseSummary();
 }
-
+function addCashRow(){
+  if(expenseCash.length>=5){toast('حداکثر ۵ پرداخت نقدی','error');return}
+  expenseCash.push({amount:'',date:todayISO(),note:''});
+  renderCashRows();updateExpenseSummary();
+}
+function removeCashRow(i){expenseCash.splice(i,1);renderCashRows();updateExpenseSummary()}
+function updateCashRow(i,f,v){expenseCash[i][f]=v;updateExpenseSummary()}
+function renderCashRows(){
+  var el=document.getElementById('cashList');
+  if(!expenseCash.length){el.innerHTML='<div style="font-size:11px;color:var(--text3);text-align:center;padding:8px">موردی اضافه نشده</div>';}
+  else{
+    el.innerHTML=expenseCash.map((c,i)=>`
+      <div class="payment-row">
+        <div class="payment-row-header"><span>نقد ${num(i+1)}</span><button class="payment-del" onclick="removeCashRow(${i})">✕</button></div>
+        <div class="form-row">
+          <input class="form-input" type="number" placeholder="مبلغ" value="${c.amount||''}" oninput="updateCashRow(${i},'amount',this.value)">
+          <input class="form-input" type="text" placeholder="یادداشت" value="${esc(c.note||'')}" oninput="updateCashRow(${i},'note',this.value)">
+        </div>
+      </div>`).join('');
+  }
+  document.getElementById('cashBtn').disabled=expenseCash.length>=5;
+}
+function addChequeRow(){
+  if(expenseCheques.length>=5){toast('حداکثر ۵ چک','error');return}
+  expenseCheques.push({bank:'',number:'',amount:'',dueDate:'',status:'pending',note:''});
+  renderChequeRows();updateExpenseSummary();
+}
+function removeChequeRow(i){expenseCheques.splice(i,1);renderChequeRows();updateExpenseSummary()}
+function updateChequeRow(i,f,v){expenseCheques[i][f]=v;updateExpenseSummary()}
+function renderChequeRows(){
+  var el=document.getElementById('chqList');
+  if(!expenseCheques.length){el.innerHTML='<div style="font-size:11px;color:var(--text3);text-align:center;padding:8px">موردی اضافه نشده</div>';}
+  else{
+    el.innerHTML=expenseCheques.map((c,i)=>`
+      <div class="payment-row">
+        <div class="payment-row-header"><span>چک ${num(i+1)}</span><button class="payment-del" onclick="removeChequeRow(${i})">✕</button></div>
+        <div class="form-row" style="margin-bottom:6px">
+          <input class="form-input" placeholder="بانک" value="${esc(c.bank||'')}" oninput="updateChequeRow(${i},'bank',this.value)">
+          <input class="form-input" placeholder="شماره چک" value="${esc(c.number||'')}" oninput="updateChequeRow(${i},'number',this.value)">
+        </div>
+        <div class="form-row" style="margin-bottom:6px">
+          <input class="form-input" type="number" placeholder="مبلغ" value="${c.amount||''}" oninput="updateChequeRow(${i},'amount',this.value)">
+          <div>${dateInputHTML('chqDue_'+i,c.dueDate)}</div>
+        </div>
+        <select class="form-select" style="font-size:12px;padding:8px 12px" onchange="updateChequeRow(${i},'status',this.value)">
+          <option value="pending" ${c.status==='pending'?'selected':''}>⏳ در انتظار</option>
+          <option value="cashed" ${c.status==='cashed'?'selected':''}>✅ پاس شده</option>
+          <option value="bounced" ${c.status==='bounced'?'selected':''}>↩ برگشتی</option>
+        </select>
+      </div>`).join('');
+  }
+  document.getElementById('chqBtn').disabled=expenseCheques.length>=5;
+}
+function updateExpenseSummary(){
+  var total=Number(document.getElementById('eTotal')?.value)||0;
+  var cashSum=expenseCash.reduce((s,c)=>s+(Number(c.amount)||0),0);
+  var chqSum=expenseCheques.reduce((s,c)=>s+(Number(c.amount)||0),0);
+  var paid=cashSum+chqSum;
+  var diff=total-paid;
+  var el=document.getElementById('expSummary');
+  if(!el)return;
+  el.innerHTML=`
+    <div class="summary-line"><span>💰 مبلغ کل هزینه:</span><b>${shortMoney(total)}</b></div>
+    <div class="summary-line"><span>💵 پرداخت نقدی:</span><b style="color:#34d399">${shortMoney(cashSum)}</b></div>
+    <div class="summary-line"><span>🧾 چک‌ها:</span><b style="color:#f59e0b">${shortMoney(chqSum)}</b></div>
+    <div class="summary-line" style="border-top:1px solid var(--border);padding-top:6px;margin-top:6px"><span>📊 جمع پرداخت‌ها:</span><b>${shortMoney(paid)}</b></div>
+    ${Math.abs(diff)>1?`<div class="summary-line"><span>⚠️ ${diff>0?'باقیمانده':'مازاد'}:</span><b class="${diff>0?'warn':'bad'}">${shortMoney(Math.abs(diff))}</b></div>`:`<div class="summary-line"><span style="color:#34d399">✅ تراز</span><b style="color:#34d399">کامل</b></div>`}
+  `;
+}
 function saveExpense(id){
-  const title = document.getElementById('eTitle').value.trim();
-  const amount = Number(document.getElementById('eAmount').value)||0;
-  if(!title || amount <= 0){ toast('عنوان و مبلغ را وارد کنید','error'); return; }
-  const data = {
-    title, amount,
-    category: document.getElementById('eCategory').value,
-    projectId: document.getElementById('eProject').value,
-    date: document.getElementById('eDate').value,
-    paid: document.getElementById('ePaid').value === '1',
-    note: document.getElementById('eNote').value.trim()
-  };
-  const db = loadDB();
-  if(id){
-    const i = db.expenses.findIndex(x => x.id === id);
-    if(i >= 0) db.expenses[i] = { ...db.expenses[i], ...data };
-    toast('هزینه ویرایش شد','success');
-  } else {
-    db.expenses.push({ id:uid(), ...data });
-    toast('هزینه ثبت شد','success');
-  }
-  saveDB(db); closeModal(); renderPage(state.page);
+  var title=document.getElementById('eTitle').value.trim();
+  var total=Number(document.getElementById('eTotal').value)||0;
+  if(!title||total<=0){toast('عنوان و مبلغ الزامی است','error');return}
+  // sync cheque dueDates from jdate inputs
+  expenseCheques.forEach((c,i)=>{c.dueDate=getJDate('chqDue_'+i)});
+  var data={title,totalAmount:total,category:document.getElementById('eCategory').value,projectId:document.getElementById('eProject').value,date:getJDate('eDate'),note:document.getElementById('eNote').value.trim(),cash:expenseCash.filter(c=>c.amount>0).map(c=>({...c,amount:Number(c.amount)})),cheques:expenseCheques.filter(c=>c.amount>0).map(c=>({...c,amount:Number(c.amount)}))};
+  var db=loadDB();
+  if(id){var i=db.expenses.findIndex(x=>x.id===id);if(i>=0)db.expenses[i]={...db.expenses[i],...data};toast('ویرایش شد','success')}
+  else{db.expenses.push({id:uid(),...data});toast('هزینه ثبت شد','success')}
+  saveDB(db);closeModal();renderPage(state.page);
 }
-
 function deleteExpense(id){
-  if(!confirm('این هزینه حذف شود؟')) return;
-  const db = loadDB();
-  db.expenses = db.expenses.filter(x => x.id !== id);
-  saveDB(db); closeModal(); toast('حذف شد','success'); renderPage(state.page);
-}
-
-/* ===== CHEQUE FORM ===== */
-function openChequeForm(id){
-  const db = loadDB();
-  const c = id ? db.cheques.find(x => x.id === id) : { type:'paid', bank:'', number:'', amount:'', issueDate:today(), dueDate:'', beneficiary:'', status:'pending', projectId:'', note:'' };
-  if(!c) return;
-  const projOpts = db.projects.map(p => `<option value="${p.id}" ${p.id===c.projectId?'selected':''}>${esc(p.name)}</option>`).join('');
-  document.getElementById('modalBody').innerHTML = `
-    <div class="modal-title">${id?'ویرایش چک':'چک جدید'}</div>
-    <div class="form-row">
-      <div class="form-group"><label class="form-label">نوع چک</label><select class="form-select" id="cType"><option value="paid" ${c.type==='paid'?'selected':''}>📤 پرداختی</option><option value="received" ${c.type==='received'?'selected':''}>📥 دریافتی</option></select></div>
-      <div class="form-group"><label class="form-label">بانک</label><input class="form-input" id="cBank" value="${esc(c.bank||'')}" placeholder="ملت"></div>
-    </div>
-    <div class="form-row">
-      <div class="form-group"><label class="form-label">شماره چک</label><input class="form-input" id="cNumber" value="${esc(c.number||'')}" placeholder="123456"></div>
-      <div class="form-group"><label class="form-label">مبلغ *</label><input class="form-input" id="cAmount" type="number" value="${c.amount||''}" placeholder="0"></div>
-    </div>
-    <div class="form-row">
-      <div class="form-group"><label class="form-label">تاریخ صدور</label><input class="form-input" id="cIssue" type="date" value="${c.issueDate||today()}"></div>
-      <div class="form-group"><label class="form-label">تاریخ سررسید *</label><input class="form-input" id="cDue" type="date" value="${c.dueDate||''}"></div>
-    </div>
-    <div class="form-group"><label class="form-label">دریافت‌کننده / صادرکننده</label><input class="form-input" id="cBenef" value="${esc(c.beneficiary||'')}" placeholder="آقای رضایی"></div>
-    <div class="form-group"><label class="form-label">پروژه</label><select class="form-select" id="cProject"><option value="">— بدون پروژه —</option>${projOpts}</select></div>
-    <div class="form-group"><label class="form-label">یادداشت</label><textarea class="form-textarea" id="cNote">${esc(c.note||'')}</textarea></div>
-    <div class="actions">
-      <button class="btn btn-primary" onclick="saveCheque(${id?`'${id}'`:'null'})">${id?'ذخیره':'ثبت'}</button>
-      <button class="btn btn-secondary" onclick="closeModal()">انصراف</button>
-    </div>
-  `;
-  showModal();
-}
-
-function saveCheque(id){
-  const amount = Number(document.getElementById('cAmount').value)||0;
-  const due = document.getElementById('cDue').value;
-  if(amount <= 0 || !due){ toast('مبلغ و سررسید الزامی است','error'); return; }
-  const data = {
-    type: document.getElementById('cType').value,
-    bank: document.getElementById('cBank').value.trim() || '—',
-    number: document.getElementById('cNumber').value.trim(),
-    amount, issueDate: document.getElementById('cIssue').value,
-    dueDate: due,
-    beneficiary: document.getElementById('cBenef').value.trim(),
-    projectId: document.getElementById('cProject').value,
-    note: document.getElementById('cNote').value.trim()
-  };
-  const db = loadDB();
-  if(id){
-    const i = db.cheques.findIndex(x => x.id === id);
-    if(i >= 0) db.cheques[i] = { ...db.cheques[i], ...data };
-    toast('چک ویرایش شد','success');
-  } else {
-    db.cheques.push({ id:uid(), ...data, status:'pending' });
-    toast('چک ثبت شد','success');
-  }
-  saveDB(db); closeModal(); renderPage(state.page);
-}
-
-function updateChequeStatus(id, status){
-  const db = loadDB();
-  const c = db.cheques.find(x => x.id === id);
-  if(!c) return;
-  c.status = status;
-  // Auto-create expense/income when cashed
-  if(status === 'cashed'){
-    if(c.type === 'paid'){
-      db.expenses.push({ id:uid(), title:`چک ${c.bank} #${c.number||''}`, amount:c.amount, category:'سایر', projectId:c.projectId, date:today(), paid:true, note:c.note });
-    }
-    toast('چک پاس شد و در هزینه‌ها ثبت شد','success');
-  } else {
-    toast('وضعیت چک به‌روز شد','success');
-  }
-  saveDB(db); renderPage(state.page);
-}
-
-function deleteCheque(id){
-  if(!confirm('این چک حذف شود؟')) return;
-  const db = loadDB();
-  db.cheques = db.cheques.filter(x => x.id !== id);
-  saveDB(db); toast('حذف شد','success'); renderPage(state.page);
+  if(!confirm('حذف شود؟'))return;
+  var db=loadDB();db.expenses=db.expenses.filter(x=>x.id!==id);saveDB(db);closeModal();toast('حذف شد','success');renderPage(state.page);
 }
 
 /* ===== MATERIAL FORM ===== */
 function openMaterialForm(id){
-  const db = loadDB();
-  const m = id ? db.materials.find(x => x.id === id) : { name:'', unit:'کیسه', quantity:'', unitPrice:'', projectId:'', supplier:'' };
-  if(!m) return;
-  const projOpts = db.projects.map(p => `<option value="${p.id}" ${p.id===m.projectId?'selected':''}>${esc(p.name)}</option>`).join('');
-  document.getElementById('modalBody').innerHTML = `
+  var db=loadDB();
+  var m=id?db.materials.find(x=>x.id===id):{name:'',unit:'کیسه',quantity:'',unitPrice:'',projectId:'',supplier:''};
+  if(!m)return;
+  var projOpts=db.projects.map(p=>`<option value="${p.id}" ${p.id===m.projectId?'selected':''}>${esc(p.name)}</option>`).join('');
+  document.getElementById('modalBody').innerHTML=`
     <div class="modal-title">${id?'ویرایش مصالح':'مصالح جدید'}</div>
-    <div class="form-group"><label class="form-label">نام مصالح *</label><input class="form-input" id="mName" value="${esc(m.name||'')}" placeholder="سیمان تیپ ۲"></div>
+    <div class="form-group"><label class="form-label">نام *</label><input class="form-input" id="mName" value="${esc(m.name||'')}" placeholder="سیمان تیپ ۲"></div>
     <div class="form-row">
-      <div class="form-group"><label class="form-label">مقدار *</label><input class="form-input" id="mQty" type="number" value="${m.quantity||''}" placeholder="0"></div>
-      <div class="form-group"><label class="form-label">واحد</label><input class="form-input" id="mUnit" value="${esc(m.unit||'کیسه')}" placeholder="کیسه"></div>
+      <div class="form-group"><label class="form-label">مقدار *</label><input class="form-input" id="mQty" type="number" value="${m.quantity||''}"></div>
+      <div class="form-group"><label class="form-label">واحد</label><input class="form-input" id="mUnit" value="${esc(m.unit||'کیسه')}"></div>
     </div>
-    <div class="form-group"><label class="form-label">قیمت واحد (تومان)</label><input class="form-input" id="mPrice" type="number" value="${m.unitPrice||''}" placeholder="0"></div>
-    <div class="form-group"><label class="form-label">پروژه</label><select class="form-select" id="mProject"><option value="">— بدون پروژه —</option>${projOpts}</select></div>
-    <div class="form-group"><label class="form-label">تامین‌کننده</label><input class="form-input" id="mSupplier" value="${esc(m.supplier||'')}" placeholder="فروشگاه..."></div>
+    <div class="form-group"><label class="form-label">قیمت واحد (تومان)</label><input class="form-input" id="mPrice" type="number" value="${m.unitPrice||''}"></div>
+    <div class="form-group"><label class="form-label">پروژه</label><select class="form-select" id="mProject"><option value="">— بدون —</option>${projOpts}</select></div>
+    <div class="form-group"><label class="form-label">تامین‌کننده</label><input class="form-input" id="mSupplier" value="${esc(m.supplier||'')}"></div>
     <div class="actions">
       <button class="btn btn-primary" onclick="saveMaterial(${id?`'${id}'`:'null'})">${id?'ذخیره':'افزودن'}</button>
       <button class="btn btn-secondary" onclick="closeModal()">انصراف</button>
     </div>
     ${id?`<button class="btn btn-danger btn-block" style="margin-top:10px" onclick="deleteMaterial('${id}')">🗑️ حذف</button>`:''}
+    <div class="brand-modal"><div class="brand-name">✦ DAVIN NOVA ✦</div><div class="brand-sub">DESIGNED & ENGINEERED BY DAVIN</div><div class="brand-phone">۰۹۱۲۱۷۵۹۹۴۲</div></div>
   `;
   showModal();
 }
-
 function saveMaterial(id){
-  const name = document.getElementById('mName').value.trim();
-  const qty = Number(document.getElementById('mQty').value)||0;
-  if(!name || qty <= 0){ toast('نام و مقدار را وارد کنید','error'); return; }
-  const data = {
-    name, quantity:qty, unit:document.getElementById('mUnit').value.trim()||'عدد',
-    unitPrice:Number(document.getElementById('mPrice').value)||0,
-    projectId:document.getElementById('mProject').value,
-    supplier:document.getElementById('mSupplier').value.trim()
-  };
-  const db = loadDB();
-  if(id){ const i = db.materials.findIndex(x => x.id === id); if(i>=0) db.materials[i] = { ...db.materials[i], ...data }; toast('ویرایش شد','success'); }
-  else { db.materials.push({ id:uid(), ...data }); toast('مصالح اضافه شد','success'); }
-  saveDB(db); closeModal(); renderPage(state.page);
+  var name=document.getElementById('mName').value.trim();
+  var qty=Number(document.getElementById('mQty').value)||0;
+  if(!name||qty<=0){toast('نام و مقدار الزامی','error');return}
+  var data={name,quantity:qty,unit:document.getElementById('mUnit').value.trim()||'عدد',unitPrice:Number(document.getElementById('mPrice').value)||0,projectId:document.getElementById('mProject').value,supplier:document.getElementById('mSupplier').value.trim()};
+  var db=loadDB();
+  if(id){var i=db.materials.findIndex(x=>x.id===id);if(i>=0)db.materials[i]={...db.materials[i],...data};toast('ویرایش شد','success')}
+  else{db.materials.push({id:uid(),...data});toast('اضافه شد','success')}
+  saveDB(db);closeModal();renderPage(state.page);
 }
-
 function deleteMaterial(id){
-  if(!confirm('این مصالح حذف شود؟')) return;
-  const db = loadDB();
-  db.materials = db.materials.filter(x => x.id !== id);
-  saveDB(db); closeModal(); toast('حذف شد','success'); renderPage(state.page);
+  if(!confirm('حذف شود؟'))return;
+  var db=loadDB();db.materials=db.materials.filter(x=>x.id!==id);saveDB(db);closeModal();toast('حذف شد','success');renderPage(state.page);
 }
 
-/* ===== WORKER / PARTNER / TASK ===== */
-function openWorkerForm(id){
-  const db = loadDB();
-  const w = id ? db.workers.find(x => x.id === id) : { name:'', role:'بنا', dailyWage:'', projectId:'', phone:'' };
-  if(!w) return;
-  const projOpts = db.projects.map(p => `<option value="${p.id}" ${p.id===w.projectId?'selected':''}>${esc(p.name)}</option>`).join('');
-  document.getElementById('modalBody').innerHTML = `
-    <div class="modal-title">${id?'ویرایش کارگر':'کارگر جدید'}</div>
-    <div class="form-group"><label class="form-label">نام *</label><input class="form-input" id="wName" value="${esc(w.name||'')}"></div>
+/* ===== CONTRACTOR FORM ===== */
+function openContractorForm(id){
+  var db=loadDB();
+  var c=id?db.contractors.find(x=>x.id===id):{name:'',share:'',phone:'',projectId:'',paidAmount:0};
+  if(!c)return;
+  var projOpts=db.projects.map(p=>`<option value="${p.id}" ${p.id===c.projectId?'selected':''}>${esc(p.name)}</option>`).join('');
+  document.getElementById('modalBody').innerHTML=`
+    <div class="modal-title">${id?'ویرایش پیمانکار':'پیمانکار جدید'}</div>
+    <div class="form-group"><label class="form-label">نام پیمانکار *</label><input class="form-input" id="ctName" value="${esc(c.name||'')}" placeholder="آقای رضایی"></div>
     <div class="form-row">
-      <div class="form-group"><label class="form-label">نقش</label><input class="form-input" id="wRole" value="${esc(w.role||'')}" placeholder="بنا، برقکار..."></div>
-      <div class="form-group"><label class="form-label">دستمزد روزانه</label><input class="form-input" id="wWage" type="number" value="${w.dailyWage||''}"></div>
+      <div class="form-group"><label class="form-label">درصد سهم (٪) *</label><input class="form-input" id="ctShare" type="number" min="0" max="100" value="${c.share||''}" placeholder="۱۰"></div>
+      <div class="form-group"><label class="form-label">شماره همراه</label><input class="form-input" id="ctPhone" value="${esc(c.phone||'')}" placeholder="0912..."></div>
     </div>
-    <div class="form-group"><label class="form-label">تلفن</label><input class="form-input" id="wPhone" value="${esc(w.phone||'')}" placeholder="0912..."></div>
-    <div class="form-group"><label class="form-label">پروژه</label><select class="form-select" id="wProject"><option value="">— بدون پروژه —</option>${projOpts}</select></div>
+    <div class="form-group"><label class="form-label">پروژه *</label><select class="form-select" id="ctProject"><option value="">— انتخاب —</option>${projOpts}</select></div>
+    <div style="font-size:11px;color:var(--text2);background:rgba(245,158,11,.08);border:1px solid rgba(245,158,11,.2);border-radius:10px;padding:10px;margin-bottom:12px">
+      ℹ️ درصد پیمانکار از <b>کل هزینه تمام‌شده پروژه</b> محاسبه می‌شود و خودش جزو هزینه‌های مستقیم نیست.
+    </div>
     <div class="actions">
-      <button class="btn btn-primary" onclick="saveWorker(${id?`'${id}'`:'null'})">${id?'ذخیره':'افزودن'}</button>
+      <button class="btn btn-primary" onclick="saveContractor(${id?`'${id}'`:'null'})">${id?'ذخیره':'افزودن'}</button>
       <button class="btn btn-secondary" onclick="closeModal()">انصراف</button>
     </div>
-    ${id?`<button class="btn btn-danger btn-block" style="margin-top:10px" onclick="deleteWorker('${id}')">🗑️ حذف</button>`:''}
+    <div class="brand-modal"><div class="brand-name">✦ DAVIN NOVA ✦</div><div class="brand-sub">DESIGNED & ENGINEERED BY DAVIN</div><div class="brand-phone">۰۹۱۲۱۷۵۹۹۴۲</div></div>
   `;
   showModal();
 }
-function saveWorker(id){
-  const name = document.getElementById('wName').value.trim();
-  if(!name){ toast('نام الزامی است','error'); return; }
-  const data = { name, role:document.getElementById('wRole').value.trim(), dailyWage:Number(document.getElementById('wWage').value)||0, phone:document.getElementById('wPhone').value.trim(), projectId:document.getElementById('wProject').value };
-  const db = loadDB();
-  if(id){ const i=db.workers.findIndex(x=>x.id===id); if(i>=0) db.workers[i] = {...db.workers[i],...data}; toast('ویرایش شد','success'); }
-  else { db.workers.push({id:uid(),...data}); toast('کارگر اضافه شد','success'); }
-  saveDB(db); closeModal(); renderPage(state.page);
+function saveContractor(id){
+  var name=document.getElementById('ctName').value.trim();
+  var share=Number(document.getElementById('ctShare').value)||0;
+  var projectId=document.getElementById('ctProject').value;
+  if(!name){toast('نام الزامی','error');return}
+  if(share<0||share>100){toast('درصد باید بین ۰ تا ۱۰۰','error');return}
+  if(!projectId){toast('پروژه الزامی','error');return}
+  var data={name,share,phone:document.getElementById('ctPhone').value.trim(),projectId};
+  var db=loadDB();
+  if(id){var i=db.contractors.findIndex(x=>x.id===id);if(i>=0)db.contractors[i]={...db.contractors[i],...data};toast('ویرایش شد','success')}
+  else{db.contractors.push({id:uid(),...data,paidAmount:0});toast('اضافه شد','success')}
+  // Warn if total shares > 100 for a project
+  var sameProj=db.contractors.filter(c=>c.projectId===projectId);
+  var totalShare=sameProj.reduce((s,c)=>s+(Number(c.share)||0),0);
+  if(totalShare>100){setTimeout(()=>toast('⚠️ مجموع درصد پیمانکاران این پروژه از ۱۰۰٪ گذشت','error'),800)}
+  saveDB(db);closeModal();renderPage(state.page);
 }
-function deleteWorker(id){ if(!confirm('حذف شود؟'))return; const db=loadDB(); db.workers=db.workers.filter(x=>x.id!==id); saveDB(db); closeModal(); toast('حذف شد','success'); renderPage(state.page); }
-
-function openPartnerForm(id){
-  const db = loadDB();
-  const p = id ? db.partners.find(x => x.id === id) : { name:'', share:'', projectId:'', phone:'' };
-  if(!p) return;
-  const projOpts = db.projects.map(x => `<option value="${x.id}" ${x.id===p.projectId?'selected':''}>${esc(x.name)}</option>`).join('');
-  document.getElementById('modalBody').innerHTML = `
-    <div class="modal-title">${id?'ویرایش شریک':'شریک جدید'}</div>
-    <div class="form-group"><label class="form-label">نام *</label><input class="form-input" id="ptName" value="${esc(p.name||'')}"></div>
-    <div class="form-row">
-      <div class="form-group"><label class="form-label">سهم (٪)</label><input class="form-input" id="ptShare" type="number" min="0" max="100" value="${p.share||''}"></div>
-      <div class="form-group"><label class="form-label">تلفن</label><input class="form-input" id="ptPhone" value="${esc(p.phone||'')}"></div>
+function openContractorPay(id){
+  var db=loadDB();
+  var c=db.contractors.find(x=>x.id===id);
+  if(!c)return;
+  var wage=contractorWage(c,db);
+  var paid=Number(c.paidAmount)||0;
+  var remaining=Math.max(0,wage-paid);
+  document.getElementById('modalBody').innerHTML=`
+    <div class="modal-title">💰 پرداخت به ${esc(c.name)}</div>
+    <div class="summary-box">
+      <div class="summary-line"><span>دستمزد متعلقه:</span><b style="color:#f59e0b">${shortMoney(wage)}</b></div>
+      <div class="summary-line"><span>قبلاً پرداخت شده:</span><b style="color:#34d399">${shortMoney(paid)}</b></div>
+      <div class="summary-line"><span>باقیمانده:</span><b style="color:#f87171">${shortMoney(remaining)}</b></div>
     </div>
-    <div class="form-group"><label class="form-label">پروژه</label><select class="form-select" id="ptProject"><option value="">— عمومی —</option>${projOpts}</select></div>
+    <div class="form-group" style="margin-top:12px"><label class="form-label">مبلغ پرداختی جدید (تومان)</label><input class="form-input" id="payAmount" type="number" placeholder="0" value="${remaining}"></div>
     <div class="actions">
-      <button class="btn btn-primary" onclick="savePartner(${id?`'${id}'`:'null'})">${id?'ذخیره':'افزودن'}</button>
+      <button class="btn btn-primary" onclick="saveContractorPay('${id}')">ثبت پرداخت</button>
       <button class="btn btn-secondary" onclick="closeModal()">انصراف</button>
     </div>
-    ${id?`<button class="btn btn-danger btn-block" style="margin-top:10px" onclick="deletePartner('${id}')">🗑️ حذف</button>`:''}
+    <div class="brand-modal"><div class="brand-name">✦ DAVIN NOVA ✦</div><div class="brand-sub">DESIGNED & ENGINEERED BY DAVIN</div><div class="brand-phone">۰۹۱۲۱۷۵۹۹۴۲</div></div>
   `;
   showModal();
 }
-function savePartner(id){
-  const name = document.getElementById('ptName').value.trim();
-  if(!name){ toast('نام الزامی است','error'); return; }
-  const data = { name, share:Number(document.getElementById('ptShare').value)||0, phone:document.getElementById('ptPhone').value.trim(), projectId:document.getElementById('ptProject').value };
-  const db = loadDB();
-  if(id){ const i=db.partners.findIndex(x=>x.id===id); if(i>=0) db.partners[i]={...db.partners[i],...data}; toast('ویرایش شد','success'); }
-  else { db.partners.push({id:uid(),...data}); toast('شریک اضافه شد','success'); }
-  saveDB(db); closeModal(); renderPage(state.page);
+function saveContractorPay(id){
+  var amt=Number(document.getElementById('payAmount').value)||0;
+  if(amt<=0){toast('مبلغ الزامی','error');return}
+  var db=loadDB();
+  var c=db.contractors.find(x=>x.id===id);
+  if(!c)return;
+  c.paidAmount=(Number(c.paidAmount)||0)+amt;
+  saveDB(db);closeModal();toast('پرداخت ثبت شد','success');renderPage(state.page);
 }
-function deletePartner(id){ if(!confirm('حذف شود؟'))return; const db=loadDB(); db.partners=db.partners.filter(x=>x.id!==id); saveDB(db); closeModal(); toast('حذف شد','success'); renderPage(state.page); }
-
-function openTaskForm(){
-  const db = loadDB();
-  const projOpts = db.projects.map(p => `<option value="${p.id}">${esc(p.name)}</option>`).join('');
-  document.getElementById('modalBody').innerHTML = `
-    <div class="modal-title">وظیفه جدید</div>
-    <div class="form-group"><label class="form-label">عنوان *</label><input class="form-input" id="tTitle" placeholder="مثلاً خرید میلگرد"></div>
-    <div class="form-group"><label class="form-label">مهلت</label><input class="form-input" id="tDeadline" type="date"></div>
-    <div class="form-group"><label class="form-label">پروژه</label><select class="form-select" id="tProject"><option value="">— بدون پروژه —</option>${projOpts}</select></div>
-    <div class="actions">
-      <button class="btn btn-primary" onclick="saveTask()">افزودن</button>
-      <button class="btn btn-secondary" onclick="closeModal()">انصراف</button>
-    </div>
-  `;
-  showModal();
+function deleteContractor(id){
+  if(!confirm('حذف شود؟'))return;
+  var db=loadDB();db.contractors=db.contractors.filter(x=>x.id!==id);saveDB(db);toast('حذف شد','success');renderPage(state.page);
 }
-function saveTask(){
-  const title = document.getElementById('tTitle').value.trim();
-  if(!title){ toast('عنوان الزامی است','error'); return; }
-  const db = loadDB();
-  db.tasks.push({ id:uid(), title, deadline:document.getElementById('tDeadline').value, projectId:document.getElementById('tProject').value, status:'pending' });
-  saveDB(db); closeModal(); toast('وظیفه اضافه شد','success'); renderPage(state.page);
-}
-function toggleTask(id){
-  const db = loadDB();
-  const t = db.tasks.find(x => x.id === id);
-  if(!t) return;
-  t.status = t.status === 'done' ? 'pending' : 'done';
-  saveDB(db); renderTasks();
-}
-function deleteTask(id){ if(!confirm('حذف شود؟'))return; const db=loadDB(); db.tasks=db.tasks.filter(x=>x.id!==id); saveDB(db); toast('حذف شد','success'); renderTasks(); }
 
 /* ===== REPORT ===== */
 function showReport(){
-  const db = loadDB();
-  let html = '<div class="modal-title">📊 گزارش کامل</div>';
-  if(!db.projects.length){ html += '<div class="empty"><div class="empty-icon">📊</div><div class="empty-text">پروژه‌ای وجود ندارد</div></div>'; }
-  else {
-    db.projects.forEach(p => {
-      const spent = db.expenses.filter(e => e.projectId === p.id).reduce((s,e) => s + (Number(e.amount)||0), 0);
-      const received = db.cheques.filter(c => c.projectId === p.id && c.type==='received' && c.status==='cashed').reduce((s,c)=>s+(Number(c.amount)||0),0);
-      const paid = db.cheques.filter(c => c.projectId === p.id && c.type==='paid' && c.status==='pending').reduce((s,c)=>s+(Number(c.amount)||0),0);
-      const net = (Number(p.budget)||0) - spent;
-      const profit = received - spent;
-      html += `<div class="card" style="margin-bottom:12px">
+  var db=loadDB();
+  var html='<div class="modal-title">📊 گزارش کامل</div>';
+  if(!db.projects.length){html+='<div class="empty"><div class="empty-icon">📊</div><div class="empty-text">پروژه‌ای نیست</div></div>'}
+  else{
+    db.projects.forEach(p=>{
+      var direct=projectDirectCost(p.id,db);
+      var conWage=db.contractors.filter(c=>c.projectId===p.id).reduce((s,c)=>s+contractorWage(c,db),0);
+      var totalFinal=direct+conWage;
+      var budget=Number(p.budget)||0;
+      var net=budget-totalFinal;
+      html+=`<div class="card" style="margin-bottom:12px">
         <div style="font-weight:700;font-size:14px;margin-bottom:8px">🏗️ ${esc(p.name)}</div>
-        <div style="display:flex;justify-content:space-between;font-size:12px;color:var(--text2);margin:4px 0"><span>بودجه:</span><b style="color:var(--text)">${money(p.budget)}</b></div>
-        <div style="display:flex;justify-content:space-between;font-size:12px;color:var(--text2);margin:4px 0"><span>هزینه شده:</span><b style="color:#f87171">${money(spent)}</b></div>
-        <div style="display:flex;justify-content:space-between;font-size:12px;color:var(--text2);margin:4px 0"><span>باقیمانده بودجه:</span><b style="color:${net>=0?'#34d399':'#f87171'}">${money(net)}</b></div>
-        <div style="display:flex;justify-content:space-between;font-size:12px;color:var(--text2);margin:4px 0"><span>دریافتی نقد:</span><b style="color:#34d399">${money(received)}</b></div>
-        <div style="display:flex;justify-content:space-between;font-size:12px;color:var(--text2);margin:4px 0"><span>چک پرداختی در انتظار:</span><b style="color:#f87171">${money(paid)}</b></div>
-        <div style="display:flex;justify-content:space-between;font-size:13px;margin-top:8px;padding-top:8px;border-top:1px solid var(--border)"><span style="color:var(--text2)">سود تخمینی:</span><b style="color:${profit>=0?'#34d399':'#f87171'}">${money(profit)}</b></div>
+        <div style="display:flex;justify-content:space-between;font-size:12px;color:var(--text2);margin:4px 0"><span>بودجه:</span><b style="color:var(--text)">${shortMoney(budget)}</b></div>
+        <div style="display:flex;justify-content:space-between;font-size:12px;color:var(--text2);margin:4px 0"><span>هزینه مستقیم:</span><b style="color:#f87171">${shortMoney(direct)}</b></div>
+        <div style="display:flex;justify-content:space-between;font-size:12px;color:var(--text2);margin:4px 0"><span>دستمزد پیمانکاران:</span><b style="color:#a78bfa">${shortMoney(conWage)}</b></div>
+        <div style="display:flex;justify-content:space-between;font-size:13px;margin-top:8px;padding-top:8px;border-top:1px solid var(--border)"><span style="color:var(--text2)">💵 هزینه تمام‌شده:</span><b style="color:#f59e0b">${shortMoney(totalFinal)}</b></div>
+        <div style="display:flex;justify-content:space-between;font-size:13px;margin-top:4px"><span style="color:var(--text2)">${net>=0?'✅ صرفه‌جویی':'⚠️ اضافه بودجه'}:</span><b style="color:${net>=0?'#34d399':'#f87171'}">${shortMoney(Math.abs(net))}</b></div>
       </div>`;
     });
   }
-  html += '<button class="btn btn-secondary btn-block" style="margin-top:10px" onclick="closeModal()">بستن</button>';
-  document.getElementById('modalBody').innerHTML = html;
+  html+='<button class="btn btn-secondary btn-block" style="margin-top:10px" onclick="closeModal()">بستن</button>';
+  html+='<div class="brand-modal"><div class="brand-name">✦ DAVIN NOVA ✦</div><div class="brand-sub">DESIGNED & ENGINEERED BY DAVIN</div><div class="brand-phone">۰۹۱۲۱۷۵۹۹۴۲</div></div>';
+  document.getElementById('modalBody').innerHTML=html;
   showModal();
 }
 
 /* ===== MODAL ===== */
-function showModal(){ document.getElementById('modal').classList.add('show'); }
-function closeModal(){ document.getElementById('modal').classList.remove('show'); }
+function showModal(){document.getElementById('modal').classList.add('show')}
+function closeModal(){document.getElementById('modal').classList.remove('show')}
 
 /* ===== BACKUP ===== */
 function openBackup(){
-  document.getElementById('modalBody').innerHTML = `
+  document.getElementById('modalBody').innerHTML=`
     <div class="modal-title">⚙️ تنظیمات و پشتیبان‌گیری</div>
     <div class="list-item" onclick="showReport()"><div class="list-icon purple">📊</div><div class="list-body"><div class="list-title">گزارش کامل</div><div class="list-sub">خلاصه مالی هر پروژه</div></div></div>
     <div class="list-item" onclick="exportData()"><div class="list-icon blue">💾</div><div class="list-body"><div class="list-title">خروجی داده‌ها (JSON)</div><div class="list-sub">پشتیبان کامل</div></div></div>
     <div class="list-item" onclick="importData()"><div class="list-icon green">📥</div><div class="list-body"><div class="list-title">بازیابی داده‌ها</div><div class="list-sub">بارگذاری از فایل</div></div></div>
-    <div class="list-item" onclick="clearAll()"><div class="list-icon red">🗑️</div><div class="list-body"><div class="list-title" style="color:#f87171">حذف همه داده‌ها</div><div class="list-sub">غیرقابل بازگشت</div></div></div>
+    <div class="list-item" onclick="clearAll()"><div class="list-icon red">🗑️</div><div class="list-body"><div class="list-title" style="color:#f87171">حذف همه</div><div class="list-sub">غیرقابل بازگشت</div></div></div>
     <button class="btn btn-secondary btn-block" style="margin-top:10px" onclick="closeModal()">بستن</button>
+    <div class="brand-modal"><div class="brand-name">✦ DAVIN NOVA ✦</div><div class="brand-sub">DESIGNED & ENGINEERED BY DAVIN</div><div class="brand-phone">۰۹۱۲۱۷۵۹۹۴۲</div></div>
   `;
   showModal();
 }
-
 function exportData(){
-  const db = loadDB();
-  const blob = new Blob([JSON.stringify(db,null,2)], {type:'application/json'});
-  const url = URL.createObjectURL(blob);
-  const a = document.createElement('a');
-  a.href = url;
-  a.download = `sakhtyar-backup-${today()}.json`;
-  a.click();
-  setTimeout(()=>URL.revokeObjectURL(url), 1000);
-  toast('پشتیبان دانلود شد','success');
+  var db=loadDB();
+  var blob=new Blob([JSON.stringify(db,null,2)],{type:'application/json'});
+  var url=URL.createObjectURL(blob);
+  var a=document.createElement('a');a.href=url;a.download=`davin-nova-backup-${todayISO()}.json`;a.click();
+  setTimeout(()=>URL.revokeObjectURL(url),1000);
+  toast('دانلود شد','success');
 }
-
-function importData(){ document.getElementById('fileInput').click(); }
+function importData(){document.getElementById('fileInput').click()}
 function handleImport(e){
-  const file = e.target.files[0];
-  if(!file) return;
-  const reader = new FileReader();
-  reader.onload = (ev) => {
-    try {
-      const data = JSON.parse(ev.target.result);
-      if(!data.projects) throw new Error('invalid');
-      saveDB(data);
-      toast('داده‌ها بازیابی شد','success');
-      closeModal();
-      renderPage(state.page);
-    } catch(err){ toast('فایل نامعتبر است','error'); }
-  };
-  reader.readAsText(file);
-  e.target.value = '';
+  var file=e.target.files[0];if(!file)return;
+  var reader=new FileReader();
+  reader.onload=ev=>{try{var data=JSON.parse(ev.target.result);if(!data.projects)throw 0;saveDB(data);toast('بازیابی شد','success');closeModal();renderPage(state.page)}catch(err){toast('فایل نامعتبر','error')}};
+  reader.readAsText(file);e.target.value='';
 }
-
 function clearAll(){
-  if(!confirm('⚠️ تمام داده‌ها حذف می‌شوند. مطمئن هستید؟')) return;
-  if(!confirm('آیا از پشتیبان‌گیری مطمئن هستید؟ این عمل بازگشت‌پذیر نیست!')) return;
-  localStorage.removeItem(DB_KEY);
-  loadDB();
-  toast('همه داده‌ها حذف شد','success');
-  closeModal();
-  renderPage(state.page);
+  if(!confirm('⚠️ همه داده‌ها حذف شوند؟'))return;
+  if(!confirm('مطمئنید؟ پشتیبان گرفته‌اید؟'))return;
+  localStorage.removeItem(DB_KEY);loadDB();toast('حذف شد','success');closeModal();renderPage(state.page);
 }
 
 /* ===== TOAST ===== */
-let toastTimer = null;
-function toast(msg, type){
-  const el = document.getElementById('toast');
-  el.textContent = msg;
-  el.className = 'toast' + (type ? ' '+type : '');
-  void el.offsetWidth;
-  el.classList.add('show');
+var toastTimer=null;
+function toast(msg,type){
+  var el=document.getElementById('toast');
+  el.textContent=msg;
+  el.className='toast'+(type?' '+type:'');
+  void el.offsetWidth;el.classList.add('show');
   clearTimeout(toastTimer);
-  toastTimer = setTimeout(() => el.classList.remove('show'), 2400);
+  toastTimer=setTimeout(()=>el.classList.remove('show'),2400);
 }
-
-/* ===== UTILS ===== */
-function esc(s){ if(s==null) return ''; return String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
+function esc(s){if(s==null)return '';return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
 
 /* ===== EVENTS ===== */
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded',()=>{
   loadDB();
-  // Project filters
-  document.querySelectorAll('#projectFilters .chip').forEach(c => {
-    c.addEventListener('click', () => {
-      document.querySelectorAll('#projectFilters .chip').forEach(x => x.classList.remove('active'));
-      c.classList.add('active');
-      state.projectFilter = c.dataset.filter;
-      renderProjects();
-    });
-  });
-  // Expense filters
-  document.querySelectorAll('#expenseFilters .chip').forEach(c => {
-    c.addEventListener('click', () => {
-      document.querySelectorAll('#expenseFilters .chip').forEach(x => x.classList.remove('active'));
-      c.classList.add('active');
-      state.expenseFilter = c.dataset.filter;
-      renderExpenses();
-    });
-  });
-  // Cheque filters
-  document.querySelectorAll('#chequeFilters .chip').forEach(c => {
-    c.addEventListener('click', () => {
-      document.querySelectorAll('#chequeFilters .chip').forEach(x => x.classList.remove('active'));
-      c.classList.add('active');
-      state.chequeFilter = c.dataset.filter;
-      renderCheques();
-    });
-  });
-  // Finance tabs
-  document.querySelectorAll('#financeTabs .chip').forEach(c => {
-    c.addEventListener('click', () => {
-      document.querySelectorAll('#financeTabs .chip').forEach(x => x.classList.remove('active'));
-      c.classList.add('active');
-      state.financeTab = c.dataset.tab;
-      document.getElementById('financeExpenses').style.display = c.dataset.tab === 'expenses' ? '' : 'none';
-      document.getElementById('financeCheques').style.display = c.dataset.tab === 'cheques' ? '' : 'none';
-    });
-  });
-
-  // Check for due cheques reminder
-  const db = loadDB();
-  const dueSoon = db.cheques.filter(c => c.status === 'pending' && daysUntil(c.dueDate) <= 7 && daysUntil(c.dueDate) >= -30);
-  if(dueSoon.length && !sessionStorage.getItem('chequeReminder')){
-    sessionStorage.setItem('chequeReminder','1');
-    setTimeout(() => toast(`⚠️ ${num(dueSoon.length)} چک نزدیک سررسید دارید`,'error'), 800);
-  } else {
-    setTimeout(() => toast('👋 به ساخت‌یار خوش آمدید','success'), 500);
-  }
-
+  document.querySelectorAll('#projectFilters .chip').forEach(c=>c.addEventListener('click',()=>{
+    document.querySelectorAll('#projectFilters .chip').forEach(x=>x.classList.remove('active'));
+    c.classList.add('active');state.projectFilter=c.dataset.filter;renderProjects();
+  }));
+  document.querySelectorAll('#expenseFilters .chip').forEach(c=>c.addEventListener('click',()=>{
+    document.querySelectorAll('#expenseFilters .chip').forEach(x=>x.classList.remove('active'));
+    c.classList.add('active');state.expenseFilter=c.dataset.filter;renderExpenses();
+  }));
+  var db=loadDB();
+  var dueSoon=0;
+  db.expenses.forEach(e=>(e.cheques||[]).forEach(c=>{if(c.status==='pending'&&daysUntil(c.dueDate)<=7&&daysUntil(c.dueDate)>=-30)dueSoon++}));
+  if(dueSoon&&!sessionStorage.getItem('chqRem')){sessionStorage.setItem('chqRem','1');setTimeout(()=>toast(`⚠️ ${num(dueSoon)} چک نزدیک سررسید`,'error'),800)}
+  else setTimeout(()=>toast('👋 به ساخت‌یار خوش آمدید','success'),500);
   renderPage('dashboard');
-  console.log('%c🏗️ ساخت‌یار v1.0 بارگذاری شد','color:#f59e0b;font-size:16px;font-weight:bold');
+  console.log('%c🏗️ ساخت‌یار v2.0 — DAVIN NOVA','color:#f59e0b;font-size:16px;font-weight:bold');
 });
 </script>
 </body>
