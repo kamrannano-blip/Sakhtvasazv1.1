@@ -6,7 +6,7 @@
 <meta name="theme-color" content="#0a0e1a">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <title>ساخت‌یار | DAVIN NOVA</title>
-<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
 html,body{height:100%;overflow:hidden;overscroll-behavior:none}
@@ -17,9 +17,27 @@ body{font-family:'Vazirmatn',sans-serif;background:#0a0e1a;color:#e8ecf5;font-si
 .header-row{display:flex;justify-content:space-between;align-items:flex-start;gap:10px}
 .header-title{font-size:19px;font-weight:800;background:linear-gradient(135deg,var(--primary),var(--primary2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
 .header-sub{font-size:11px;color:var(--text2);margin-top:2px;font-weight:500}
-.header-date{font-size:11px;color:var(--primary);margin-top:4px;font-weight:600;display:flex;align-items:center;gap:4px}
+.header-right{display:flex;flex-direction:column;align-items:flex-end;gap:4px;flex-shrink:0}
+.header-date-row{display:flex;justify-content:space-between;align-items:center;margin-top:8px;gap:10px}
+.header-date{font-size:11px;color:var(--primary);font-weight:600;display:flex;align-items:center;gap:4px}
 .header-btn{width:40px;height:40px;border-radius:12px;background:var(--card);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:18px;cursor:pointer;transition:.2s;flex-shrink:0}
 .header-btn:active{transform:scale(.92);background:var(--card2)}
+.davin-brand{font-size:13px;font-weight:900;letter-spacing:3px;text-transform:uppercase;animation:davinRainbow 6s linear infinite;padding:2px 4px;line-height:1}
+@keyframes davinRainbow{
+  0%{color:#ef4444;text-shadow:0 0 8px rgba(239,68,68,.6)}
+  8.33%{color:#f97316;text-shadow:0 0 8px rgba(249,115,22,.6)}
+  16.66%{color:#f59e0b;text-shadow:0 0 8px rgba(245,158,11,.6)}
+  25%{color:#eab308;text-shadow:0 0 8px rgba(234,179,8,.6)}
+  33.33%{color:#84cc16;text-shadow:0 0 8px rgba(132,204,22,.6)}
+  41.66%{color:#10b981;text-shadow:0 0 8px rgba(16,185,129,.6)}
+  50%{color:#14b8a6;text-shadow:0 0 8px rgba(20,184,166,.6)}
+  58.33%{color:#06b6d4;text-shadow:0 0 8px rgba(6,182,212,.6)}
+  66.66%{color:#3b82f6;text-shadow:0 0 8px rgba(59,130,246,.6)}
+  75%{color:#6366f1;text-shadow:0 0 8px rgba(99,102,241,.6)}
+  83.33%{color:#8b5cf6;text-shadow:0 0 8px rgba(139,92,246,.6)}
+  91.66%{color:#d946ef;text-shadow:0 0 8px rgba(217,70,239,.6)}
+  100%{color:#ef4444;text-shadow:0 0 8px rgba(239,68,68,.6)}
+}
 .main{flex:1;overflow-y:auto;overflow-x:hidden;padding:16px 16px calc(120px + var(--safe-bottom));scroll-behavior:smooth}
 .main::-webkit-scrollbar{width:0}
 .page{display:none;animation:fadeIn .3s ease}
@@ -150,14 +168,12 @@ body{font-family:'Vazirmatn',sans-serif;background:#0a0e1a;color:#e8ecf5;font-si
 .contractor-pay{background:linear-gradient(135deg,rgba(16,185,129,.08),rgba(59,130,246,.08));border-radius:10px;padding:10px;margin-top:8px}
 .contractor-pay-line{display:flex;justify-content:space-between;font-size:12px;margin:3px 0;gap:8px}
 .contractor-pay-line b{font-weight:800;word-break:break-all;text-align:left}
-.payment-history{margin-top:8px;border-top:1px solid var(--border);padding-top:8px}
 .payment-history-item{background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:8px 10px;margin-bottom:6px;font-size:11px;display:flex;justify-content:space-between;align-items:center;gap:8px}
 .payment-history-item .ph-type{font-weight:700;color:var(--primary);font-size:11px}
 .payment-history-item .ph-type.cheque{color:#a78bfa}
 .payment-history-item .ph-amount{font-weight:800;color:var(--text);word-break:break-all;font-size:11px}
 .payment-history-item .ph-date{color:var(--text2);font-size:10px;margin-top:2px}
 .payment-history-item .ph-del{background:rgba(239,68,68,.15);color:#f87171;border:none;width:20px;height:20px;border-radius:5px;font-size:10px;cursor:pointer;font-family:inherit;flex-shrink:0}
-.cash-detail{font-size:10px;color:var(--text3);margin-top:4px}
 </style>
 </head>
 <body>
@@ -168,9 +184,15 @@ body{font-family:'Vazirmatn',sans-serif;background:#0a0e1a;color:#e8ecf5;font-si
       <div style="flex:1;min-width:0">
         <div class="header-title" id="pageTitle">ساخت‌یار</div>
         <div class="header-sub" id="pageSub">مدیریت حرفه‌ای پروژه‌های ساختمانی</div>
-        <div class="header-date" id="headerDate">📅 —</div>
       </div>
-      <div class="header-btn" onclick="openBackup()">⚙️</div>
+      <div class="header-right">
+        <div class="davin-brand">DAVIN</div>
+        <div class="header-btn" onclick="openBackup()">⚙️</div>
+      </div>
+    </div>
+    <div class="header-date-row">
+      <div class="header-date" id="headerDate">📅 —</div>
+      <div class="header-date" id="headerDateFull" style="color:var(--text2)"></div>
     </div>
   </div>
 
@@ -271,23 +293,87 @@ body{font-family:'Vazirmatn',sans-serif;background:#0a0e1a;color:#e8ecf5;font-si
 <input type="file" id="fileInput" accept=".json" style="display:none" onchange="handleImport(event)">
 
 <script>
-/* ===== JALAALI LIBRARY ===== */
-var jalaali=function(){var breaks=[-61,9,38,199,426,686,756,818,1111,1181,1210,1635,2060,2097,2192,2262,2324,2394,2456,3178];
-function div(a,b){return~~(a/b)}function mod(a,b){return a-~~(a/b)*b}
-function jalCal(jy){var bl=breaks.length,gy=jy+621,leapJ=jalCal.leap,march,n,i;function leap(y){return mod(y,33)%4===1&&mod(y,33)!==0&&mod(y-1,33)!==0}
-var jp=breaks[0];for(i=1;i<bl;i+=1){var jm=breaks[i],jump=jm-jp;if(jy<jm)break;jp=jm}n=jy-jp;if(n<0)return{leap:false,gy:0,march:0};if(n<jump){leapJ=leap(jy);march=div(n,33)*8+div(mod(n,33),4);if(mod(n,33)===4&&n===jump-1)march+=1}else{leapJ=leap(jy);march=div(n,33)*8+div(mod(n,33),4)}march=jp+march;return{leap:leapJ,gy:gy,march:march}}
-function j2d(jy,jm,jd){var r=jalCal(jy);return g2d(r.gy,3,r.march)+(jm-1)*31-div(jm,7)*(jm-7)+jd-1}
-function d2j(jdn){var gy=d2g(jdn).gy,jy=gy-621,r=jalCal(jy),jdn1f=g2d(gy,3,r.march),jdn1f_,k,jm,jd;if(jdn>=jdn1f){k=jdn-jdn1f}else{jy-=1;r=jalCal(jy);jdn1f=g2d(gy,3,r.march);jdn1f_=g2d(gy-1,3,jalCal(jy).march);k=jdn-jdn1f_}
-if(k>=0&&k<=185){jm=1+div(k,31);jd=mod(k,31)+1;return{jy:jy,jm:jm,jd:jd}}else{k-=186}
-jm=7+div(k,30);jd=mod(k,30)+1;return{jy:jy,jm:jm,jd:jd}}
-function g2d(gy,gm,gd){var d=div((gy+div(gm-8,6)+100100)*1461,4)+div(153*mod(gm+9,12)+2,5)+gd-34840408;d=d-div(div(gy+100100+div(gm-8,6),100)*3,4)+752;return d}
-function d2g(jdn){var j,i,gd,gm,gy;j=4*jdn+139361631;j=j+div(div(4*jdn+183187720,146097)*3,4)*4-3908;i=div(mod(j,1461),4)*5+308;gd=div(mod(i,153),5)+1;gm=mod(div(i,153),12)+1;gy=div(j,1461)-100100+div(8-gm,6);return{gy:gy,gm:gm,gd:gd}}
-function toJalaali(gy,gm,gd){return d2j(g2d(gy,gm,gd))}
-function toGregorian(jy,jm,jd){return d2g(j2d(jy,jm,jd))}
-return{toJalaali:toJalaali,toGregorian:toGregorian}}();
+/* ===== JALAALI LIBRARY (کامل و دقیق) ===== */
+var jalaali = (function() {
+  var breaks = [-61, 9, 38, 199, 426, 686, 756, 818, 1111, 1181, 1210, 1635, 2060, 2097, 2192, 2262, 2324, 2394, 2456, 3178];
+  function div(a, b) { return ~~(a / b); }
+  function mod(a, b) { return a - ~~(a / b) * b; }
+  function jalCal(jy, withoutLeap) {
+    var bl = breaks.length, gy = jy + 621, leapJ = -14, jp = breaks[0], jm, jump, leap, leapG, march, n, i;
+    if (jy < jp || jy >= breaks[bl - 1]) throw new Error('Invalid Jalaali year ' + jy);
+    for (i = 1; i < bl; i += 1) {
+      jm = breaks[i];
+      jump = jm - jp;
+      if (jy < jm) break;
+      leapJ = leapJ + div(jump, 33) * 8 + div(mod(jump, 33), 4);
+      jp = jm;
+    }
+    n = jy - jp;
+    leapJ = leapJ + div(n, 33) * 8 + div(mod(n, 33) + 3, 4);
+    if (mod(jump, 33) === 4 && jump - n === 4) leapJ += 1;
+    leapG = div(gy, 4) - div((div(gy, 100) + 1) * 3, 4) - 150;
+    march = 20 + leapJ - leapG;
+    if (!withoutLeap) {
+      if (jump - n < 6) n = n - jump + div(jump + 4, 33) * 33;
+      leap = mod(mod(n + 1, 33) - 1, 4);
+      if (leap === -1) leap = 4;
+    }
+    return { leap: leap, gy: gy, march: march };
+  }
+  function j2d(jy, jm, jd) {
+    var r = jalCal(jy, true);
+    return g2d(r.gy, 3, r.march) + (jm - 1) * 31 - div(jm, 7) * (jm - 7) + jd - 1;
+  }
+  function d2j(jdn) {
+    var gy = d2g(jdn).gy, jy = gy - 621, r = jalCal(jy, false), jdn1f = g2d(gy, 3, r.march), jd, jm, k;
+    k = jdn - jdn1f;
+    if (k >= 0) {
+      if (k <= 185) { jm = 1 + div(k, 31); jd = mod(k, 31) + 1; return { jy: jy, jm: jm, jd: jd }; }
+      else k -= 186;
+    } else {
+      jy -= 1;
+      k += 179;
+      if (r.leap === 1) k += 1;
+    }
+    jm = 7 + div(k, 30);
+    jd = mod(k, 30) + 1;
+    return { jy: jy, jm: jm, jd: jd };
+  }
+  function g2d(gy, gm, gd) {
+    var d = div((gy + div(gm - 8, 6) + 100100) * 1461, 4) + div(153 * mod(gm + 9, 12) + 2, 5) + gd - 34840408;
+    d = d - div(div(gy + 100100 + div(gm - 8, 6), 100) * 3, 4) + 752;
+    return d;
+  }
+  function d2g(jdn) {
+    var j, i, gd, gm, gy;
+    j = 4 * jdn + 139361631;
+    j = j + div(div(4 * jdn + 183187720, 146097) * 3, 4) * 4 - 3908;
+    i = div(mod(j, 1461), 4) * 5 + 308;
+    gd = div(mod(i, 153), 5) + 1;
+    gm = mod(div(i, 153), 12) + 1;
+    gy = div(j, 1461) - 100100 + div(8 - gm, 6);
+    return { gy: gy, gm: gm, gd: gd };
+  }
+  function toJalaali(gy, gm, gd) {
+    if (typeof gy === 'object') { gd = gy.gd; gm = gy.gm; gy = gy.gy; }
+    return d2j(g2d(gy, gm, gd));
+  }
+  function toGregorian(jy, jm, jd) {
+    if (typeof jy === 'object') { jd = jy.jd; jm = jy.jm; jy = jy.jy; }
+    return d2g(j2d(jy, jm, jd));
+  }
+  function isLeapJalaaliYear(jy) { return jalCal(jy, false).leap === 0; }
+  function jalaaliMonthLength(jy, jm) {
+    if (jm <= 6) return 31;
+    if (jm <= 11) return 30;
+    if (isLeapJalaaliYear(jy)) return 30;
+    return 29;
+  }
+  return { toJalaali: toJalaali, toGregorian: toGregorian, isLeapJalaaliYear: isLeapJalaaliYear, jalaaliMonthLength: jalaaliMonthLength };
+})();
 
 /* ===== STATE & DB ===== */
-const DB_KEY='sakhtyar_v4';
+const DB_KEY='sakhtyar_v5';
 let state={page:'dashboard',projectFilter:'all',expenseFilter:'all'};
 
 function loadDB(){
@@ -302,10 +388,18 @@ function uid(){return Date.now().toString(36)+Math.random().toString(36).slice(2
 const FA_DIGITS=['۰','۱','۲','۳','۴','۵','۶','۷','۸','۹'];
 function toFaDigits(s){return String(s).replace(/\d/g,d=>FA_DIGITS[d])}
 function toEnDigits(s){return String(s).replace(/[۰-۹]/g,d=>'۰۱۲۳۴۵۶۷۸۹'.indexOf(d))}
-function num(n){if(n===0)return '۰';if(!n)return '۰';return Number(n).toLocaleString('fa-IR')}
+function num(n){if(!n&&n!==0)return '۰';return Number(n).toLocaleString('fa-IR')}
 function money(n){return num(n)+' تومان'}
 function yearFa(y){return toFaDigits(y)}
-function todayISO(){var d=new Date();return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`}
+
+/* ===== TODAY ISO ===== */
+function todayISO(){
+  var d=new Date();
+  var y=d.getFullYear();
+  var m=String(d.getMonth()+1).padStart(2,'0');
+  var day=String(d.getDate()).padStart(2,'0');
+  return y+'-'+m+'-'+day;
+}
 
 /* ===== MONEY INPUT WITH SEPARATOR ===== */
 function moneyInputHTML(id,value,placeholder){
@@ -330,20 +424,24 @@ const WEEK_DAYS=['یکشنبه','دوشنبه','سه‌شنبه','چهارشنب
 const MONTHS=['فروردین','اردیبهشت','خرداد','تیر','مرداد','شهریور','مهر','آبان','آذر','دی','بهمن','اسفند'];
 function isoToJalali(iso){
   if(!iso)return null;
-  try{var d=new Date(iso);if(isNaN(d))return null;return jalaali.toJalaali(d.getFullYear(),d.getMonth()+1,d.getDate())}catch(e){return null}
+  try{
+    var d=new Date(iso);
+    if(isNaN(d.getTime()))return null;
+    return jalaali.toJalaali(d.getFullYear(),d.getMonth()+1,d.getDate());
+  }catch(e){return null}
 }
 function jalaliToISO(jy,jm,jd){
-  try{var g=jalaali.toGregorian(jy,jm,jd);return `${g.gy}-${String(g.gm).padStart(2,'0')}-${String(g.gd).padStart(2,'0')}`}catch(e){return ''}
+  try{var g=jalaali.toGregorian(jy,jm,jd);return g.gy+'-'+String(g.gm).padStart(2,'0')+'-'+String(g.gd).padStart(2,'0')}catch(e){return ''}
 }
 function faDate(iso){
   var j=isoToJalali(iso);if(!j)return '—';
-  return `${yearFa(j.jy)}/${toFaDigits(String(j.jm).padStart(2,'0'))}/${toFaDigits(String(j.jd).padStart(2,'0'))}`;
+  return yearFa(j.jy)+'/'+toFaDigits(String(j.jm).padStart(2,'0'))+'/'+toFaDigits(String(j.jd).padStart(2,'0'));
 }
 function faDateFull(){
   var d=new Date();
   var j=jalaali.toJalaali(d.getFullYear(),d.getMonth()+1,d.getDate());
   var wd=WEEK_DAYS[d.getDay()];
-  return `${wd} ${toFaDigits(j.jd)} ${MONTHS[j.jm-1]} ${yearFa(j.jy)}`;
+  return wd+' '+toFaDigits(j.jd)+' '+MONTHS[j.jm-1]+' '+yearFa(j.jy);
 }
 function daysUntil(iso){if(!iso)return 999;var d=new Date(iso),n=new Date();return Math.ceil((d-n)/86400000)}
 
@@ -353,8 +451,8 @@ function dateInputHTML(id,isoValue){
   var j=isoToJalali(isoValue)||isoToJalali(todayISO());
   var years=[],days=[];
   for(var y=1390;y<=1420;y++)years.push(y);
-  var daysInMonth=(j.jm<=6)?31:30;
-  for(var d=1;d<=daysInMonth;d++)days.push(d);
+  var maxD=jalaali.jalaaliMonthLength(j.jy,j.jm);
+  for(var d=1;d<=maxD;d++)days.push(d);
   var yOpts=years.map(y=>`<option value="${y}" ${y===j.jy?'selected':''}>${yearFa(y)}</option>`).join('');
   var mOpts=MONTHS.map((m,i)=>`<option value="${i+1}" ${i+1===j.jm?'selected':''}>${m}</option>`).join('');
   var dOpts=days.map(d=>`<option value="${d}" ${d===j.jd?'selected':''}>${toFaDigits(d)}</option>`).join('');
@@ -365,9 +463,10 @@ function dateInputHTML(id,isoValue){
   </div>`;
 }
 function syncJDate(id){
+  var y=Number(document.getElementById(id+'_y').value);
   var m=Number(document.getElementById(id+'_m').value);
   var dSel=document.getElementById(id+'_d');
-  var maxD=(m<=6)?31:30;
+  var maxD=jalaali.jalaaliMonthLength(y,m);
   var current=Number(dSel.value);if(current>maxD)current=maxD;
   var html='';for(var i=1;i<=maxD;i++)html+=`<option value="${i}" ${i===current?'selected':''}>${toFaDigits(i)}</option>`;
   dSel.innerHTML=html;
@@ -760,20 +859,15 @@ function saveExpense(id){
   var title=document.getElementById('eTitle').value.trim();
   var total=getMoney('eTotal');
   if(!title||total<=0){toast('عنوان و مبلغ الزامی','error');return}
-  // sync cash amounts and dates
   var cashArr=[];
   for(var i=0;i<expenseCash.length;i++){
     var amt=getMoney('cashAmt_'+i);
-    if(amt>0){
-      cashArr.push({amount:amt,date:getJDate('cashDate_'+i),note:expenseCash[i].note||''});
-    }
+    if(amt>0)cashArr.push({amount:amt,date:getJDate('cashDate_'+i),note:expenseCash[i].note||''});
   }
   var chqArr=[];
   for(var j=0;j<expenseCheques.length;j++){
     var camt=getMoney('chqAmt_'+j);
-    if(camt>0){
-      chqArr.push({bank:expenseCheques[j].bank||'',number:expenseCheques[j].number||'',amount:camt,dueDate:getJDate('chqDue_'+j),status:expenseCheques[j].status||'pending',note:expenseCheques[j].note||''});
-    }
+    if(camt>0)chqArr.push({bank:expenseCheques[j].bank||'',number:expenseCheques[j].number||'',amount:camt,dueDate:getJDate('chqDue_'+j),status:expenseCheques[j].status||'pending',note:expenseCheques[j].note||''});
   }
   var data={title,totalAmount:total,category:document.getElementById('eCategory').value,projectId:document.getElementById('eProject').value,date:getJDate('eDate'),note:document.getElementById('eNote').value.trim(),cash:cashArr,cheques:chqArr};
   var db=loadDB();
@@ -1025,7 +1119,7 @@ function exportData(){
   var db=loadDB();
   var blob=new Blob([JSON.stringify(db,null,2)],{type:'application/json'});
   var url=URL.createObjectURL(blob);
-  var a=document.createElement('a');a.href=url;a.download=`davin-nova-backup-${todayISO()}.json`;a.click();
+  var a=document.createElement('a');a.href=url;a.download='davin-nova-backup-'+todayISO()+'.json';a.click();
   setTimeout(()=>URL.revokeObjectURL(url),1000);
   toast('دانلود شد','success');
 }
@@ -1051,11 +1145,16 @@ function toast(msg,type){
 }
 function esc(s){if(s==null)return '';return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
 
-/* ===== EVENTS ===== */
+/* ===== INIT ===== */
 document.addEventListener('DOMContentLoaded',()=>{
   loadDB();
   // Update header date
-  document.getElementById('headerDate').textContent='📅 '+faDateFull();
+  try{
+    document.getElementById('headerDate').textContent='📅 '+faDateFull();
+    var j=isoToJalali(todayISO());
+    document.getElementById('headerDateFull').textContent=j?toFaDigits(j.jy)+'/'+toFaDigits(String(j.jm).padStart(2,'0'))+'/'+toFaDigits(String(j.jd).padStart(2,'0')):'';
+  }catch(e){console.error('Date error:',e)}
+  
   document.querySelectorAll('#projectFilters .chip').forEach(c=>c.addEventListener('click',()=>{
     document.querySelectorAll('#projectFilters .chip').forEach(x=>x.classList.remove('active'));
     c.classList.add('active');state.projectFilter=c.dataset.filter;renderProjects();
@@ -1067,10 +1166,11 @@ document.addEventListener('DOMContentLoaded',()=>{
   var db=loadDB();
   var dueSoon=0;
   db.expenses.forEach(e=>(e.cheques||[]).forEach(c=>{if(c.status==='pending'&&daysUntil(c.dueDate)<=7&&daysUntil(c.dueDate)>=-30)dueSoon++}));
-  if(dueSoon&&!sessionStorage.getItem('chqRem')){sessionStorage.setItem('chqRem','1');setTimeout(()=>toast(`⚠️ ${num(dueSoon)} چک نزدیک سررسید`,'error'),800)}
+  if(dueSoon&&!sessionStorage.getItem('chqRem')){sessionStorage.setItem('chqRem','1');setTimeout(()=>toast('⚠️ '+num(dueSoon)+' چک نزدیک سررسید','error'),800)}
   else setTimeout(()=>toast('👋 به ساخت‌یار خوش آمدید','success'),500);
   renderPage('dashboard');
-  console.log('%c🏗️ ساخت‌یار v4.0 — DAVIN NOVA','color:#f59e0b;font-size:16px;font-weight:bold');
+  console.log('%c🏗️ ساخت‌یار v5.0 — DAVIN NOVA','color:#f59e0b;font-size:16px;font-weight:bold');
+  console.log('%c📅 Today:','color:#8b95ad',todayISO(),'→',faDateFull());
 });
 </script>
 </body>
