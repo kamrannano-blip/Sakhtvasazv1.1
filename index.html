@@ -21,61 +21,152 @@ html,body{height:100%;overflow:hidden;overscroll-behavior:none}
 body{font-family:'Vazirmatn',sans-serif;background:#0a0e1a;color:#e8ecf5;font-size:14px;line-height:1.6;user-select:none;-webkit-font-smoothing:antialiased;position:fixed;width:100%}
 :root{--bg:#0a0e1a;--bg2:#0f1524;--card:#151b2d;--card2:#1c2438;--border:#252e45;--text:#e8ecf5;--text2:#8b95ad;--text3:#5a6480;--primary:#f59e0b;--primary2:#fb923c;--success:#10b981;--success2:#34d399;--danger:#ef4444;--danger2:#f87171;--info:#3b82f6;--purple:#8b5cf6;--safe-bottom:env(safe-area-inset-bottom,0px);--safe-top:env(safe-area-inset-top,0px)}
 #app{height:100vh;height:100dvh;display:flex;flex-direction:column;max-width:500px;margin:0 auto;background:var(--bg)}
-.header{padding:calc(14px + var(--safe-top)) 18px 12px;background:linear-gradient(180deg,#0f1524 0%,var(--bg) 100%);border-bottom:1px solid var(--border);flex-shrink:0;z-index:10}
-.header-row{display:flex;justify-content:space-between;align-items:flex-start;gap:10px}
-.header-title{font-size:19px;font-weight:800;background:linear-gradient(135deg,var(--primary),var(--primary2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-.header-sub{font-size:11px;color:var(--text2);margin-top:2px;font-weight:500}
-.header-right{display:flex;flex-direction:column;align-items:flex-end;gap:4px;flex-shrink:0}
-.header-date-row{display:flex;justify-content:space-between;align-items:center;margin-top:8px;gap:10px}
-.header-date{font-size:11px;color:var(--primary);font-weight:600;display:flex;align-items:center;gap:4px}
-.header-logo{width:44px;height:44px;border-radius:12px;border:1px solid var(--border);object-fit:cover;cursor:pointer;transition:.2s;background:var(--card);box-shadow:0 2px 8px rgba(0,0,0,.3)}
-.header-logo:active{transform:scale(.92);box-shadow:0 0 16px rgba(245,158,11,.4)}
-.davin-typewriter{font-size:13px;font-weight:900;letter-spacing:3px;text-transform:uppercase;line-height:1;height:16px;display:flex;align-items:center;justify-content:center;font-family:'Vazirmatn',monospace;padding:2px 4px;margin-top:2px}
-.davin-text{display:inline-block;white-space:nowrap;overflow:hidden;border-left:1.5px solid currentColor;animation:davinSequence 48s linear infinite;color:#f59e0b}
-@keyframes davinSequence{
-  0%{width:0;color:#ef4444;border-color:#ef4444}
-  2%{width:calc(1em * 0.6);color:#f97316;border-color:#f97316}
-  4.16%{width:calc(1em * 1.2);color:#eab308;border-color:#eab308}
-  6.25%{width:calc(1em * 1.8);color:#10b981;border-color:#10b981}
-  8.33%{width:100%;color:#3b82f6;border-color:#3b82f6}
-  9%{color:#fff;text-shadow:0 0 12px #fff,0 0 24px #fbbf24,0 0 40px #f59e0b;transform:scale(1.15)}
-  9.5%{color:#fff;text-shadow:0 0 20px #fff,0 0 40px #fbbf24,0 0 60px #f59e0b;transform:scale(1.2)}
-  10%{color:#fff;text-shadow:0 0 8px #fff,0 0 16px #fbbf24;transform:scale(1.05)}
-  10.4%{color:#fbbf24;text-shadow:0 0 10px #fbbf24;transform:scale(1)}
-  11.2%{color:#fff;text-shadow:0 0 16px #fff,0 0 32px #a78bfa,0 0 50px #8b5cf6;transform:scale(1.18)}
-  11.8%{color:#fff;text-shadow:0 0 24px #fff,0 0 48px #a78bfa,0 0 70px #8b5cf6;transform:scale(1.22)}
-  12.5%{color:#fff;text-shadow:0 0 6px #fff;transform:scale(1)}
-  13%{color:#ef4444;text-shadow:0 0 8px rgba(239,68,68,.6);border-color:#ef4444}
-  16%{color:#f97316;text-shadow:0 0 8px rgba(249,115,22,.6);border-color:#f97316}
-  19%{color:#f59e0b;text-shadow:0 0 8px rgba(245,158,11,.6);border-color:#f59e0b}
-  22%{color:#eab308;text-shadow:0 0 8px rgba(234,179,8,.6);border-color:#eab308}
-  25%{color:#84cc16;text-shadow:0 0 8px rgba(132,204,22,.6);border-color:#84cc16}
-  28%{color:#10b981;text-shadow:0 0 8px rgba(16,185,129,.6);border-color:#10b981}
-  31%{color:#14b8a6;text-shadow:0 0 8px rgba(20,184,166,.6);border-color:#14b8a6}
-  34%{color:#06b6d4;text-shadow:0 0 8px rgba(6,182,212,.6);border-color:#06b6d4}
-  37%{color:#3b82f6;text-shadow:0 0 8px rgba(59,130,246,.6);border-color:#3b82f6}
-  40%{color:#6366f1;text-shadow:0 0 8px rgba(99,102,241,.6);border-color:#6366f1}
-  43%{color:#8b5cf6;text-shadow:0 0 8px rgba(139,92,246,.6);border-color:#8b5cf6}
-  46%{color:#d946ef;text-shadow:0 0 8px rgba(217,70,239,.6);border-color:#d946ef}
-  49%{color:#ec4899;text-shadow:0 0 8px rgba(236,72,153,.6);border-color:#ec4899}
-  52%{color:#f43f5e;text-shadow:0 0 8px rgba(244,63,94,.6);border-color:#f43f5e}
-  55%{color:#ef4444;text-shadow:0 0 8px rgba(239,68,68,.6);border-color:#ef4444}
-  58%{color:#f97316;text-shadow:0 0 8px rgba(249,115,22,.6);border-color:#f97316}
-  61%{color:#eab308;text-shadow:0 0 8px rgba(234,179,8,.6);border-color:#eab308}
-  64%{color:#10b981;text-shadow:0 0 8px rgba(16,185,129,.6);border-color:#10b981}
-  67%{color:#06b6d4;text-shadow:0 0 8px rgba(6,182,212,.6);border-color:#06b6d4}
-  70%{color:#3b82f6;text-shadow:0 0 8px rgba(59,130,246,.6);border-color:#3b82f6}
-  73%{color:#8b5cf6;text-shadow:0 0 8px rgba(139,92,246,.6);border-color:#8b5cf6}
-  76%{color:#d946ef;text-shadow:0 0 8px rgba(217,70,239,.6);border-color:#d946ef}
-  79%{color:#ec4899;text-shadow:0 0 8px rgba(236,72,153,.6);border-color:#ec4899}
-  82%{color:#ef4444;text-shadow:0 0 8px rgba(239,68,68,.6);border-color:#ef4444}
-  85%{color:#f59e0b;text-shadow:0 0 8px rgba(245,158,11,.6);border-color:#f59e0b}
-  88%{color:#10b981;text-shadow:0 0 8px rgba(16,185,129,.6);border-color:#10b981}
-  91%{color:#3b82f6;text-shadow:0 0 8px rgba(59,130,246,.6);border-color:#3b82f6}
-  94%{color:#8b5cf6;text-shadow:0 0 8px rgba(139,92,246,.6);border-color:#8b5cf6}
-  97%{color:#d946ef;text-shadow:0 0 8px rgba(217,70,239,.6);border-color:#d946ef}
-  100%{width:100%;color:#ef4444;text-shadow:none;transform:scale(1);border-color:transparent}
+
+/* ===== HEADER (Compact & Professional) ===== */
+.header{
+  padding:calc(10px + var(--safe-top)) 14px 10px;
+  background:linear-gradient(135deg,#0f1524 0%,#1a2438 50%,#0a0e1a 100%);
+  border-bottom:1px solid var(--border);
+  flex-shrink:0;
+  z-index:10;
+  position:relative;
+  overflow:hidden;
 }
+.header::before{
+  content:'';
+  position:absolute;
+  top:0;right:0;left:0;
+  height:2px;
+  background:linear-gradient(90deg,#ef4444,#f97316,#eab308,#10b981,#06b6d4,#3b82f6,#8b5cf6,#d946ef);
+  background-size:200% 100%;
+  animation:headerRainbow 8s linear infinite;
+  opacity:.7;
+}
+@keyframes headerRainbow{
+  0%{background-position:0% 0}
+  100%{background-position:200% 0}
+}
+.header-row{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:10px;
+  position:relative;
+  z-index:1;
+}
+.header-left{
+  flex:1;
+  min-width:0;
+  display:flex;
+  flex-direction:column;
+  gap:2px;
+}
+.header-title{
+  font-size:17px;
+  font-weight:800;
+  background:linear-gradient(135deg,var(--primary),var(--primary2));
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  background-clip:text;
+  line-height:1.25;
+  letter-spacing:-.3px;
+}
+.header-date{
+  font-size:10px;
+  color:var(--primary);
+  font-weight:700;
+  display:flex;
+  align-items:center;
+  gap:4px;
+  line-height:1.3;
+}
+.header-sub{
+  font-size:9.5px;
+  color:var(--text2);
+  font-weight:500;
+  line-height:1.3;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+}
+.header-center{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  flex-shrink:0;
+  gap:3px;
+}
+.header-logo{
+  width:38px;
+  height:38px;
+  border-radius:10px;
+  border:1.5px solid rgba(245,158,11,.5);
+  object-fit:cover;
+  cursor:pointer;
+  transition:.2s;
+  background:var(--card);
+  box-shadow:0 2px 8px rgba(0,0,0,.4),0 0 0 2px rgba(245,158,11,.1);
+}
+.header-logo:active{transform:scale(.92);box-shadow:0 0 20px rgba(245,158,11,.6)}
+.header-btn{width:40px;height:40px;border-radius:12px;background:var(--card);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:18px;cursor:pointer;transition:.2s;flex-shrink:0}
+.header-btn:active{transform:scale(.92);background:var(--card2)}
+
+/* ===== DAVIN with Lightning ===== */
+.davin-lightning{
+  font-size:11px;
+  font-weight:900;
+  letter-spacing:2.5px;
+  text-transform:uppercase;
+  line-height:1;
+  color:#f59e0b;
+  padding:1px 4px;
+  position:relative;
+  animation:davinLightning 4s ease-in-out infinite;
+  text-shadow:0 0 4px rgba(245,158,11,.6);
+}
+@keyframes davinLightning{
+  0%, 70%, 100%{
+    color:#f59e0b;
+    text-shadow:0 0 4px rgba(245,158,11,.5);
+    transform:scale(1);
+  }
+  72%{
+    color:#fff;
+    text-shadow:0 0 8px #fff,0 0 16px #fbbf24,0 0 28px #f59e0b;
+    transform:scale(1.15);
+  }
+  74%{
+    color:#fbbf24;
+    text-shadow:0 0 6px #fbbf24;
+    transform:scale(1.05);
+  }
+  76%{
+    color:#fff;
+    text-shadow:0 0 10px #fff,0 0 20px #fbbf24,0 0 36px #f59e0b;
+    transform:scale(1.2);
+  }
+  78%{
+    color:#fff;
+    text-shadow:0 0 6px #fff;
+    transform:scale(1.05);
+  }
+  80%{
+    color:#fbbf24;
+    text-shadow:0 0 4px #fbbf24;
+    transform:scale(1);
+  }
+  82%{
+    color:#fff;
+    text-shadow:0 0 8px #fff,0 0 16px #a78bfa,0 0 28px #8b5cf6;
+    transform:scale(1.12);
+  }
+  84%{
+    color:#f59e0b;
+    text-shadow:0 0 4px rgba(245,158,11,.5);
+    transform:scale(1);
+  }
+}
+
 .main{flex:1;overflow-y:auto;overflow-x:hidden;padding:16px 16px calc(120px + var(--safe-bottom));scroll-behavior:smooth}
 .main::-webkit-scrollbar{width:0}
 .page{display:none;animation:fadeIn .3s ease}
@@ -285,20 +376,16 @@ body{font-family:'Vazirmatn',sans-serif;background:#0a0e1a;color:#e8ecf5;font-si
 <div id="app">
   <div class="header">
     <div class="header-row">
-      <div style="flex:1;min-width:0">
+      <div class="header-left">
         <div class="header-title" id="pageTitle">ساخت‌یار</div>
+        <div class="header-date" id="headerDate">📅 —</div>
         <div class="header-sub" id="pageSub">مدیریت حرفه‌ای پروژه‌های ساختمانی</div>
       </div>
-      <div class="header-right">
+      <div class="header-center">
         <img src="DAVIN.PNG" class="header-logo" onclick="openAbout()" alt="DAVIN" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-        <div class="header-btn" style="display:none" onclick="openAbout()">⚙️</div>
-        <div class="davin-typewriter">
-          <span class="davin-text">DAVIN</span>
-        </div>
+        <div class="header-btn" style="display:none;width:38px;height:38px;font-size:16px" onclick="openAbout()">⚙️</div>
+        <div class="davin-lightning">DAVIN</div>
       </div>
-    </div>
-    <div class="header-date-row">
-      <div class="header-date" id="headerDate">📅 —</div>
     </div>
   </div>
 
@@ -1133,7 +1220,7 @@ function esc(s){if(s==null)return '';return String(s).replace(/[&<>"']/g,c=>({'&
 
 document.addEventListener('DOMContentLoaded',()=>{
   loadDB();
-  try{document.getElementById('headerDate').textContent='📅 '+faDateFull()}catch(e){}
+  try{document.getElementById('headerDate').innerHTML='📅 '+faDateFull()}catch(e){}
   
   document.querySelectorAll('#projectFilters .chip').forEach(c=>c.addEventListener('click',()=>{
     document.querySelectorAll('#projectFilters .chip').forEach(x=>x.classList.remove('active'));
@@ -1168,12 +1255,11 @@ document.addEventListener('DOMContentLoaded',()=>{
   
   renderPage('dashboard');
   
-  // Register Service Worker for offline
   if('serviceWorker' in navigator){
     navigator.serviceWorker.register('sw.js').then(r=>console.log('SW Registered')).catch(e=>console.log('SW Error:',e));
   }
   
-  console.log('%c🏗️ ساخت‌یار v8.0 — DAVIN NOVA','color:#f59e0b;font-size:16px;font-weight:bold');
+  console.log('%c🏗️ ساخت‌یار v9.0 — DAVIN NOVA','color:#f59e0b;font-size:16px;font-weight:bold');
 });
 </script>
 </body>
