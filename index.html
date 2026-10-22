@@ -5,17 +5,17 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
 <meta name="theme-color" content="#0a0e1a">
 <title>ساخت‌یار | DAVIN NOVA</title>
-
-<!-- PWA Manifest & Icons -->
 <link rel="manifest" href="manifest.json">
 <link rel="apple-touch-icon" href="DAVIN.PNG">
 <link rel="icon" type="image/png" href="DAVIN.PNG">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="ساخت‌یار">
-
-<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 <style>
+@font-face{font-family:'Vazirmatn';src:url('fonts/Vazirmatn-Regular.woff2') format('woff2');font-weight:400;font-display:swap}
+@font-face{font-family:'Vazirmatn';src:url('fonts/Vazirmatn-Medium.woff2') format('woff2');font-weight:500;font-display:swap}
+@font-face{font-family:'Vazirmatn';src:url('fonts/Vazirmatn-Bold.woff2') format('woff2');font-weight:700;font-display:swap}
+@font-face{font-family:'Vazirmatn';src:url('fonts/Vazirmatn-Black.woff2') format('woff2');font-weight:900;font-display:swap}
 *{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
 html,body{height:100%;overflow:hidden;overscroll-behavior:none}
 body{font-family:'Vazirmatn',sans-serif;background:#0a0e1a;color:#e8ecf5;font-size:14px;line-height:1.6;user-select:none;-webkit-font-smoothing:antialiased;position:fixed;width:100%}
@@ -30,8 +30,52 @@ body{font-family:'Vazirmatn',sans-serif;background:#0a0e1a;color:#e8ecf5;font-si
 .header-date{font-size:11px;color:var(--primary);font-weight:600;display:flex;align-items:center;gap:4px}
 .header-logo{width:44px;height:44px;border-radius:12px;border:1px solid var(--border);object-fit:cover;cursor:pointer;transition:.2s;background:var(--card);box-shadow:0 2px 8px rgba(0,0,0,.3)}
 .header-logo:active{transform:scale(.92);box-shadow:0 0 16px rgba(245,158,11,.4)}
-.davin-brand{font-size:13px;font-weight:900;letter-spacing:3px;text-transform:uppercase;animation:davinRainbow 6s linear infinite;padding:2px 4px;line-height:1}
-@keyframes davinRainbow{0%{color:#ef4444;text-shadow:0 0 8px rgba(239,68,68,.6)}8.33%{color:#f97316;text-shadow:0 0 8px rgba(249,115,22,.6)}16.66%{color:#f59e0b;text-shadow:0 0 8px rgba(245,158,11,.6)}25%{color:#eab308;text-shadow:0 0 8px rgba(234,179,8,.6)}33.33%{color:#84cc16;text-shadow:0 0 8px rgba(132,204,22,.6)}41.66%{color:#10b981;text-shadow:0 0 8px rgba(16,185,129,.6)}50%{color:#14b8a6;text-shadow:0 0 8px rgba(20,184,166,.6)}58.33%{color:#06b6d4;text-shadow:0 0 8px rgba(6,182,212,.6)}66.66%{color:#3b82f6;text-shadow:0 0 8px rgba(59,130,246,.6)}75%{color:#6366f1;text-shadow:0 0 8px rgba(99,102,241,.6)}83.33%{color:#8b5cf6;text-shadow:0 0 8px rgba(139,92,246,.6)}91.66%{color:#d946ef;text-shadow:0 0 8px rgba(217,70,239,.6)}100%{color:#ef4444;text-shadow:0 0 8px rgba(239,68,68,.6)}}
+.davin-typewriter{font-size:13px;font-weight:900;letter-spacing:3px;text-transform:uppercase;line-height:1;height:16px;display:flex;align-items:center;justify-content:center;font-family:'Vazirmatn',monospace;padding:2px 4px;margin-top:2px}
+.davin-text{display:inline-block;white-space:nowrap;overflow:hidden;border-left:1.5px solid currentColor;animation:davinSequence 48s linear infinite;color:#f59e0b}
+@keyframes davinSequence{
+  0%{width:0;color:#ef4444;border-color:#ef4444}
+  2%{width:calc(1em * 0.6);color:#f97316;border-color:#f97316}
+  4.16%{width:calc(1em * 1.2);color:#eab308;border-color:#eab308}
+  6.25%{width:calc(1em * 1.8);color:#10b981;border-color:#10b981}
+  8.33%{width:100%;color:#3b82f6;border-color:#3b82f6}
+  9%{color:#fff;text-shadow:0 0 12px #fff,0 0 24px #fbbf24,0 0 40px #f59e0b;transform:scale(1.15)}
+  9.5%{color:#fff;text-shadow:0 0 20px #fff,0 0 40px #fbbf24,0 0 60px #f59e0b;transform:scale(1.2)}
+  10%{color:#fff;text-shadow:0 0 8px #fff,0 0 16px #fbbf24;transform:scale(1.05)}
+  10.4%{color:#fbbf24;text-shadow:0 0 10px #fbbf24;transform:scale(1)}
+  11.2%{color:#fff;text-shadow:0 0 16px #fff,0 0 32px #a78bfa,0 0 50px #8b5cf6;transform:scale(1.18)}
+  11.8%{color:#fff;text-shadow:0 0 24px #fff,0 0 48px #a78bfa,0 0 70px #8b5cf6;transform:scale(1.22)}
+  12.5%{color:#fff;text-shadow:0 0 6px #fff;transform:scale(1)}
+  13%{color:#ef4444;text-shadow:0 0 8px rgba(239,68,68,.6);border-color:#ef4444}
+  16%{color:#f97316;text-shadow:0 0 8px rgba(249,115,22,.6);border-color:#f97316}
+  19%{color:#f59e0b;text-shadow:0 0 8px rgba(245,158,11,.6);border-color:#f59e0b}
+  22%{color:#eab308;text-shadow:0 0 8px rgba(234,179,8,.6);border-color:#eab308}
+  25%{color:#84cc16;text-shadow:0 0 8px rgba(132,204,22,.6);border-color:#84cc16}
+  28%{color:#10b981;text-shadow:0 0 8px rgba(16,185,129,.6);border-color:#10b981}
+  31%{color:#14b8a6;text-shadow:0 0 8px rgba(20,184,166,.6);border-color:#14b8a6}
+  34%{color:#06b6d4;text-shadow:0 0 8px rgba(6,182,212,.6);border-color:#06b6d4}
+  37%{color:#3b82f6;text-shadow:0 0 8px rgba(59,130,246,.6);border-color:#3b82f6}
+  40%{color:#6366f1;text-shadow:0 0 8px rgba(99,102,241,.6);border-color:#6366f1}
+  43%{color:#8b5cf6;text-shadow:0 0 8px rgba(139,92,246,.6);border-color:#8b5cf6}
+  46%{color:#d946ef;text-shadow:0 0 8px rgba(217,70,239,.6);border-color:#d946ef}
+  49%{color:#ec4899;text-shadow:0 0 8px rgba(236,72,153,.6);border-color:#ec4899}
+  52%{color:#f43f5e;text-shadow:0 0 8px rgba(244,63,94,.6);border-color:#f43f5e}
+  55%{color:#ef4444;text-shadow:0 0 8px rgba(239,68,68,.6);border-color:#ef4444}
+  58%{color:#f97316;text-shadow:0 0 8px rgba(249,115,22,.6);border-color:#f97316}
+  61%{color:#eab308;text-shadow:0 0 8px rgba(234,179,8,.6);border-color:#eab308}
+  64%{color:#10b981;text-shadow:0 0 8px rgba(16,185,129,.6);border-color:#10b981}
+  67%{color:#06b6d4;text-shadow:0 0 8px rgba(6,182,212,.6);border-color:#06b6d4}
+  70%{color:#3b82f6;text-shadow:0 0 8px rgba(59,130,246,.6);border-color:#3b82f6}
+  73%{color:#8b5cf6;text-shadow:0 0 8px rgba(139,92,246,.6);border-color:#8b5cf6}
+  76%{color:#d946ef;text-shadow:0 0 8px rgba(217,70,239,.6);border-color:#d946ef}
+  79%{color:#ec4899;text-shadow:0 0 8px rgba(236,72,153,.6);border-color:#ec4899}
+  82%{color:#ef4444;text-shadow:0 0 8px rgba(239,68,68,.6);border-color:#ef4444}
+  85%{color:#f59e0b;text-shadow:0 0 8px rgba(245,158,11,.6);border-color:#f59e0b}
+  88%{color:#10b981;text-shadow:0 0 8px rgba(16,185,129,.6);border-color:#10b981}
+  91%{color:#3b82f6;text-shadow:0 0 8px rgba(59,130,246,.6);border-color:#3b82f6}
+  94%{color:#8b5cf6;text-shadow:0 0 8px rgba(139,92,246,.6);border-color:#8b5cf6}
+  97%{color:#d946ef;text-shadow:0 0 8px rgba(217,70,239,.6);border-color:#d946ef}
+  100%{width:100%;color:#ef4444;text-shadow:none;transform:scale(1);border-color:transparent}
+}
 .main{flex:1;overflow-y:auto;overflow-x:hidden;padding:16px 16px calc(120px + var(--safe-bottom));scroll-behavior:smooth}
 .main::-webkit-scrollbar{width:0}
 .page{display:none;animation:fadeIn .3s ease}
@@ -62,7 +106,7 @@ body{font-family:'Vazirmatn',sans-serif;background:#0a0e1a;color:#e8ecf5;font-si
 .btn:active{transform:scale(.96)}
 .btn-primary{background:linear-gradient(135deg,var(--primary),var(--primary2));color:#0a0e1a;box-shadow:0 4px 16px rgba(245,158,11,.3)}
 .btn-secondary{background:var(--card2);color:var(--text);border:1px solid var(--border)}
-.btn-success{background:linear-gradient(135deg,#10b981,#34d399);color:#fff;box-shadow:0 4px 16px rgba(16,185,129,.3)}
+.btn-success{background:linear-gradient(135deg,#10b981,#34d399);color:#fff}
 .btn-danger{background:rgba(239,68,68,.15);color:#f87171;border:1px solid rgba(239,68,68,.3)}
 .btn-block{width:100%}
 .btn-sm{padding:8px 12px;font-size:11px;border-radius:10px}
@@ -192,8 +236,6 @@ body{font-family:'Vazirmatn',sans-serif;background:#0a0e1a;color:#e8ecf5;font-si
 .debt-item .debt-title{font-weight:700;color:#f87171;margin-bottom:3px}
 .debt-item .debt-info{color:var(--text2);font-size:11px;margin:2px 0}
 .debt-item .debt-amount{font-weight:800;color:#f87171;margin-top:4px}
-
-/* ===== MATERIAL CARDS (WAREHOUSE) ===== */
 .mat-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:14px;margin-bottom:12px;position:relative;overflow:hidden}
 .mat-card.manual{border-color:rgba(139,92,246,.3)}
 .mat-card::before{content:'';position:absolute;right:0;top:0;bottom:0;width:3px;background:linear-gradient(180deg,var(--primary),var(--primary2))}
@@ -219,12 +261,10 @@ body{font-family:'Vazirmatn',sans-serif;background:#0a0e1a;color:#e8ecf5;font-si
 .usage-item .usage-amount{font-weight:800;color:#f59e0b;word-break:break-all}
 .usage-item .usage-date{color:var(--text2);font-size:10px;margin-top:2px}
 .usage-item .usage-del{background:rgba(239,68,68,.15);color:#f87171;border:none;width:20px;height:20px;border-radius:5px;font-size:10px;cursor:pointer;font-family:inherit;flex-shrink:0}
-
-/* ===== ABOUT MODAL ===== */
 .about-hero{background:linear-gradient(135deg,rgba(245,158,11,.15) 0%,rgba(139,92,246,.15) 100%);border:1px solid rgba(245,158,11,.3);border-radius:20px;padding:24px 16px;text-align:center;position:relative;overflow:hidden;margin-bottom:16px}
 .about-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 30% 20%,rgba(245,158,11,.2),transparent 60%),radial-gradient(circle at 70% 80%,rgba(139,92,246,.2),transparent 60%);pointer-events:none}
 .about-logo{width:88px;height:88px;border-radius:22px;border:2px solid var(--primary);box-shadow:0 8px 32px rgba(245,158,11,.5),0 0 40px rgba(245,158,11,.3);position:relative;z-index:1;object-fit:cover;background:var(--card)}
-.about-brand{font-size:18px;font-weight:900;letter-spacing:3px;background:linear-gradient(135deg,var(--primary),var(--primary2),var(--purple),#ec4899);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-top:16px;position:relative;z-index:1;animation:davinRainbow 8s linear infinite}
+.about-brand{font-size:18px;font-weight:900;letter-spacing:3px;background:linear-gradient(135deg,var(--primary),var(--primary2),var(--purple),#ec4899);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-top:16px;position:relative;z-index:1}
 .about-sub{font-size:10px;color:var(--text2);letter-spacing:1.5px;margin-top:4px;font-weight:600;position:relative;z-index:1}
 .about-tagline{text-align:center;font-size:14px;font-weight:800;margin:16px 0;padding:12px;background:linear-gradient(135deg,rgba(245,158,11,.12),rgba(139,92,246,.12));border:1px solid rgba(245,158,11,.3);border-radius:12px;color:var(--primary);position:relative}
 .about-tagline::before,.about-tagline::after{content:'✦';margin:0 8px;color:var(--purple)}
@@ -250,14 +290,15 @@ body{font-family:'Vazirmatn',sans-serif;background:#0a0e1a;color:#e8ecf5;font-si
         <div class="header-sub" id="pageSub">مدیریت حرفه‌ای پروژه‌های ساختمانی</div>
       </div>
       <div class="header-right">
-        <div class="davin-brand">DAVIN</div>
         <img src="DAVIN.PNG" class="header-logo" onclick="openAbout()" alt="DAVIN" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
         <div class="header-btn" style="display:none" onclick="openAbout()">⚙️</div>
+        <div class="davin-typewriter">
+          <span class="davin-text">DAVIN</span>
+        </div>
       </div>
     </div>
     <div class="header-date-row">
       <div class="header-date" id="headerDate">📅 —</div>
-      <div class="header-date" id="headerDateFull" style="color:var(--text2)"></div>
     </div>
   </div>
 
@@ -930,19 +971,11 @@ function saveExpense(id){
   var db=loadDB();var expenseId=id||uid();
   if(id){var idx=db.expenses.findIndex(x=>x.id===id);if(idx>=0)db.expenses[idx]={...db.expenses[idx],...data};toast('ویرایش شد','success')}
   else{db.expenses.push({id:expenseId,...data});toast('ثبت شد','success')}
-  // Sync warehouse
   var existingMat=db.materials.find(m=>m.expenseId===expenseId);
   if(whItem){
-    if(existingMat){
-      // Update existing, preserve usageHistory & usedQuantity
-      existingMat.name=title;existingMat.quantity=whItem.quantity;existingMat.unit=whItem.unit;
-      existingMat.unitPrice=total/whItem.quantity;existingMat.projectId=document.getElementById('eProject').value;
-    } else {
-      db.materials.push({id:uid(),name:title,quantity:whItem.quantity,unit:whItem.unit,unitPrice:total/whItem.quantity,projectId:document.getElementById('eProject').value,supplier:'',expenseId:expenseId,usedQuantity:0,usageHistory:[],createdAt:todayISO()});
-    }
-  } else {
-    db.materials=db.materials.filter(m=>m.expenseId!==expenseId);
-  }
+    if(existingMat){existingMat.name=title;existingMat.quantity=whItem.quantity;existingMat.unit=whItem.unit;existingMat.unitPrice=total/whItem.quantity;existingMat.projectId=document.getElementById('eProject').value}
+    else{db.materials.push({id:uid(),name:title,quantity:whItem.quantity,unit:whItem.unit,unitPrice:total/whItem.quantity,projectId:document.getElementById('eProject').value,supplier:'',expenseId:expenseId,usedQuantity:0,usageHistory:[],createdAt:todayISO()})}
+  } else {db.materials=db.materials.filter(m=>m.expenseId!==expenseId)}
   saveDB(db);closeModal();renderPage(state.page);
 }
 function deleteExpense(id){
@@ -1034,7 +1067,6 @@ function showReport(){
   document.getElementById('modalBody').innerHTML=html;showModal();
 }
 
-/* ===== ABOUT MODAL (رنگی و جذاب) ===== */
 function openAbout(){
   document.getElementById('modalBody').innerHTML=`
     <div class="about-hero">
@@ -1043,17 +1075,11 @@ function openAbout(){
       <div class="about-sub">DESIGNED & ENGINEERED BY DAVIN</div>
     </div>
     <div class="about-tagline">نرم‌افزارهای هوشمند، راهکارهای حرفه‌ای</div>
-    <div class="about-card">
-      این نرم‌افزار توسط شرکت <b>داوین نوا (DAVIN NOVA)</b> طراحی و توسعه داده شده است.
-    </div>
-    <div class="about-card">
-      نسخه حاضر به‌صورت <span class="hl">آنلاک (Unlocked)</span> ارائه شده و در حال حاضر در مرحله تست، بررسی و بهینه‌سازی قرار دارد. هدف ما، ارائه نرم‌افزاری کاربردی، دقیق و قابل‌اعتماد برای مدیریت بهتر امور شماست.
-    </div>
+    <div class="about-card">این نرم‌افزار توسط شرکت <b>داوین نوا (DAVIN NOVA)</b> طراحی و توسعه داده شده است.</div>
+    <div class="about-card">نسخه حاضر به‌صورت <span class="hl">آنلاک (Unlocked)</span> ارائه شده و در حال حاضر در مرحله تست، بررسی و بهینه‌سازی قرار دارد. هدف ما، ارائه نرم‌افزاری کاربردی، دقیق و قابل‌اعتماد برای مدیریت بهتر امور شماست.</div>
     <div class="about-support-card">
       <div class="about-support-title">📞 دریافت نسخه اصلی و ثبت سفارش</div>
-      <div style="font-size:12px;color:var(--text2);line-height:1.8;margin-bottom:14px">
-        جهت دریافت نسخه اصلی نرم‌افزار، اطلاع از آخرین به‌روزرسانی‌ها یا سفارش طراحی و توسعه نرم‌افزار اختصاصی متناسب با نیازهای خود، لطفاً با واحد پشتیبانی شرکت داوین نوا در ارتباط باشید.
-      </div>
+      <div style="font-size:12px;color:var(--text2);line-height:1.8;margin-bottom:14px">جهت دریافت نسخه اصلی نرم‌افزار، اطلاع از آخرین به‌روزرسانی‌ها یا سفارش طراحی و توسعه نرم‌افزار اختصاصی متناسب با نیازهای خود، لطفاً با واحد پشتیبانی شرکت داوین نوا در ارتباط باشید.</div>
       <div style="font-size:12px;font-weight:700;color:var(--primary);margin-bottom:10px">پشتیبانی DAVIN NOVA</div>
       <a href="tel:09121759942" class="about-phone">📞 ۰۹۱۲۱۷۵۹۹۴۲</a>
     </div>
@@ -1062,8 +1088,7 @@ function openAbout(){
       <button class="btn btn-primary" style="flex:1" onclick="closeModal();openBackup()">⚙️ تنظیمات</button>
       <button class="btn btn-secondary" style="flex:1" onclick="closeModal()">بستن</button>
     </div>
-  `;
-  showModal();
+  `;showModal();
 }
 
 function showModal(){document.getElementById('modal').classList.add('show')}
@@ -1108,12 +1133,8 @@ function esc(s){if(s==null)return '';return String(s).replace(/[&<>"']/g,c=>({'&
 
 document.addEventListener('DOMContentLoaded',()=>{
   loadDB();
-  try{
-    document.getElementById('headerDate').textContent='📅 '+faDateFull();
-    var j=isoToJalali(todayISO());
-    document.getElementById('headerDateFull').textContent=j?toFaDigits(j.jy)+'/'+toFaDigits(String(j.jm).padStart(2,'0'))+'/'+toFaDigits(String(j.jd).padStart(2,'0')):'';
-  }catch(e){}
-
+  try{document.getElementById('headerDate').textContent='📅 '+faDateFull()}catch(e){}
+  
   document.querySelectorAll('#projectFilters .chip').forEach(c=>c.addEventListener('click',()=>{
     document.querySelectorAll('#projectFilters .chip').forEach(x=>x.classList.remove('active'));
     c.classList.add('active');state.projectFilter=c.dataset.filter;renderProjects();
@@ -1146,6 +1167,12 @@ document.addEventListener('DOMContentLoaded',()=>{
   else setTimeout(()=>toast('👋 به ساخت‌یار خوش آمدید','success'),500);
   
   renderPage('dashboard');
+  
+  // Register Service Worker for offline
+  if('serviceWorker' in navigator){
+    navigator.serviceWorker.register('sw.js').then(r=>console.log('SW Registered')).catch(e=>console.log('SW Error:',e));
+  }
+  
   console.log('%c🏗️ ساخت‌یار v8.0 — DAVIN NOVA','color:#f59e0b;font-size:16px;font-weight:bold');
 });
 </script>
